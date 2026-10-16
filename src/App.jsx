@@ -135,7 +135,7 @@ export default function App() {
     localStorage.setItem("kgt-alerts", JSON.stringify(alerts));
   }, [alerts]);
 
-  // LIVE CRYPTO via Binance WebSocket
+
   useEffect(() => {
     let socket;
     let reconnectTimer;
@@ -221,7 +221,7 @@ export default function App() {
     };
   }, []);
 
-  // LIVE CURRENCY RATES: every 5 minutes
+  
   useEffect(() => {
     let cancelled = false;
 
@@ -252,7 +252,7 @@ export default function App() {
     };
   }, []);
 
-  // Check price alerts whenever live prices change.
+  
   useEffect(() => {
     if (!cryptoLive) return;
 
@@ -405,7 +405,7 @@ export default function App() {
       try {
         await Notification.requestPermission();
       } catch {
-        // The in-page notice still works.
+      
       }
     }
   }
@@ -414,7 +414,7 @@ export default function App() {
     setAlerts((old) => old.filter((item) => item.id !== id));
   }
 
-  // This chart shows price points collected during the current browser session.
+  
   const chartValues = selectedCoin?.history || [];
   const chartMin = Math.min(...chartValues, selectedCoin?.price || 0);
   const chartMax = Math.max(...chartValues, selectedCoin?.price || 0);
