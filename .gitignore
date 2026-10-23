@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local backups and archives
+backup-*/
+*.backup
+*.backup-*
+*.before-*
+*.tar.gz
