@@ -1,0 +1,28 @@
+{
+  "app": {
+    "name": "Kigali Global Tracker"
+  },
+  "navigation": {
+    "market": "Market",
+    "charts": "Charts",
+    "portfolio": "Portfolio",
+    "alerts": "Price Alerts",
+    "converter": "Converter",
+    "news": "Crypto News",
+    "sentiment": "Fear & Greed",
+    "transactions": "Transactions",
+    "dca": "DCA Calculator",
+    "accounts": "Accounts"
+  },
+  "common": {
+    "search": "Search",
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "language": "Language",
+    "settings": "Settings"
+  }
+}

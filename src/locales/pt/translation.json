@@ -1,0 +1,56 @@
+{
+  "app": {
+    "name": "Kigali Global Tracker"
+  },
+  "navigation": {
+    "market": "Mercado",
+    "charts": "Gráficos",
+    "portfolio": "Portfólio",
+    "alerts": "Alertas de preço",
+    "converter": "Conversor",
+    "news": "Notícias de criptomoedas",
+    "sentiment": "Medo e ganância",
+    "transactions": "Transações",
+    "dca": "Calculadora DCA",
+    "accounts": "Contas"
+  },
+  "common": {
+    "search": "Pesquisar",
+    "loading": "Carregando...",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "delete": "Excluir",
+    "edit": "Editar",
+    "close": "Fechar",
+    "language": "Idioma",
+    "settings": "Configurações"
+  },
+  "header": {
+    "title": "Painel de criptomoedas e moedas",
+    "subtitle": "Criptomoedas ao vivo · Moedas globais · Portfólio · Alertas de preço",
+    "darkMode": "Modo escuro",
+    "lightMode": "Modo claro"
+  },
+  "market": {
+    "searchPlaceholder": "⌕ Pesquisar Bitcoin, ETH, Dogecoin...",
+    "searchLabel": "Pesquisar criptomoedas",
+    "sortLabel": "Ordenar criptomoedas",
+    "defaultOrder": "Ordem padrão",
+    "nameAZ": "Nome: A a Z",
+    "priceHigh": "Preço: do maior para o menor",
+    "priceLow": "Preço: do menor para o maior",
+    "gainers": "Maiores altas",
+    "losers": "Maiores quedas",
+    "allCoins": "Todas as moedas",
+    "watchlist": "Lista de favoritos",
+    "toggleWatchlist": "Alternar lista de favoritos",
+    "loadingPrice": "Carregando preço...",
+    "collectingHistory": "Coletando histórico de preços ao vivo...",
+    "priceIncreased": "▲ O preço aumentou desde a última atualização",
+    "priceDecreased": "▼ O preço diminuiu desde a última atualização",
+    "waitingMovement": "● Aguardando movimento do preço",
+    "viewChart": "Ver gráfico",
+    "noCoinsFound": "Nenhuma moeda encontrada. Tente outra pesquisa ou escolha Todas as moedas.",
+    "marketMovers": "↗ Movimentações do mercado (24 h)"
+  }
+}

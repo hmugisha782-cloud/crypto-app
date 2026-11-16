@@ -1,0 +1,28 @@
+{
+  "app": {
+    "name": "Kigali Global Tracker"
+  },
+  "navigation": {
+    "market": "Isoko",
+    "charts": "Imbonerahamwe",
+    "portfolio": "Umutungo wanjye",
+    "alerts": "Imenyesha ry'ibiciro",
+    "converter": "Guhindura amafaranga",
+    "news": "Amakuru ya Crypto",
+    "sentiment": "Ubwoba n'Umururumba",
+    "transactions": "Ibyakozwe",
+    "dca": "Imibare y'ishoramari rya buri gihe",
+    "accounts": "Konti"
+  },
+  "common": {
+    "search": "Shakisha",
+    "loading": "Birimo gutegurwa...",
+    "save": "Bika",
+    "cancel": "Reka",
+    "delete": "Siba",
+    "edit": "Hindura",
+    "close": "Funga",
+    "language": "Ururimi",
+    "settings": "Igenamiterere"
+  }
+}

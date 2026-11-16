@@ -18,6 +18,8 @@ import NoticeBanner from "./components/Notification.jsx";
 import FearGreedIndex from "./components/FearGreedIndex.jsx";
 import TransactionHistory from "./components/TransactionHistory.jsx";
 import DCACalculator from "./components/DCACalculator.jsx";
+import OrderBook from "./components/OrderBook.jsx";
+import PaperTrading from "./components/PaperTrading.jsx";
 
 
 export default function App() {
@@ -60,6 +62,9 @@ export default function App() {
 
   const [alerts, setAlerts] = useState(() =>
     loadSaved("kgt-alerts", [])
+  );
+  const [alertHistory, setAlertHistory] = useState(() =>
+    loadSaved("kgt-alert-history", [])
   );
   const [alertCoin, setAlertCoin] = useState("bitcoin");
   const [alertPrice, setAlertPrice] = useState("");
@@ -132,6 +137,10 @@ export default function App() {
   useEffect(() => {
     localStorage.setItem("kgt-alerts", JSON.stringify(alerts));
   }, [alerts]);
+
+  useEffect(() => {
+    localStorage.setItem("kgt-alert-history", JSON.stringify(alertHistory));
+  }, [alertHistory]);
 
 
   useEffect(() => {
@@ -426,8 +435,13 @@ export default function App() {
 
         changed = true;
         triggeredAlerts.push({
+          alertId: alert.id,
+          coinId: alert.coinId,
           coinName: coin.name,
           price: coin.price,
+          target: alert.target,
+          direction: alert.direction,
+          triggeredAt: new Date().toISOString(),
         });
 
         return { ...alert, triggered: true };
@@ -437,6 +451,16 @@ export default function App() {
     });
 
     if (triggeredAlerts.length > 0) {
+      setAlertHistory((current) => {
+        const existingIds = new Set(current.map((item) => item.alertId));
+        const newEntries = triggeredAlerts.filter(
+          (item) => !existingIds.has(item.alertId)
+        );
+        return newEntries.length > 0
+          ? [...newEntries, ...current]
+          : current;
+      });
+
       const first = triggeredAlerts[0];
 
       setNotice(`${first.coinName} reached $${fmt(first.price)}!`);
@@ -707,6 +731,10 @@ export default function App() {
           setActiveTab={setActiveTab}
         />
 
+        <OrderBook activeTab={activeTab} theme={theme} panel={panel} fmt={fmt} />
+
+        <PaperTrading activeTab={activeTab} coins={coins} theme={theme} panel={panel} fmt={fmt} />
+
         {/* PORTFOLIO */}
         <Portfolio
           activeTab={activeTab}
@@ -748,6 +776,8 @@ export default function App() {
           alerts={alerts}
           fmt={fmt}
           removeAlert={removeAlert}
+          alertHistory={alertHistory}
+          setAlertHistory={setAlertHistory}
         />
 
         {/* CURRENCY CONVERTER */}

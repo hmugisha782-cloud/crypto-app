@@ -1,0 +1,56 @@
+{
+  "app": {
+    "name": "Kigali Global Tracker"
+  },
+  "navigation": {
+    "market": "Pasar",
+    "charts": "Grafik",
+    "portfolio": "Portofolio",
+    "alerts": "Peringatan Harga",
+    "converter": "Konverter",
+    "news": "Berita Kripto",
+    "sentiment": "Takut & Serakah",
+    "transactions": "Transaksi",
+    "dca": "Kalkulator DCA",
+    "accounts": "Akun"
+  },
+  "common": {
+    "search": "Cari",
+    "loading": "Memuat...",
+    "save": "Simpan",
+    "cancel": "Batal",
+    "delete": "Hapus",
+    "edit": "Edit",
+    "close": "Tutup",
+    "language": "Bahasa",
+    "settings": "Pengaturan"
+  },
+  "header": {
+    "title": "Dasbor Kripto & Mata Uang",
+    "subtitle": "Kripto langsung · Mata uang global · Portofolio · Peringatan harga",
+    "darkMode": "Mode gelap",
+    "lightMode": "Mode terang"
+  },
+  "market": {
+    "searchPlaceholder": "⌕ Cari Bitcoin, ETH, Dogecoin...",
+    "searchLabel": "Cari mata uang kripto",
+    "sortLabel": "Urutkan mata uang kripto",
+    "defaultOrder": "Urutan default",
+    "nameAZ": "Nama: A sampai Z",
+    "priceHigh": "Harga: tertinggi ke terendah",
+    "priceLow": "Harga: terendah ke tertinggi",
+    "gainers": "Kenaikan terbesar",
+    "losers": "Penurunan terbesar",
+    "allCoins": "Semua koin",
+    "watchlist": "Daftar pantauan",
+    "toggleWatchlist": "Ubah daftar pantauan",
+    "loadingPrice": "Memuat harga...",
+    "collectingHistory": "Mengumpulkan riwayat harga langsung...",
+    "priceIncreased": "▲ Harga naik sejak pembaruan terakhir",
+    "priceDecreased": "▼ Harga turun sejak pembaruan terakhir",
+    "waitingMovement": "● Menunggu pergerakan harga",
+    "viewChart": "Lihat grafik",
+    "noCoinsFound": "Koin tidak ditemukan. Coba pencarian lain atau pilih Semua koin.",
+    "marketMovers": "↗ Pergerakan Pasar (24 jam)"
+  }
+}

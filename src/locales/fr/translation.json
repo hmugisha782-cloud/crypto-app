@@ -1,0 +1,56 @@
+{
+  "app": {
+    "name": "Kigali Global Tracker"
+  },
+  "navigation": {
+    "market": "Marché",
+    "charts": "Graphiques",
+    "portfolio": "Portefeuille",
+    "alerts": "Alertes de prix",
+    "converter": "Convertisseur",
+    "news": "Actualités crypto",
+    "sentiment": "Peur et avidité",
+    "transactions": "Transactions",
+    "dca": "Calculateur DCA",
+    "accounts": "Comptes"
+  },
+  "common": {
+    "search": "Rechercher",
+    "loading": "Chargement...",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "close": "Fermer",
+    "language": "Langue",
+    "settings": "Paramètres"
+  },
+  "header": {
+    "title": "Tableau de bord crypto et devises",
+    "subtitle": "Crypto en direct · Devises mondiales · Portefeuille · Alertes de prix",
+    "darkMode": "Mode sombre",
+    "lightMode": "Mode clair"
+  },
+  "market": {
+    "searchPlaceholder": "⌕ Rechercher Bitcoin, ETH, Dogecoin...",
+    "searchLabel": "Rechercher des cryptomonnaies",
+    "sortLabel": "Trier les cryptomonnaies",
+    "defaultOrder": "Ordre par défaut",
+    "nameAZ": "Nom : A à Z",
+    "priceHigh": "Prix : du plus élevé au plus bas",
+    "priceLow": "Prix : du plus bas au plus élevé",
+    "gainers": "Plus fortes hausses",
+    "losers": "Plus fortes baisses",
+    "allCoins": "Toutes les cryptomonnaies",
+    "watchlist": "Liste de suivi",
+    "toggleWatchlist": "Afficher ou masquer la liste de suivi",
+    "loadingPrice": "Chargement du prix...",
+    "collectingHistory": "Collecte de l'historique des prix en direct...",
+    "priceIncreased": "▲ Le prix a augmenté depuis la dernière mise à jour",
+    "priceDecreased": "▼ Le prix a diminué depuis la dernière mise à jour",
+    "waitingMovement": "● En attente d'un mouvement du prix",
+    "viewChart": "Voir le graphique",
+    "noCoinsFound": "Aucune cryptomonnaie trouvée. Essayez une autre recherche ou choisissez Toutes les cryptomonnaies.",
+    "marketMovers": "↗ Mouvements du marché (24 h)"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "app": {
+    "name": "Kigali Global Tracker"
+  },
+  "navigation": {
+    "market": "Thị trường",
+    "charts": "Biểu đồ",
+    "portfolio": "Danh mục đầu tư",
+    "alerts": "Cảnh báo giá",
+    "converter": "Chuyển đổi",
+    "news": "Tin tức crypto",
+    "sentiment": "Sợ hãi & Tham lam",
+    "transactions": "Giao dịch",
+    "dca": "Máy tính DCA",
+    "accounts": "Tài khoản"
+  },
+  "common": {
+    "search": "Tìm kiếm",
+    "loading": "Đang tải...",
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "delete": "Xóa",
+    "edit": "Chỉnh sửa",
+    "close": "Đóng",
+    "language": "Ngôn ngữ",
+    "settings": "Cài đặt"
+  },
+  "header": {
+    "title": "Bảng điều khiển tiền mã hóa và tiền tệ",
+    "subtitle": "Crypto trực tiếp · Tiền tệ toàn cầu · Danh mục đầu tư · Cảnh báo giá",
+    "darkMode": "Chế độ tối",
+    "lightMode": "Chế độ sáng"
+  },
+  "market": {
+    "searchPlaceholder": "⌕ Tìm Bitcoin, ETH, Dogecoin...",
+    "searchLabel": "Tìm tiền mã hóa",
+    "sortLabel": "Sắp xếp tiền mã hóa",
+    "defaultOrder": "Thứ tự mặc định",
+    "nameAZ": "Tên: A đến Z",
+    "priceHigh": "Giá: Cao đến thấp",
+    "priceLow": "Giá: Thấp đến cao",
+    "gainers": "Tăng mạnh nhất",
+    "losers": "Giảm mạnh nhất",
+    "allCoins": "Tất cả coin",
+    "watchlist": "Danh sách theo dõi",
+    "toggleWatchlist": "Bật/tắt danh sách theo dõi",
+    "loadingPrice": "Đang tải giá...",
+    "collectingHistory": "Đang thu thập lịch sử giá trực tiếp...",
+    "priceIncreased": "▲ Giá tăng kể từ lần cập nhật trước",
+    "priceDecreased": "▼ Giá giảm kể từ lần cập nhật trước",
+    "waitingMovement": "● Đang chờ biến động giá",
+    "viewChart": "Xem biểu đồ",
+    "noCoinsFound": "Không tìm thấy coin. Hãy thử tìm kiếm khác hoặc chọn Tất cả coin.",
+    "marketMovers": "↗ Biến động thị trường (24 giờ)"
+  }
+}

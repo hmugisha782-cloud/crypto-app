@@ -1,0 +1,56 @@
+{
+  "app": {
+    "name": "Kigali Global Tracker"
+  },
+  "navigation": {
+    "market": "बाज़ार",
+    "charts": "चार्ट",
+    "portfolio": "पोर्टफोलियो",
+    "alerts": "कीमत अलर्ट",
+    "converter": "कन्वर्टर",
+    "news": "क्रिप्टो समाचार",
+    "sentiment": "डर और लालच",
+    "transactions": "लेन-देन",
+    "dca": "DCA कैलकुलेटर",
+    "accounts": "खाते"
+  },
+  "common": {
+    "search": "खोजें",
+    "loading": "लोड हो रहा है...",
+    "save": "सहेजें",
+    "cancel": "रद्द करें",
+    "delete": "हटाएँ",
+    "edit": "संपादित करें",
+    "close": "बंद करें",
+    "language": "भाषा",
+    "settings": "सेटिंग्स"
+  },
+  "header": {
+    "title": "क्रिप्टो और मुद्रा डैशबोर्ड",
+    "subtitle": "लाइव क्रिप्टो · वैश्विक मुद्राएँ · पोर्टफोलियो · कीमत अलर्ट",
+    "darkMode": "डार्क मोड",
+    "lightMode": "लाइट मोड"
+  },
+  "market": {
+    "searchPlaceholder": "⌕ Bitcoin, ETH, Dogecoin खोजें...",
+    "searchLabel": "क्रिप्टोकरेंसी खोजें",
+    "sortLabel": "क्रिप्टोकरेंसी क्रमबद्ध करें",
+    "defaultOrder": "डिफ़ॉल्ट क्रम",
+    "nameAZ": "नाम: A से Z",
+    "priceHigh": "कीमत: अधिक से कम",
+    "priceLow": "कीमत: कम से अधिक",
+    "gainers": "सबसे अधिक बढ़ने वाले",
+    "losers": "सबसे अधिक गिरने वाले",
+    "allCoins": "सभी कॉइन",
+    "watchlist": "वॉचलिस्ट",
+    "toggleWatchlist": "वॉचलिस्ट बदलें",
+    "loadingPrice": "कीमत लोड हो रही है...",
+    "collectingHistory": "लाइव कीमत का इतिहास एकत्र किया जा रहा है...",
+    "priceIncreased": "▲ पिछले अपडेट से कीमत बढ़ी है",
+    "priceDecreased": "▼ पिछले अपडेट से कीमत घटी है",
+    "waitingMovement": "● कीमत में बदलाव की प्रतीक्षा है",
+    "viewChart": "चार्ट देखें",
+    "noCoinsFound": "कोई कॉइन नहीं मिला। दूसरी खोज करें या सभी कॉइन चुनें।",
+    "marketMovers": "↗ बाज़ार में बदलाव (24 घंटे)"
+  }
+}

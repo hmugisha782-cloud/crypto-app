@@ -1,14 +1,51 @@
-
+import "dotenv/config";
 import express from "express";
+import helmet from "helmet";
+import cors from "cors";
+import rateLimit from "express-rate-limit";
+import authRoutes from "./routes/auth.js";
 
-const PORT = 3000;
 const app = express();
+const PORT = Number(process.env.PORT) || 3000;
 
-app.use(express.json());
+app.disable("x-powered-by");
+app.use(helmet());
+
+const allowedOrigin = process.env.FRONTEND_ORIGIN;
+
+app.use(cors({
+  origin(origin, callback) {
+    if (origin && origin === allowedOrigin) {
+      return callback(null, true);
+    }
+    return callback(null, false);
+  },
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+}));
+app.use(express.json({ limit: "100kb" }));
+
+const apiLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 300,
+  standardHeaders: "draft-8",
+  legacyHeaders: false,
+});
+
+app.use(apiLimiter);
+app.use("/api/auth", authRoutes);
 
 app.get("/", (req, res) => {
   res.status(200).json({
     message: "Crypto Tracker Backend is running!",
+  });
+});
+
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    status: "ok",
+    service: "crypto-tracker-backend",
+    timestamp: new Date().toISOString(),
   });
 });
 
@@ -18,6 +55,20 @@ app.get("/user", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+const server = app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Crypto Tracker Backend listening on port ${PORT}`);
 });
+
+function shutdown(signal) {
+  console.log(`${signal} received; shutting down gracefully`);
+
+  server.close((error) => {
+    if (error) {
+      console.error("Error while closing server:", error);
+      process.exitCode = 1;
+    }
+  });
+}
+
+process.on("SIGTERM", () => shutdown("SIGTERM"));
+process.on("SIGINT", () => shutdown("SIGINT"));

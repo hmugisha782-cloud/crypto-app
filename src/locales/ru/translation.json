@@ -1,0 +1,56 @@
+{
+  "app": {
+    "name": "Kigali Global Tracker"
+  },
+  "navigation": {
+    "market": "Рынок",
+    "charts": "Графики",
+    "portfolio": "Портфель",
+    "alerts": "Ценовые уведомления",
+    "converter": "Конвертер",
+    "news": "Криптоновости",
+    "sentiment": "Страх и жадность",
+    "transactions": "Транзакции",
+    "dca": "Калькулятор DCA",
+    "accounts": "Аккаунты"
+  },
+  "common": {
+    "search": "Поиск",
+    "loading": "Загрузка...",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "delete": "Удалить",
+    "edit": "Изменить",
+    "close": "Закрыть",
+    "language": "Язык",
+    "settings": "Настройки"
+  },
+  "header": {
+    "title": "Панель криптовалют и валют",
+    "subtitle": "Криптовалюты в реальном времени · Мировые валюты · Портфель · Ценовые уведомления",
+    "darkMode": "Тёмная тема",
+    "lightMode": "Светлая тема"
+  },
+  "market": {
+    "searchPlaceholder": "⌕ Поиск Bitcoin, ETH, Dogecoin...",
+    "searchLabel": "Поиск криптовалют",
+    "sortLabel": "Сортировка криптовалют",
+    "defaultOrder": "По умолчанию",
+    "nameAZ": "Название: от А до Я",
+    "priceHigh": "Цена: от высокой к низкой",
+    "priceLow": "Цена: от низкой к высокой",
+    "gainers": "Лидеры роста",
+    "losers": "Лидеры падения",
+    "allCoins": "Все монеты",
+    "watchlist": "Избранное",
+    "toggleWatchlist": "Переключить избранное",
+    "loadingPrice": "Загрузка цены...",
+    "collectingHistory": "Сбор истории текущих цен...",
+    "priceIncreased": "▲ Цена выросла с прошлого обновления",
+    "priceDecreased": "▼ Цена снизилась с прошлого обновления",
+    "waitingMovement": "● Ожидание изменения цены",
+    "viewChart": "Посмотреть график",
+    "noCoinsFound": "Монеты не найдены. Попробуйте другой запрос или выберите все монеты.",
+    "marketMovers": "↗ Изменения рынка (24 ч.)"
+  }
+}

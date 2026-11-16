@@ -33,16 +33,27 @@ export default function DCACalculator({
     const count = Math.max(0, Math.floor(Number(periods) || 0));
     const change = (Number(priceChange) || 0) / 100;
     const totalInvested = investment * count;
+    const intervalDays = {
+      daily: 1,
+      weekly: 7,
+      monthly: 30,
+    }[frequency] ?? 7;
+    const durationDays = Math.max(0, count - 1) * intervalDays;
     let totalCoins = 0;
 
-    for (let i = 0; i < count; i += 1) {
-      const price =
-        currentPrice > 0
-          ? currentPrice * (1 + change * (i / Math.max(count - 1, 1)))
-          : 0;
+    // Avoid impossible or invalid starting prices.
+    const startFactor = 1 + change;
+    const validPriceRange = currentPrice > 0 && startFactor > 0;
 
-      if (price > 0) {
-        totalCoins += investment / price;
+    if (validPriceRange) {
+      for (let i = 0; i < count; i += 1) {
+        const progress = count > 1 ? i / (count - 1) : 0;
+        const priceFactor = 1 + change * progress;
+        const price = (currentPrice * priceFactor) / startFactor;
+
+        if (Number.isFinite(price) && price > 0) {
+          totalCoins += investment / price;
+        }
       }
     }
 
@@ -54,13 +65,14 @@ export default function DCACalculator({
       totalInvested,
       totalCoins,
       averagePrice,
+      durationDays,
       currentValue,
       profitLoss:
         currentPrice > 0 && totalCoins > 0
           ? currentValue - totalInvested
           : null,
     };
-  }, [amount, periods, priceChange, currentPrice]);
+  }, [amount, periods, priceChange, currentPrice, frequency]);
 
   if (activeTab !== "dca") return null;
 
@@ -190,8 +202,13 @@ export default function DCACalculator({
       </div>
 
       <p style={{ color: theme.muted || "#94a3b8", fontSize: 13 }}>
-        Frequency: {frequency}. The assumed price change models a gradual
-        price movement across investments. Real market prices fluctuate.
+        Investment frequency: {frequency.charAt(0).toUpperCase() + frequency.slice(1)}.
+        Estimated time between first and last investment:{" "}
+        {result.durationDays} days ({Math.floor(result.durationDays / 30)} months,
+        {Math.floor((result.durationDays % 30) / 7)} weeks,
+        {result.durationDays % 7} days).
+        The assumed price change models gradual movement across investments;
+        real market prices fluctuate.
       </p>
 
       <div

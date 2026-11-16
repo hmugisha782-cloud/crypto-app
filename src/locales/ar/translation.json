@@ -1,0 +1,56 @@
+{
+  "app": {
+    "name": "Kigali Global Tracker"
+  },
+  "navigation": {
+    "market": "السوق",
+    "charts": "الرسوم البيانية",
+    "portfolio": "المحفظة",
+    "alerts": "تنبيهات الأسعار",
+    "converter": "محول العملات",
+    "news": "أخبار العملات الرقمية",
+    "sentiment": "الخوف والطمع",
+    "transactions": "المعاملات",
+    "dca": "حاسبة الاستثمار الدوري",
+    "accounts": "الحسابات"
+  },
+  "common": {
+    "search": "بحث",
+    "loading": "جارٍ التحميل...",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "close": "إغلاق",
+    "language": "اللغة",
+    "settings": "الإعدادات"
+  },
+  "header": {
+    "title": "لوحة العملات الرقمية والعملات",
+    "subtitle": "عملات رقمية مباشرة · عملات عالمية · المحفظة · تنبيهات الأسعار",
+    "darkMode": "الوضع الداكن",
+    "lightMode": "الوضع الفاتح"
+  },
+  "market": {
+    "searchPlaceholder": "⌕ ابحث عن Bitcoin أو ETH أو Dogecoin...",
+    "searchLabel": "البحث عن العملات الرقمية",
+    "sortLabel": "ترتيب العملات الرقمية",
+    "defaultOrder": "الترتيب الافتراضي",
+    "nameAZ": "الاسم: من A إلى Z",
+    "priceHigh": "السعر: من الأعلى إلى الأقل",
+    "priceLow": "السعر: من الأقل إلى الأعلى",
+    "gainers": "الأعلى ارتفاعًا",
+    "losers": "الأعلى انخفاضًا",
+    "allCoins": "جميع العملات",
+    "watchlist": "قائمة المتابعة",
+    "toggleWatchlist": "تبديل قائمة المتابعة",
+    "loadingPrice": "جارٍ تحميل السعر...",
+    "collectingHistory": "جارٍ جمع سجل الأسعار المباشر...",
+    "priceIncreased": "▲ ارتفع السعر منذ آخر تحديث",
+    "priceDecreased": "▼ انخفض السعر منذ آخر تحديث",
+    "waitingMovement": "● في انتظار حركة السعر",
+    "viewChart": "عرض الرسم البياني",
+    "noCoinsFound": "لم يتم العثور على عملات. جرّب بحثًا آخر أو اختر جميع العملات.",
+    "marketMovers": "↗ تحركات السوق (24 ساعة)"
+  }
+}

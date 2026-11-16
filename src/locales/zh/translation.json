@@ -1,0 +1,56 @@
+{
+  "app": {
+    "name": "Kigali Global Tracker"
+  },
+  "navigation": {
+    "market": "市场",
+    "charts": "图表",
+    "portfolio": "投资组合",
+    "alerts": "价格提醒",
+    "converter": "转换器",
+    "news": "加密货币新闻",
+    "sentiment": "恐惧与贪婪指数",
+    "transactions": "交易记录",
+    "dca": "定投计算器",
+    "accounts": "账户"
+  },
+  "common": {
+    "search": "搜索",
+    "loading": "加载中...",
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑",
+    "close": "关闭",
+    "language": "语言",
+    "settings": "设置"
+  },
+  "header": {
+    "title": "加密货币与货币仪表板",
+    "subtitle": "实时加密货币 · 全球货币 · 投资组合 · 价格提醒",
+    "darkMode": "深色模式",
+    "lightMode": "浅色模式"
+  },
+  "market": {
+    "searchPlaceholder": "⌕ 搜索 Bitcoin、ETH、Dogecoin...",
+    "searchLabel": "搜索加密货币",
+    "sortLabel": "加密货币排序",
+    "defaultOrder": "默认排序",
+    "nameAZ": "名称：A 到 Z",
+    "priceHigh": "价格：从高到低",
+    "priceLow": "价格：从低到高",
+    "gainers": "涨幅最大",
+    "losers": "跌幅最大",
+    "allCoins": "所有币种",
+    "watchlist": "关注列表",
+    "toggleWatchlist": "切换关注列表",
+    "loadingPrice": "正在加载价格...",
+    "collectingHistory": "正在收集实时价格历史...",
+    "priceIncreased": "▲ 自上次更新以来价格上涨",
+    "priceDecreased": "▼ 自上次更新以来价格下跌",
+    "waitingMovement": "● 正在等待价格变动",
+    "viewChart": "查看图表",
+    "noCoinsFound": "未找到币种。请尝试其他搜索或选择所有币种。",
+    "marketMovers": "↗ 市场动态（24小时）"
+  }
+}

@@ -29,3 +29,11 @@ backup-*/
 *.backup-*
 *.before-*
 *.tar.gz
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# SQLite database files
+backend/data/

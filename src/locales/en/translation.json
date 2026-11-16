@@ -1,0 +1,82 @@
+{
+  "app": {
+    "name": "Kigali Global Tracker"
+  },
+  "navigation": {
+    "market": "Market",
+    "charts": "Charts",
+    "portfolio": "Portfolio",
+    "alerts": "Price Alerts",
+    "converter": "Converter",
+    "news": "Crypto News",
+    "sentiment": "Fear & Greed",
+    "transactions": "Transactions",
+    "dca": "DCA Calculator",
+    "accounts": "Accounts"
+  },
+  "common": {
+    "search": "Search",
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "language": "Language",
+    "settings": "Settings"
+  },
+  "header": {
+    "title": "Crypto & Currency Dashboard",
+    "subtitle": "Live crypto · Global currencies · Portfolio · Price alerts",
+    "darkMode": "Dark mode",
+    "lightMode": "Light mode"
+  },
+  "market": {
+    "searchPlaceholder": "⌕ Search Bitcoin, ETH, Dogecoin...",
+    "searchLabel": "Search cryptocurrencies",
+    "sortLabel": "Sort cryptocurrencies",
+    "defaultOrder": "Default order",
+    "nameAZ": "Name: A to Z",
+    "priceHigh": "Price: High to low",
+    "priceLow": "Price: Low to high",
+    "gainers": "Biggest gainers",
+    "losers": "Biggest losers",
+    "allCoins": "All coins",
+    "watchlist": "Watchlist",
+    "toggleWatchlist": "Toggle watchlist",
+    "loadingPrice": "Loading price...",
+    "collectingHistory": "Collecting live price history...",
+    "priceIncreased": "▲ Price increased since last update",
+    "priceDecreased": "▼ Price decreased since last update",
+    "waitingMovement": "● Waiting for price movement",
+    "viewChart": "View chart",
+    "noCoinsFound": "No coins found. Try another search or choose All coins.",
+    "marketMovers": "↗ Market Movers (24h)"
+  },
+  "overview": {
+    "cryptoConnection": "CRYPTO CONNECTION",
+    "lastUpdate": "Last update: {{time}}",
+    "waitingLiveData": "Waiting for live data",
+    "exchangeRates": "EXCHANGE RATES",
+    "liveRatesConnected": "Live rates connected",
+    "backupRates": "Using backup rates",
+    "refreshRates": "Refreshes every 5 minutes",
+    "marketOverview": "Market Overview",
+    "trackedCoins": "TRACKED COINS",
+    "coinsWithLivePrices": "Coins with live prices",
+    "gaining": "GAINING",
+    "positive24h": "Coins positive over 24 hours",
+    "losing": "LOSING",
+    "negative24h": "Coins negative over 24 hours",
+    "topMover24h": "TOP MOVER (24H)",
+    "waitingPrices": "Waiting for prices",
+    "marketCap": "TOTAL CRYPTO MARKET CAP",
+    "marketCapDescription": "Total value of the crypto market",
+    "tradingVolume24h": "24H TRADING VOLUME",
+    "tradingVolumeDescription": "Trading volume over the last 24 hours",
+    "bitcoinDominance": "BITCOIN DOMINANCE",
+    "bitcoinDominanceDescription": "Bitcoin's share of total crypto market value",
+    "loading": "Loading...",
+    "unavailable": "Unavailable"
+  }
+}

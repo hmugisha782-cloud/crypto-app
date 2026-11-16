@@ -2,6 +2,31 @@ import { useEffect, useState } from "react";
 
 const STORAGE_KEY = "kgt-transactions";
 
+function parseCsvLine(line) {
+  const values = [];
+  let value = "";
+  let insideQuotes = false;
+
+  for (let i = 0; i < line.length; i++) {
+    const char = line[i];
+
+    if (char === '"' && insideQuotes && line[i + 1] === '"') {
+      value += '"';
+      i++;
+    } else if (char === '"') {
+      insideQuotes = !insideQuotes;
+    } else if (char === "," && !insideQuotes) {
+      values.push(value);
+      value = "";
+    } else {
+      value += char;
+    }
+  }
+
+  values.push(value);
+  return values;
+}
+
 function loadTransactions() {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
@@ -29,6 +54,8 @@ export default function TransactionHistory({
     new Date().toISOString().slice(0, 10)
   );
   const [error, setError] = useState("");
+  const [filterType, setFilterType] = useState("ALL");
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     try {
@@ -37,6 +64,16 @@ export default function TransactionHistory({
       setError("Could not save transactions in this browser.");
     }
   }, [transactions]);
+
+  const totalBought = transactions
+    .filter((item) => item.type === "BUY")
+    .reduce((sum, item) => sum + item.total, 0);
+
+  const totalSold = transactions
+    .filter((item) => item.type === "SELL")
+    .reduce((sum, item) => sum + item.total, 0);
+
+  const netCashFlow = totalSold - totalBought;
 
   if (activeTab !== "transactions") return null;
 
@@ -78,6 +115,132 @@ export default function TransactionHistory({
     setQuantity("");
     setPrice("");
     setError("");
+  }
+
+  function exportTransactions() {
+    const headers = ["Date", "Coin", "Symbol", "Type", "Quantity", "Unit Price USD", "Total USD"];
+
+    const rows = transactions.map((item) => [
+      item.date,
+      item.coinName,
+      item.symbol,
+      item.type,
+      item.quantity,
+      item.price,
+      item.total,
+    ]);
+
+    const escapeCsv = (value) =>
+      '"' + String(value ?? "").replace(/"/g, '""') + '"';
+
+    const csv = [headers, ...rows]
+      .map((row) => row.map(escapeCsv).join(","))
+      .join("\r\n");
+
+    const blob = new Blob(["\uFEFF", csv], {
+      type: "text/csv;charset=utf-8;",
+    });
+
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "kgt-transactions.csv";
+    link.click();
+    URL.revokeObjectURL(url);
+  }
+
+  async function importTransactions(event) {
+    const file = event.target.files?.[0];
+    event.target.value = "";
+    if (!file) return;
+
+    try {
+      const text = (await file.text()).replace(/^\uFEFF/, "");
+      const lines = text.split(/\r?\n/).filter((line) => line.trim());
+
+      if (lines.length < 2) {
+        setError("CSV file has no transaction rows.");
+        return;
+      }
+
+      const headers = parseCsvLine(lines[0]).map((value) =>
+        value.trim().toLowerCase()
+      );
+      const required = [
+        "date", "coin", "symbol", "type",
+        "quantity", "unit price usd", "total usd",
+      ];
+
+      if (!required.every((header) => headers.includes(header))) {
+        setError("CSV columns do not match the exported transaction format.");
+        return;
+      }
+
+      const index = Object.fromEntries(
+        required.map((header) => [header, headers.indexOf(header)])
+      );
+
+      const imported = [];
+      for (const line of lines.slice(1)) {
+        const row = parseCsvLine(line);
+        const coinName = row[index.coin]?.trim();
+        const symbol = row[index.symbol]?.trim();
+        const transactionType = row[index.type]?.trim().toUpperCase();
+        const transactionDate = row[index.date]?.trim();
+        const amount = Number(row[index.quantity]);
+        const unitPrice = Number(row[index["unit price usd"]]);
+        const total = Number(row[index["total usd"]]);
+
+        if (
+          !coinName || !symbol ||
+          !["BUY", "SELL"].includes(transactionType) ||
+          !/^\d{4}-\d{2}-\d{2}$/.test(transactionDate) ||
+          !Number.isFinite(amount) || amount <= 0 ||
+          !Number.isFinite(unitPrice) || unitPrice < 0 ||
+          !Number.isFinite(total) || total < 0
+        ) {
+          setError("Import cancelled: CSV contains invalid transaction data.");
+          return;
+        }
+
+        const coin = coins.find(
+          (item) =>
+            item.symbol?.toLowerCase() === symbol.toLowerCase() ||
+            item.name?.toLowerCase() === coinName.toLowerCase()
+        );
+
+        imported.push({
+          id: `${Date.now()}-${Math.random().toString(36).slice(2, 10)}-${imported.length}`,
+          coinId: coin?.id ?? symbol.toLowerCase(),
+          coinName,
+          symbol,
+          type: transactionType,
+          quantity: amount,
+          price: unitPrice,
+          date: transactionDate,
+          total: amount * unitPrice,
+        });
+      }
+
+      setTransactions((current) => {
+        const existingKeys = new Set(
+          current.map((item) =>
+            [item.date, item.symbol, item.type, item.quantity, item.price].join("|")
+          )
+        );
+        const uniqueImported = imported.filter((item) => {
+          const key = [item.date, item.symbol, item.type, item.quantity, item.price].join("|");
+          if (existingKeys.has(key)) return false;
+          existingKeys.add(key);
+          return true;
+        });
+
+        setError(`Imported ${uniqueImported.length} new transaction(s).`);
+        return [...uniqueImported, ...current];
+      });
+    } catch {
+      setError("Could not read this CSV file.");
+    }
   }
 
   function removeTransaction(id) {
@@ -174,7 +337,59 @@ export default function TransactionHistory({
         </p>
       )}
 
-      <h3>Saved transactions ({transactions.length})</h3>
+      <div
+        className="twocol"
+        style={{ marginTop: 20, marginBottom: 20 }}
+      >
+        {[
+          ["Total Bought", totalBought, "#ef4444"],
+          ["Total Sold", totalSold, "#00b887"],
+          ["Net Cash Flow", netCashFlow, theme.text],
+        ].map(([label, value, color]) => (
+          <div
+            key={label}
+            style={{
+              ...panel,
+              padding: 16,
+              border: `1px solid ${theme.border}`,
+            }}
+          >
+            <p style={{ color: theme.muted, fontSize: 13, margin: 0 }}>
+              {label}
+            </p>
+            <h3 style={{ color, marginBottom: 0 }}>
+              ${fmt(value)}
+            </h3>
+          </div>
+        ))}
+      </div>
+
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, flexWrap: "wrap", marginTop: 20 }}>
+        <h3>Saved transactions ({transactions.length})</h3>
+        <input aria-label="Search transactions" style={{ ...field, maxWidth: 220 }} type="search" placeholder="Search coin or symbol..." value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} />
+        <select aria-label="Filter transactions by type" style={{ ...field, maxWidth: 220 }} value={filterType} onChange={(event) => setFilterType(event.target.value)}>
+          <option value="ALL">All transactions</option>
+          <option value="BUY">BUY only</option>
+          <option value="SELL">SELL only</option>
+        </select>
+        <button
+          type="button"
+          style={button(false)}
+          onClick={exportTransactions}
+          title="Download all transactions as CSV"
+        >
+          Export CSV
+        </button>
+        <label style={{ ...button(false), cursor: "pointer" }}>
+          Import CSV
+          <input
+            type="file"
+            accept=".csv,text/csv"
+            onChange={importTransactions}
+            style={{ display: "none" }}
+          />
+        </label>
+      </div>
 
       {transactions.length === 0 ? (
         <p style={{ color: theme.muted }}>No transactions recorded yet.</p>
@@ -200,7 +415,7 @@ export default function TransactionHistory({
               </tr>
             </thead>
             <tbody>
-              {transactions.map((item) => (
+              {transactions.filter((item) => (filterType === "ALL" || item.type === filterType) && `${item.coinName} ${item.symbol}`.toLowerCase().includes(searchTerm.trim().toLowerCase())).map((item) => (
                 <tr key={item.id}>
                   <td style={{ padding: 10 }}>{item.date}</td>
                   <td style={{ padding: 10 }}>

@@ -1,0 +1,56 @@
+{
+  "app": {
+    "name": "Kigali Global Tracker"
+  },
+  "navigation": {
+    "market": "Piyasa",
+    "charts": "Grafikler",
+    "portfolio": "Portföy",
+    "alerts": "Fiyat Uyarıları",
+    "converter": "Dönüştürücü",
+    "news": "Kripto Haberleri",
+    "sentiment": "Korku ve Açgözlülük",
+    "transactions": "İşlemler",
+    "dca": "DCA Hesaplayıcı",
+    "accounts": "Hesaplar"
+  },
+  "common": {
+    "search": "Ara",
+    "loading": "Yükleniyor...",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "close": "Kapat",
+    "language": "Dil",
+    "settings": "Ayarlar"
+  },
+  "header": {
+    "title": "Kripto ve Döviz Paneli",
+    "subtitle": "Canlı kripto · Küresel para birimleri · Portföy · Fiyat uyarıları",
+    "darkMode": "Koyu mod",
+    "lightMode": "Açık mod"
+  },
+  "market": {
+    "searchPlaceholder": "⌕ Bitcoin, ETH, Dogecoin ara...",
+    "searchLabel": "Kripto para ara",
+    "sortLabel": "Kripto paraları sırala",
+    "defaultOrder": "Varsayılan sıralama",
+    "nameAZ": "Ad: A'dan Z'ye",
+    "priceHigh": "Fiyat: Yüksekten düşüğe",
+    "priceLow": "Fiyat: Düşükten yükseğe",
+    "gainers": "En çok yükselenler",
+    "losers": "En çok düşenler",
+    "allCoins": "Tüm coinler",
+    "watchlist": "İzleme listesi",
+    "toggleWatchlist": "İzleme listesini değiştir",
+    "loadingPrice": "Fiyat yükleniyor...",
+    "collectingHistory": "Canlı fiyat geçmişi toplanıyor...",
+    "priceIncreased": "▲ Son güncellemeden beri fiyat arttı",
+    "priceDecreased": "▼ Son güncellemeden beri fiyat düştü",
+    "waitingMovement": "● Fiyat hareketi bekleniyor",
+    "viewChart": "Grafiği görüntüle",
+    "noCoinsFound": "Coin bulunamadı. Başka bir arama deneyin veya Tüm coinleri seçin.",
+    "marketMovers": "↗ Piyasa hareketleri (24 saat)"
+  }
+}

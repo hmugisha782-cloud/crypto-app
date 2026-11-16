@@ -1,0 +1,56 @@
+{
+  "app": {
+    "name": "Kigali Global Tracker"
+  },
+  "navigation": {
+    "market": "Soko",
+    "charts": "Chati",
+    "portfolio": "Jalada la uwekezaji",
+    "alerts": "Arifa za bei",
+    "converter": "Kibadilishaji",
+    "news": "Habari za crypto",
+    "sentiment": "Hofu na tamaa",
+    "transactions": "Miamala",
+    "dca": "Kikokotoo cha DCA",
+    "accounts": "Akaunti"
+  },
+  "common": {
+    "search": "Tafuta",
+    "loading": "Inapakia...",
+    "save": "Hifadhi",
+    "cancel": "Ghairi",
+    "delete": "Futa",
+    "edit": "Hariri",
+    "close": "Funga",
+    "language": "Lugha",
+    "settings": "Mipangilio"
+  },
+  "header": {
+    "title": "Dashibodi ya crypto na sarafu",
+    "subtitle": "Crypto ya moja kwa moja · Sarafu za dunia · Jalada la uwekezaji · Arifa za bei",
+    "darkMode": "Hali ya giza",
+    "lightMode": "Hali ya mwanga"
+  },
+  "market": {
+    "searchPlaceholder": "⌕ Tafuta Bitcoin, ETH, Dogecoin...",
+    "searchLabel": "Tafuta sarafu za kidijitali",
+    "sortLabel": "Panga sarafu za kidijitali",
+    "defaultOrder": "Mpangilio wa kawaida",
+    "nameAZ": "Jina: A hadi Z",
+    "priceHigh": "Bei: Juu hadi chini",
+    "priceLow": "Bei: Chini hadi juu",
+    "gainers": "Zilizopanda zaidi",
+    "losers": "Zilizoshuka zaidi",
+    "allCoins": "Sarafu zote",
+    "watchlist": "Orodha ya ufuatiliaji",
+    "toggleWatchlist": "Badilisha orodha ya ufuatiliaji",
+    "loadingPrice": "Inapakia bei...",
+    "collectingHistory": "Inakusanya historia ya bei za moja kwa moja...",
+    "priceIncreased": "▲ Bei imeongezeka tangu sasisho la mwisho",
+    "priceDecreased": "▼ Bei imepungua tangu sasisho la mwisho",
+    "waitingMovement": "● Inasubiri mabadiliko ya bei",
+    "viewChart": "Tazama chati",
+    "noCoinsFound": "Hakuna sarafu zilizopatikana. Jaribu kutafuta tena au uchague Sarafu zote.",
+    "marketMovers": "↗ Mabadiliko ya soko (saa 24)"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "app": {
+    "name": "Kigali Global Tracker"
+  },
+  "navigation": {
+    "market": "市場",
+    "charts": "チャート",
+    "portfolio": "ポートフォリオ",
+    "alerts": "価格アラート",
+    "converter": "通貨換算",
+    "news": "暗号資産ニュース",
+    "sentiment": "恐怖と強欲",
+    "transactions": "取引履歴",
+    "dca": "DCA計算機",
+    "accounts": "アカウント"
+  },
+  "common": {
+    "search": "検索",
+    "loading": "読み込み中...",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "edit": "編集",
+    "close": "閉じる",
+    "language": "言語",
+    "settings": "設定"
+  },
+  "header": {
+    "title": "暗号資産・通貨ダッシュボード",
+    "subtitle": "リアルタイム暗号資産 · 世界の通貨 · ポートフォリオ · 価格アラート",
+    "darkMode": "ダークモード",
+    "lightMode": "ライトモード"
+  },
+  "market": {
+    "searchPlaceholder": "⌕ Bitcoin、ETH、Dogecoinを検索...",
+    "searchLabel": "暗号資産を検索",
+    "sortLabel": "暗号資産を並べ替え",
+    "defaultOrder": "標準順",
+    "nameAZ": "名前：AからZ",
+    "priceHigh": "価格：高い順",
+    "priceLow": "価格：安い順",
+    "gainers": "上昇率上位",
+    "losers": "下落率上位",
+    "allCoins": "すべてのコイン",
+    "watchlist": "ウォッチリスト",
+    "toggleWatchlist": "ウォッチリストを切り替え",
+    "loadingPrice": "価格を読み込み中...",
+    "collectingHistory": "リアルタイム価格履歴を取得中...",
+    "priceIncreased": "▲ 前回の更新から価格が上昇",
+    "priceDecreased": "▼ 前回の更新から価格が下落",
+    "waitingMovement": "● 価格変動を待っています",
+    "viewChart": "チャートを見る",
+    "noCoinsFound": "コインが見つかりません。別の検索を試すか、すべてのコインを選択してください。",
+    "marketMovers": "↗ 市場の値動き（24時間）"
+  }
+}

@@ -1,6 +1,7 @@
 export default function PriceAlerts({activeTab, panel, theme, addPriceAlert, alertCoin,
   setAlertCoin, coins, field, alertPrice, setAlertPrice,
-  alertDirection, setAlertDirection, button, alerts, fmt, removeAlert}) {
+  alertDirection, setAlertDirection, button, alerts, fmt, removeAlert,
+  alertHistory, setAlertHistory}) {
   return (
     <>
         {/* PRICE ALERTS */}
@@ -147,6 +148,66 @@ export default function PriceAlerts({activeTab, panel, theme, addPriceAlert, ale
                 Alerts run while this page is open and connected. They do not
                 monitor prices in the background after the page is closed.
               </p>
+            </section>
+
+            <section style={{ ...panel, marginBottom: 22 }}>
+              <div style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                gap: 12,
+                flexWrap: "wrap",
+              }}>
+                <h3 style={{ marginTop: 0 }}>
+                  📜 Alert History ({alertHistory.length})
+                </h3>
+                <button
+                  type="button"
+                  style={button()}
+                  disabled={alertHistory.length === 0}
+                  onClick={() => {
+                    if (window.confirm("Clear all alert history?")) {
+                      setAlertHistory([]);
+                    }
+                  }}
+                >
+                  Clear history
+                </button>
+              </div>
+
+              {alertHistory.length === 0 ? (
+                <p style={{ color: theme.muted }}>
+                  No triggered alerts yet. Triggered alerts will appear here.
+                </p>
+              ) : (
+                alertHistory.map((item) => (
+                  <div
+                    key={`${item.alertId}-${item.triggeredAt}`}
+                    style={{
+                      padding: "13px 0",
+                      borderBottom: `1px solid ${theme.border}`,
+                    }}
+                  >
+                    <strong>{item.coinName}</strong>
+                    <p style={{
+                      color: theme.muted,
+                      fontSize: 13,
+                      margin: "5px 0",
+                    }}>
+                      Reached: ${fmt(item.price)} · Target: ${fmt(item.target)}
+                    </p>
+                    <p style={{
+                      color: theme.muted,
+                      fontSize: 12,
+                      margin: 0,
+                    }}>
+                      {item.direction === "above" ? "At or above" : "At or below"}
+                      {" · "}
+                      {new Date(item.triggeredAt).toLocaleString()}
+                    </p>
+                  </div>
+                ))
+              )}
             </section>
           </>
         )}

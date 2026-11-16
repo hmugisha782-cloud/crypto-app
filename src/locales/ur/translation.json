@@ -1,0 +1,56 @@
+{
+  "app": {
+    "name": "Kigali Global Tracker"
+  },
+  "navigation": {
+    "market": "مارکیٹ",
+    "charts": "چارٹس",
+    "portfolio": "پورٹ فولیو",
+    "alerts": "قیمت کے انتباہات",
+    "converter": "کنورٹر",
+    "news": "کرپٹو خبریں",
+    "sentiment": "خوف اور لالچ",
+    "transactions": "لین دین",
+    "dca": "DCA کیلکولیٹر",
+    "accounts": "اکاؤنٹس"
+  },
+  "common": {
+    "search": "تلاش کریں",
+    "loading": "لوڈ ہو رہا ہے...",
+    "save": "محفوظ کریں",
+    "cancel": "منسوخ",
+    "delete": "حذف کریں",
+    "edit": "ترمیم",
+    "close": "بند کریں",
+    "language": "زبان",
+    "settings": "ترتیبات"
+  },
+  "header": {
+    "title": "کرپٹو اور کرنسی ڈیش بورڈ",
+    "subtitle": "لائیو کرپٹو · عالمی کرنسیاں · پورٹ فولیو · قیمت کے انتباہات",
+    "darkMode": "ڈارک موڈ",
+    "lightMode": "لائٹ موڈ"
+  },
+  "market": {
+    "searchPlaceholder": "⌕ Bitcoin، ETH، Dogecoin تلاش کریں...",
+    "searchLabel": "کرپٹو کرنسیاں تلاش کریں",
+    "sortLabel": "کرپٹو کرنسیوں کی ترتیب",
+    "defaultOrder": "ڈیفالٹ ترتیب",
+    "nameAZ": "نام: A سے Z",
+    "priceHigh": "قیمت: زیادہ سے کم",
+    "priceLow": "قیمت: کم سے زیادہ",
+    "gainers": "سب سے زیادہ اضافہ",
+    "losers": "سب سے زیادہ کمی",
+    "allCoins": "تمام کوائنز",
+    "watchlist": "واچ لسٹ",
+    "toggleWatchlist": "واچ لسٹ تبدیل کریں",
+    "loadingPrice": "قیمت لوڈ ہو رہی ہے...",
+    "collectingHistory": "لائیو قیمتوں کی تاریخ جمع ہو رہی ہے...",
+    "priceIncreased": "▲ آخری اپ ڈیٹ کے بعد قیمت بڑھی",
+    "priceDecreased": "▼ آخری اپ ڈیٹ کے بعد قیمت کم ہوئی",
+    "waitingMovement": "● قیمت میں تبدیلی کا انتظار",
+    "viewChart": "چارٹ دیکھیں",
+    "noCoinsFound": "کوئی کوائن نہیں ملا۔ دوسری تلاش کریں یا تمام کوائنز منتخب کریں۔",
+    "marketMovers": "↗ مارکیٹ میں تبدیلی (24 گھنٹے)"
+  }
+}

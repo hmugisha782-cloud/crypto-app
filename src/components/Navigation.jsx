@@ -1,15 +1,19 @@
+import { useTranslation } from "react-i18next";
 export default function Navigation({ activeTab, setActiveTab, button }) {
+  const { t } = useTranslation();
   const tabs = [
-    ["market", "📈 Market"],
-    ["charts", "📊 Charts"],
-    ["portfolio", "💼 Portfolio"],
-    ["alerts", "🔔 Price alerts"],
-    ["converter", "💱 Converter"],
-    ["news", "📰 Crypto News"],
-    ["sentiment", "😨 Fear & Greed"],
-    ["transactions", "🧾 Transactions"],
-    ["dca", "📅 DCA Calculator"],
-    ["accounts", "🔐 Demo Login"],
+    ["market", `📈 ${t("navigation.market")}`],
+    ["orderbook", "📚 Order Book"],
+    ["charts", `📊 ${t("navigation.charts")}`],
+    ["portfolio", `💼 ${t("navigation.portfolio")}`],
+    ["alerts", `🔔 ${t("navigation.alerts")}`],
+    ["converter", `💱 ${t("navigation.converter")}`],
+    ["news", `📰 ${t("navigation.news")}`],
+    ["sentiment", `😨 ${t("navigation.sentiment")}`],
+    ["transactions", `🧾 ${t("navigation.transactions")}`],
+    ["papertrading", "🧪 Paper Trading"],
+    ["dca", `📅 ${t("navigation.dca")}`],
+    ["accounts", `🔐 ${t("navigation.accounts")}`],
   ];
 
   return (

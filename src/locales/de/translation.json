@@ -1,0 +1,56 @@
+{
+  "app": {
+    "name": "Kigali Global Tracker"
+  },
+  "navigation": {
+    "market": "Markt",
+    "charts": "Diagramme",
+    "portfolio": "Portfolio",
+    "alerts": "Preisalarme",
+    "converter": "Währungsrechner",
+    "news": "Krypto-Nachrichten",
+    "sentiment": "Angst und Gier",
+    "transactions": "Transaktionen",
+    "dca": "DCA-Rechner",
+    "accounts": "Konten"
+  },
+  "common": {
+    "search": "Suchen",
+    "loading": "Wird geladen...",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "close": "Schließen",
+    "language": "Sprache",
+    "settings": "Einstellungen"
+  },
+  "header": {
+    "title": "Krypto- und Währungsdashboard",
+    "subtitle": "Live-Krypto · Globale Währungen · Portfolio · Preisalarme",
+    "darkMode": "Dunkler Modus",
+    "lightMode": "Heller Modus"
+  },
+  "market": {
+    "searchPlaceholder": "⌕ Bitcoin, ETH, Dogecoin suchen...",
+    "searchLabel": "Kryptowährungen suchen",
+    "sortLabel": "Kryptowährungen sortieren",
+    "defaultOrder": "Standardsortierung",
+    "nameAZ": "Name: A bis Z",
+    "priceHigh": "Preis: hoch bis niedrig",
+    "priceLow": "Preis: niedrig bis hoch",
+    "gainers": "Größte Gewinner",
+    "losers": "Größte Verlierer",
+    "allCoins": "Alle Coins",
+    "watchlist": "Beobachtungsliste",
+    "toggleWatchlist": "Beobachtungsliste umschalten",
+    "loadingPrice": "Preis wird geladen...",
+    "collectingHistory": "Live-Preishistorie wird gesammelt...",
+    "priceIncreased": "▲ Preis seit der letzten Aktualisierung gestiegen",
+    "priceDecreased": "▼ Preis seit der letzten Aktualisierung gefallen",
+    "waitingMovement": "● Warten auf Preisbewegung",
+    "viewChart": "Diagramm ansehen",
+    "noCoinsFound": "Keine Coins gefunden. Versuchen Sie eine andere Suche oder wählen Sie Alle Coins.",
+    "marketMovers": "↗ Marktbewegungen (24 Std.)"
+  }
+}

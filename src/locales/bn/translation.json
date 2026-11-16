@@ -1,0 +1,56 @@
+{
+  "app": {
+    "name": "কিগালি গ্লোবাল ট্র্যাকার"
+  },
+  "navigation": {
+    "market": "বাজার",
+    "charts": "চার্ট",
+    "portfolio": "পোর্টফোলিও",
+    "alerts": "মূল্য সতর্কতা",
+    "converter": "রূপান্তরক",
+    "news": "ক্রিপ্টো সংবাদ",
+    "sentiment": "ভয় ও লোভ",
+    "transactions": "লেনদেন",
+    "dca": "DCA ক্যালকুলেটর",
+    "accounts": "অ্যাকাউন্ট"
+  },
+  "common": {
+    "search": "খুঁজুন",
+    "loading": "লোড হচ্ছে...",
+    "save": "সংরক্ষণ",
+    "cancel": "বাতিল",
+    "delete": "মুছুন",
+    "edit": "সম্পাদনা",
+    "close": "বন্ধ",
+    "language": "ভাষা",
+    "settings": "সেটিংস"
+  },
+  "header": {
+    "title": "ক্রিপ্টো ও মুদ্রা ড্যাশবোর্ড",
+    "subtitle": "লাইভ ক্রিপ্টো · বৈশ্বিক মুদ্রা · পোর্টফোলিও · মূল্য সতর্কতা",
+    "darkMode": "ডার্ক মোড",
+    "lightMode": "লাইট মোড"
+  },
+  "market": {
+    "searchPlaceholder": "⌕ Bitcoin, ETH, Dogecoin খুঁজুন...",
+    "searchLabel": "ক্রিপ্টোকারেন্সি খুঁজুন",
+    "sortLabel": "ক্রিপ্টোকারেন্সি সাজান",
+    "defaultOrder": "ডিফল্ট ক্রম",
+    "nameAZ": "নাম: A থেকে Z",
+    "priceHigh": "মূল্য: বেশি থেকে কম",
+    "priceLow": "মূল্য: কম থেকে বেশি",
+    "gainers": "সর্বোচ্চ লাভকারী",
+    "losers": "সর্বোচ্চ ক্ষতিগ্রস্ত",
+    "allCoins": "সব কয়েন",
+    "watchlist": "ওয়াচলিস্ট",
+    "toggleWatchlist": "ওয়াচলিস্ট পরিবর্তন",
+    "loadingPrice": "মূল্য লোড হচ্ছে...",
+    "collectingHistory": "লাইভ মূল্যের ইতিহাস সংগ্রহ হচ্ছে...",
+    "priceIncreased": "▲ শেষ আপডেট থেকে মূল্য বেড়েছে",
+    "priceDecreased": "▼ শেষ আপডেট থেকে মূল্য কমেছে",
+    "waitingMovement": "● মূল্যের পরিবর্তনের অপেক্ষায়",
+    "viewChart": "চার্ট দেখুন",
+    "noCoinsFound": "কোনো কয়েন পাওয়া যায়নি। অন্যভাবে খুঁজুন অথবা সব কয়েন বেছে নিন।",
+    "marketMovers": "↗ বাজারের পরিবর্তন (২৪ ঘণ্টা)"
+  }
+}

@@ -1,4 +1,6 @@
 
+import { useTranslation } from "react-i18next";
+
 export default function Market({
   coins,
   filteredCoins,
@@ -19,6 +21,8 @@ export default function Market({
   setActiveTab,
   fmt,
 }) {
+  const { t } = useTranslation();
+
   return (
     <>
       <div
@@ -33,36 +37,36 @@ export default function Market({
           style={{ ...field, flex: "1 1 240px" }}
           value={search}
           onChange={(event) => setSearch(event.target.value)}
-          placeholder="⌕ Search Bitcoin, ETH, Dogecoin..."
-          aria-label="Search cryptocurrencies"
+          placeholder={t("market.searchPlaceholder")}
+          aria-label={t("market.searchLabel")}
         />
 
         <select
           style={{ ...field, flex: "0 1 220px" }}
           value={sortBy}
           onChange={(event) => setSortBy(event.target.value)}
-          aria-label="Sort cryptocurrencies"
+          aria-label={t("market.sortLabel")}
         >
-          <option value="market">Default order</option>
-          <option value="name">Name: A to Z</option>
-          <option value="price-high">Price: High to low</option>
-          <option value="price-low">Price: Low to high</option>
-          <option value="gainers">Biggest gainers</option>
-          <option value="losers">Biggest losers</option>
+          <option value="market">{t("market.defaultOrder")}</option>
+          <option value="name">{t("market.nameAZ")}</option>
+          <option value="price-high">{t("market.priceHigh")}</option>
+          <option value="price-low">{t("market.priceLow")}</option>
+          <option value="gainers">{t("market.gainers")}</option>
+          <option value="losers">{t("market.losers")}</option>
         </select>
 
         <button
           style={button(!watchOnly)}
           onClick={() => setWatchOnly(false)}
         >
-          All coins ({coins.length})
+          {t("market.allCoins")} ({coins.length})
         </button>
 
         <button
           style={button(watchOnly)}
           onClick={() => setWatchOnly(true)}
         >
-          ★ Watchlist ({watchlist.length})
+          ★ {t("market.watchlist")} ({watchlist.length})
         </button>
       </div>
 
@@ -141,7 +145,7 @@ export default function Market({
                 </div>
 
                 <button
-                  title="Toggle watchlist"
+                  title={t("market.toggleWatchlist")}
                   aria-label={`Toggle ${coin.name} watchlist`}
                   onClick={() =>
                     setWatchlist((old) =>
@@ -171,7 +175,7 @@ export default function Market({
                   margin: "24px 0 8px",
                 }}
               >
-                {coin.price ? `$${fmt(coin.price)}` : "Loading price..."}
+                {coin.price ? `$${fmt(coin.price)}` : t("market.loadingPrice")}
                 {up ? " ↑" : down ? " ↓" : ""}
               </h2>
 
@@ -213,7 +217,7 @@ export default function Market({
                   ))
                 ) : (
                   <small style={{ color: theme.muted }}>
-                    Collecting live price history...
+                    {t("market.collectingHistory")}
                   </small>
                 )}
               </div>
@@ -226,10 +230,10 @@ export default function Market({
                 }}
               >
                 {up
-                  ? "▲ Price increased since last update"
+                  ? t("market.priceIncreased")
                   : down
-                    ? "▼ Price decreased since last update"
-                    : "● Waiting for price movement"}
+                    ? t("market.priceDecreased")
+                    : t("market.waitingMovement")}
               </p>
 
               <button
@@ -239,7 +243,7 @@ export default function Market({
                   setActiveTab("charts");
                 }}
               >
-                View chart
+                {t("market.viewChart")}
               </button>
             </article>
           );
@@ -248,13 +252,13 @@ export default function Market({
 
       {filteredCoins.length === 0 && (
         <p style={{ color: theme.muted, marginBottom: 26 }}>
-          No coins found. Try another search or choose All coins.
+          {t("market.noCoinsFound")}
         </p>
       )}
 
       <section style={{ ...panel, marginBottom: 22 }}>
         <h2 style={{ marginTop: 0, fontSize: 19 }}>
-          ↗ Market Movers (24h)
+          {t("market.marketMovers")}
         </h2>
 
         {sortedMovers.map((coin, index) => (

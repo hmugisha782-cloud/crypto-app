@@ -1,0 +1,56 @@
+{
+  "app": {
+    "name": "키갈리 글로벌 트래커"
+  },
+  "navigation": {
+    "market": "시장",
+    "charts": "차트",
+    "portfolio": "포트폴리오",
+    "alerts": "가격 알림",
+    "converter": "환전",
+    "news": "암호화폐 뉴스",
+    "sentiment": "공포와 탐욕",
+    "transactions": "거래 내역",
+    "dca": "DCA 계산기",
+    "accounts": "계정"
+  },
+  "common": {
+    "search": "검색",
+    "loading": "로딩 중...",
+    "save": "저장",
+    "cancel": "취소",
+    "delete": "삭제",
+    "edit": "수정",
+    "close": "닫기",
+    "language": "언어",
+    "settings": "설정"
+  },
+  "header": {
+    "title": "암호화폐 및 통화 대시보드",
+    "subtitle": "실시간 암호화폐 · 글로벌 통화 · 포트폴리오 · 가격 알림",
+    "darkMode": "다크 모드",
+    "lightMode": "라이트 모드"
+  },
+  "market": {
+    "searchPlaceholder": "⌕ Bitcoin, ETH, Dogecoin 검색...",
+    "searchLabel": "암호화폐 검색",
+    "sortLabel": "암호화폐 정렬",
+    "defaultOrder": "기본 순서",
+    "nameAZ": "이름: A부터 Z",
+    "priceHigh": "가격: 높은 순",
+    "priceLow": "가격: 낮은 순",
+    "gainers": "상승률 상위",
+    "losers": "하락률 상위",
+    "allCoins": "모든 코인",
+    "watchlist": "관심 목록",
+    "toggleWatchlist": "관심 목록 전환",
+    "loadingPrice": "가격 로딩 중...",
+    "collectingHistory": "실시간 가격 기록 수집 중...",
+    "priceIncreased": "▲ 마지막 업데이트 이후 가격 상승",
+    "priceDecreased": "▼ 마지막 업데이트 이후 가격 하락",
+    "waitingMovement": "● 가격 변동 대기 중",
+    "viewChart": "차트 보기",
+    "noCoinsFound": "코인을 찾을 수 없습니다. 다시 검색하거나 모든 코인을 선택하세요.",
+    "marketMovers": "↗ 시장 변동 (24시간)"
+  }
+}

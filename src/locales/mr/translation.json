@@ -1,0 +1,56 @@
+{
+  "app": {
+    "name": "किगाली ग्लोबल ट्रॅकर"
+  },
+  "navigation": {
+    "market": "बाजार",
+    "charts": "आलेख",
+    "portfolio": "पोर्टफोलिओ",
+    "alerts": "किंमत सूचना",
+    "converter": "रूपांतरक",
+    "news": "क्रिप्टो बातम्या",
+    "sentiment": "भीती आणि लोभ",
+    "transactions": "व्यवहार",
+    "dca": "DCA कॅल्क्युलेटर",
+    "accounts": "खाती"
+  },
+  "common": {
+    "search": "शोधा",
+    "loading": "लोड होत आहे...",
+    "save": "जतन करा",
+    "cancel": "रद्द करा",
+    "delete": "हटवा",
+    "edit": "संपादित करा",
+    "close": "बंद करा",
+    "language": "भाषा",
+    "settings": "सेटिंग्ज"
+  },
+  "header": {
+    "title": "क्रिप्टो आणि चलन डॅशबोर्ड",
+    "subtitle": "थेट क्रिप्टो · जागतिक चलने · पोर्टफोलिओ · किंमत सूचना",
+    "darkMode": "डार्क मोड",
+    "lightMode": "लाइट मोड"
+  },
+  "market": {
+    "searchPlaceholder": "⌕ Bitcoin, ETH, Dogecoin शोधा...",
+    "searchLabel": "क्रिप्टोकरन्सी शोधा",
+    "sortLabel": "क्रिप्टोकरन्सी क्रमवारी लावा",
+    "defaultOrder": "मूळ क्रम",
+    "nameAZ": "नाव: A ते Z",
+    "priceHigh": "किंमत: जास्त ते कमी",
+    "priceLow": "किंमत: कमी ते जास्त",
+    "gainers": "सर्वाधिक वाढ",
+    "losers": "सर्वाधिक घट",
+    "allCoins": "सर्व कॉइन्स",
+    "watchlist": "वॉचलिस्ट",
+    "toggleWatchlist": "वॉचलिस्ट बदला",
+    "loadingPrice": "किंमत लोड होत आहे...",
+    "collectingHistory": "थेट किंमत इतिहास गोळा होत आहे...",
+    "priceIncreased": "▲ मागील अपडेटपासून किंमत वाढली",
+    "priceDecreased": "▼ मागील अपडेटपासून किंमत कमी झाली",
+    "waitingMovement": "● किंमतीतील बदलाची प्रतीक्षा",
+    "viewChart": "आलेख पहा",
+    "noCoinsFound": "कॉइन सापडले नाहीत. दुसरे शोधा किंवा सर्व कॉइन्स निवडा.",
+    "marketMovers": "↗ बाजारातील बदल (२४ तास)"
+  }
+}
