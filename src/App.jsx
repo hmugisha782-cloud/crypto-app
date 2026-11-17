@@ -1,3 +1,4 @@
+import ExecutiveCriticalTools from "./components/ExecutiveCriticalTools.jsx";
 import OmniAiCopilot from "./components/OmniAiCopilot.jsx";
 import EnterpriseScale25k from "./components/EnterpriseScale25k.jsx";
 import EnterprisePolishBar from "./components/EnterprisePolishBar.jsx";
@@ -890,6 +891,7 @@ export default function App() {
 
         {/* FOOTER */}
         <ExecutiveToolsPro portfolioValue={portfolioValue} rates={rates} theme={theme} panel={panel} />
+        <ExecutiveCriticalTools coins={coins} rates={rates} theme={theme} panel={panel} />
         <EnterpriseScale25k theme={theme} panel={panel} />
         <MarketCards50 theme={theme} panel={panel} />
         <Footer theme={theme} />
