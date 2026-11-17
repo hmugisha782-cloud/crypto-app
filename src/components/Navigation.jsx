@@ -14,6 +14,7 @@ export default function Navigation({ activeTab, setActiveTab, button }) {
     ["papertrading", "🧪 Paper Trading"],
     ["dca", `📅 ${t("navigation.dca")}`],
     ["insights", "🚀 Pro Insights"],
+    ["institutional", "🏛️ Institutional"],
     ["accounts", `🔐 ${t("navigation.accounts")}`],
   ];
 

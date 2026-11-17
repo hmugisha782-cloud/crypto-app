@@ -137,6 +137,17 @@ db.exec(`
     created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
   );
+
+  CREATE TABLE IF NOT EXISTS margin_simulations (id TEXT PRIMARY KEY, user_id INTEGER NOT NULL, symbol TEXT, leverage REAL, entry_price REAL, liq_price REAL, created_at TEXT DEFAULT CURRENT_TIMESTAMP);
+  CREATE TABLE IF NOT EXISTS ico_watchlist (id TEXT PRIMARY KEY, user_id INTEGER NOT NULL, project_name TEXT, token_symbol TEXT, launch_date TEXT);
+  CREATE TABLE IF NOT EXISTS whale_alerts (id TEXT PRIMARY KEY, user_id INTEGER NOT NULL, symbol TEXT, min_usd REAL, note TEXT);
+  CREATE TABLE IF NOT EXISTS tax_jurisdictions (user_id INTEGER PRIMARY KEY, country_code TEXT DEFAULT 'RW', capital_gains_rate REAL DEFAULT 15.0);
+  CREATE TABLE IF NOT EXISTS api_webhooks (id TEXT PRIMARY KEY, user_id INTEGER NOT NULL, event_type TEXT, target_url TEXT);
+  CREATE TABLE IF NOT EXISTS portfolio_snapshots (id TEXT PRIMARY KEY, user_id INTEGER NOT NULL, total_usd REAL, total_rwf REAL, captured_at TEXT DEFAULT CURRENT_TIMESTAMP);
+  CREATE TABLE IF NOT EXISTS ai_signals_log (id TEXT PRIMARY KEY, user_id INTEGER NOT NULL, symbol TEXT, signal TEXT, confidence REAL);
+  CREATE TABLE IF NOT EXISTS copy_traders (id TEXT PRIMARY KEY, user_id INTEGER NOT NULL, trader_alias TEXT, allocation_usd REAL);
+  CREATE TABLE IF NOT EXISTS fee_schedules (user_id INTEGER PRIMARY KEY, maker_fee REAL DEFAULT 0.1, taker_fee REAL DEFAULT 0.1);
+  CREATE TABLE IF NOT EXISTS custom_dashboards (user_id INTEGER PRIMARY KEY, layout_json TEXT);
 `);
 
 console.log("SQLite database initialized successfully.");
