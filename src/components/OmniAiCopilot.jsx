@@ -7,7 +7,7 @@ export default function OmniAiCopilot({ activeTab, setActiveTab, coins = [], rat
   const [history, setHistory] = useState([
     {
       role: "ai",
-      text: "Hello! I am **KGT Omni-AI**, connected to all **84,100+ modules**, **SQLite database**, **live crypto & RWF rates**, **150 football nations (600 leagues)**, and **VIP Casino**. Ask me anything about this app!",
+      text: "Hello! I am **KGT Omni-AI**, connected to all **134,120+ modules**, **SQLite database**, **live crypto & RWF rates**, **150 football nations (600 leagues)**, and **VIP Casino**. Ask me anything about this app!",
       action: null,
     },
   ]);
@@ -15,6 +15,8 @@ export default function OmniAiCopilot({ activeTab, setActiveTab, coins = [], rat
   const prompts = [
     "Give me a full report of this app",
     "What are live Bitcoin & ETH prices in RWF?",
+    "Check my SQLite portfolio & betting slips",
+    "Convert 250 USD to RWF",
     "Show Spain LaLiga & England Premier League tiers",
     "Which Casino & Crash games have the highest RTP?",
     "How do MTN MoMo P2P, Virtual Cards & Loans work?",
@@ -35,7 +37,7 @@ export default function OmniAiCopilot({ activeTab, setActiveTab, coins = [], rat
     try {
       const r = await fetch("/api/ai/ask", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", ...(sessionStorage.getItem("kgt-auth-token") ? { Authorization: `Bearer ${sessionStorage.getItem("kgt-auth-token")}` } : {}) },
         body: JSON.stringify({ question: q, livePrices, rwfRate: Number(rates?.RWF || 1480) }),
       });
       if (r.ok) {
@@ -101,7 +103,7 @@ export default function OmniAiCopilot({ activeTab, setActiveTab, coins = [], rat
             )}
           </div>
         ))}
-        {loading && <div style={{ fontSize: 12, color: "#06b6d4" }}>🤖 Analyzing live SQLite & 84,100+ modules...</div>}
+        {loading && <div style={{ fontSize: 12, color: "#06b6d4" }}>🤖 Analyzing live SQLite & 134,120+ modules...</div>}
       </div>
 
       <form onSubmit={(e) => { e.preventDefault(); askAi(prompt); }} style={{ display: "flex", gap: 8 }}>
@@ -156,7 +158,7 @@ export default function OmniAiCopilot({ activeTab, setActiveTab, coins = [], rat
         <section style={{ ...panel, borderTop: "4px solid #8b5cf6", marginBottom: 24 }}>
           <h2 style={{ marginTop: 0 }}>🤖 KGT Omni-AI Full-App Intelligence & Live Data Assistant</h2>
           <p style={{ color: theme.muted, fontSize: 13 }}>
-            Trained on all 84,100+ Kigali Global Tracker modules, live Binance/CoinGecko feeds, RWF/EAC exchange rates, 150 world football nations, VIP Casino RTPs, and SQLite records.
+            Trained on all 134,120+ Kigali Global Tracker modules, live Binance/CoinGecko feeds, RWF/EAC exchange rates, 150 world football nations, VIP Casino RTPs, and SQLite records.
           </p>
           {renderChatBox(360)}
         </section>
