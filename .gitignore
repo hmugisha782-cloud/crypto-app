@@ -37,3 +37,7 @@ backup-*/
 
 # SQLite database files
 backend/data/
+
+backend/data/*.sqlite*
+backend/backups/
+backend/backend.log

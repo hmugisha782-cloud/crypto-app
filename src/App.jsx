@@ -126,13 +126,66 @@ export default function App() {
   };
 
 
+  const [cloudSynced, setCloudSynced] = useState(false);
+
+  useEffect(() => {
+    const token = sessionStorage.getItem("kgt-auth-token");
+    if (!token) {
+      setCloudSynced(false);
+      return;
+    }
+
+    let cancelled = false;
+    fetch("/api/user/data", {
+      headers: { Authorization: `Bearer ${token}` },
+    })
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (cancelled || !data) return;
+        if (Array.isArray(data.portfolio) && data.portfolio.length > 0) {
+          setPortfolio(data.portfolio);
+        }
+        if (Array.isArray(data.watchlist) && data.watchlist.length > 0) {
+          setWatchlist(data.watchlist);
+        }
+        setCloudSynced(true);
+      })
+      .catch(() => {});
+
+    return () => {
+      cancelled = true;
+    };
+  }, [activeTab]);
+
   useEffect(() => {
     localStorage.setItem("kgt-watchlist", JSON.stringify(watchlist));
-  }, [watchlist]);
+    const token = sessionStorage.getItem("kgt-auth-token");
+    if (token && cloudSynced) {
+      fetch("/api/user/watchlist", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ watchlist }),
+      }).catch(() => {});
+    }
+  }, [watchlist, cloudSynced]);
 
   useEffect(() => {
     localStorage.setItem("kgt-portfolio", JSON.stringify(portfolio));
-  }, [portfolio]);
+    const token = sessionStorage.getItem("kgt-auth-token");
+    if (token && cloudSynced) {
+      fetch("/api/user/portfolio", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ items: portfolio }),
+      }).catch(() => {});
+    }
+  }, [portfolio, cloudSynced]);
 
   useEffect(() => {
     localStorage.setItem("kgt-alerts", JSON.stringify(alerts));
