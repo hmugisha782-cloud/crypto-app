@@ -15,6 +15,7 @@ export default function Navigation({ activeTab, setActiveTab, button }) {
     ["dca", `📅 ${t("navigation.dca")}`],
     ["insights", "🚀 Pro Insights"],
     ["institutional", "🏛️ Institutional"],
+    ["growth", "💎 Growth & MoMo"], ["earnbet", "🎰 Earn & Bet Hub"], ["chatvideo", "💬 Chat & Video"], ["omnichat_ai", "🤖 Omni-AI"],
     ["accounts", `🔐 ${t("navigation.accounts")}`],
   ];
 

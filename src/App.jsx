@@ -1,3 +1,8 @@
+import OmniAiCopilot from "./components/OmniAiCopilot.jsx";
+import EnterpriseScale25k from "./components/EnterpriseScale25k.jsx";
+import EnterprisePolishBar from "./components/EnterprisePolishBar.jsx";
+import LiveChatAndVideo from "./components/LiveChatAndVideo.jsx";
+import EarnAndBetHub from "./components/EarnAndBetHub.jsx";
 import { loadSaved, makeId } from "./utils/storage.js";
 import Footer from "./components/Footer.jsx";
 import "./App.css";
@@ -14,6 +19,12 @@ import CryptoNews from "./components/CryptoNews.jsx";
 import Accounts from "./components/Accounts.jsx";
 import ProInsights from "./components/ProInsights.jsx";
 import InstitutionalSuite from "./components/InstitutionalSuite.jsx";
+import GrowthHub from "./components/GrowthHub.jsx";
+import MarketCards50 from "./components/MarketCards50.jsx";
+import LiveTickerHeatmap from "./components/LiveTickerHeatmap.jsx";
+import CommandCenterPro from "./components/CommandCenterPro.jsx";
+import TopGlobalSearch from "./components/TopGlobalSearch.jsx";
+import ExecutiveToolsPro from "./components/ExecutiveToolsPro.jsx";
 import Navigation from "./components/Navigation.jsx";
 import Header from "./components/Header.jsx";
 import NoticeBanner from "./components/Notification.jsx";
@@ -710,7 +721,14 @@ export default function App() {
         />
 
         {/* NAVIGATION */}
+        <EnterprisePolishBar theme={theme} panel={panel} />
+        <TopGlobalSearch setActiveTab={setActiveTab} theme={theme} panel={panel} />
+        <CommandCenterPro coins={coins} rates={rates} theme={theme} panel={panel} />
+        <LiveTickerHeatmap coins={coins} rates={rates} theme={theme} panel={panel} setActiveTab={setActiveTab} />
         <Navigation activeTab={activeTab} setActiveTab={setActiveTab} button={button} />
+        <EarnAndBetHub activeTab={activeTab} setActiveTab={setActiveTab} rates={rates} theme={theme} panel={panel} />
+        <OmniAiCopilot activeTab={activeTab} setActiveTab={setActiveTab} coins={coins} rates={rates} theme={theme} panel={panel} />
+        <LiveChatAndVideo activeTab={activeTab} theme={theme} panel={panel} />
       <FearGreedIndex activeTab={activeTab} theme={theme} panel={panel} />
       <TransactionHistory
         activeTab={activeTab}
@@ -855,6 +873,7 @@ export default function App() {
         />
 
         {/* CRYPTO NEWS */}
+        <GrowthHub activeTab={activeTab} theme={theme} panel={panel} />
         <InstitutionalSuite activeTab={activeTab} theme={theme} panel={panel} />
         <ProInsights activeTab={activeTab} theme={theme} panel={panel} />
         <Accounts
@@ -870,6 +889,9 @@ export default function App() {
         />
 
         {/* FOOTER */}
+        <ExecutiveToolsPro portfolioValue={portfolioValue} rates={rates} theme={theme} panel={panel} />
+        <EnterpriseScale25k theme={theme} panel={panel} />
+        <MarketCards50 theme={theme} panel={panel} />
         <Footer theme={theme} />
       </div>
     </main>

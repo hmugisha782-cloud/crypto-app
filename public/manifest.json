@@ -1,0 +1,9 @@
+{
+  "name": "Kigali Global Tracker Pro",
+  "short_name": "KGT Pro",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#06b6d4",
+  "description": "Institutional Crypto, Regional FX & Wealth Analytics Platform"
+}
