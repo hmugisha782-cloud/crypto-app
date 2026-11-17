@@ -12,6 +12,7 @@ import Market from "./components/Market.jsx";
 import TrendingCoins from "./components/TrendingCoins.jsx";
 import CryptoNews from "./components/CryptoNews.jsx";
 import Accounts from "./components/Accounts.jsx";
+import ProInsights from "./components/ProInsights.jsx";
 import Navigation from "./components/Navigation.jsx";
 import Header from "./components/Header.jsx";
 import NoticeBanner from "./components/Notification.jsx";
@@ -853,6 +854,7 @@ export default function App() {
         />
 
         {/* CRYPTO NEWS */}
+        <ProInsights activeTab={activeTab} theme={theme} panel={panel} />
         <Accounts
           activeTab={activeTab}
           theme={theme}
