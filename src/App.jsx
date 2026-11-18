@@ -1,3 +1,4 @@
+import FloatingCommandDock from "./components/FloatingCommandDock.jsx";
 import LiveGlobalTickerStrip from "./components/LiveGlobalTickerStrip.jsx";
 import InteractiveSportsAndGamesHub from "./components/InteractiveSportsAndGamesHub.jsx";
 import UnifiedNextGenArena from "./components/UnifiedNextGenArena.jsx";
@@ -918,7 +919,8 @@ export default function App() {
         <MarketCards50 theme={theme} panel={panel} />
         <Footer theme={theme} />
       </div>
-      <MasterSystemFooterV20 theme={theme} panel={panel} />
+      <FloatingCommandDock theme={theme} />
+        <MasterSystemFooterV20 theme={theme} panel={panel} />
         <ShareAndEnterpriseFooter setActiveTab={setActiveTab} theme={theme} panel={panel} />
       </main>
   );
