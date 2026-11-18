@@ -24,25 +24,33 @@ export default function UnifiedNextGenArena({ rates = {}, theme, panel }) {
   const [msg, setMsg] = useState("");
 
   const rwfRate = Number(rates?.RWF || 1480);
-  const filteredMods = searchMod.trim()
-    ? MICRO_MODULES_250000.filter((m) => m.title.toLowerCase().includes(searchMod.toLowerCase()))
-    : MICRO_MODULES_250000;
-  const totalPages = Math.max(1, Math.ceil(filteredMods.length / 18));
+  const qLow = searchMod.trim().toLowerCase();
+  const matchedDomains = qLow ? DOMAINS_20.filter((d) => d.toLowerCase().includes(qLow)) : DOMAINS_20;
+  const totalMatches = matchedDomains.length ? Math.floor((TOTAL_MICRO * matchedDomains.length) / DOMAINS_20.length) : 0;
+  const totalPages = Math.max(1, Math.ceil(totalMatches / 18));
   const safePage = Math.min(modPage, totalPages);
-  const pageItems = filteredMods.slice((safePage - 1) * 18, safePage * 18);
+  const startIdx = (safePage - 1) * 18;
+  const pageItems = matchedDomains.length
+    ? Array.from({ length: Math.min(18, totalMatches - startIdx) }, (_, off) => {
+        const gIdx = startIdx + off;
+        const dom = matchedDomains[gIdx % matchedDomains.length];
+        const num = Math.floor(gIdx / matchedDomains.length) + 1;
+        return { id: gIdx + 1, title: `${dom} · Pro Engine #${num.toLocaleString()}`, latency: `${4 + (gIdx % 15)}ms` };
+      })
+    : [];
 
   const inp = { padding: "7px 10px", borderRadius: 8, border: `1px solid ${theme.border}`, background: theme.input, color: theme.text, fontSize: 12 };
 
   return (
     <section style={{ ...panel, marginBottom: 18, borderTop: "3px solid #ec4899", display: "grid", gap: 12 }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
-        <strong style={{ fontSize: 13, color: "#f472b6" }}>🚀 NEXT-GEN ARENA & 250,000+ UNIFIED PROJECT MODULES (v35.0)</strong>
+        <strong style={{ fontSize: 13, color: "#f472b6" }}>🚀 NEXT-GEN ARENA & 750,000+ UNIFIED PROJECT MODULES (v36.0)</strong>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
           {[
             ["esports", "🎮 Esports & Virtuals"],
             ["depin", "☀️ Solar DePIN & AI GPU"],
             ["binary", "🔮 15-Min Binary (1.88x)"],
-            ["matrix5k", "⚡ 250,000+ Micro-Modules"],
+            ["matrix5k", "⚡ 750,000+ Micro-Modules"],
           ].map(([id, label]) => (
             <button
               key={id}
@@ -107,7 +115,7 @@ export default function UnifiedNextGenArena({ rates = {}, theme, panel }) {
           <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }}>
             <input type="text" value={searchMod} onChange={(e) => { setSearchMod(e.target.value); setModPage(1); }} placeholder="Filter 5,040 unified micro-modules..." style={{ ...inp, minWidth: 240 }} />
             <div style={{ display: "flex", gap: 6, alignItems: "center", fontSize: 11 }}>
-              <span>{filteredMods.length.toLocaleString()} modules · Page {safePage}/{totalPages}</span>
+              <span>{totalMatches.toLocaleString()} modules · Page {safePage}/{totalPages}</span>
               <button type="button" disabled={safePage <= 1} onClick={() => setModPage((p) => p - 1)} style={inp}>◀</button>
               <button type="button" disabled={safePage >= totalPages} onClick={() => setModPage((p) => p + 1)} style={inp}>▶</button>
             </div>
