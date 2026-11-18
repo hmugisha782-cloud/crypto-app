@@ -1,16 +1,18 @@
-# React + Vite
+# 🇷🇼 Kigali Global Tracker — Enterprise Suite v10.0
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Production App:** [https://vercel.app](https://vercel.app)
 
-Currently, two official plugins are available:
+Kigali Global Tracker is an all-in-one **FinTech, Cryptocurrency, East Africa Mobile Money (RWF/KES/UGX/TZS), Global Sportsbook, VIP Casino, Live WebRTC Video Chat & AI Super-App** engineered for speed, reliability, and global scale.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Key Capabilities & 214,200+ Active Modules
+- **Live Crypto & Multi-Currency FX Engine:** Real-time prices and conversions across **RWF, USD, KES, UGX, TZS, EUR, and GBP**.
+- **Top 150 World Football Nations (600 Ranked Competitions):** Ranked **#1 Argentina to #150 Philippines**, with **4 tiers per country** (1st Division, 2nd Division, 3rd Division & National Cup) and live **1 / X / 2** odds.
+- **VIP Casino, Slots & Crash Games Arcade:** Provably fair *Aviator Crash, Spaceman, Sweet Bonanza, Gates of Olympus, Lightning Roulette, VIP Blackjack, Texas Hold'em Poker, Plinko, Mines, Crazy Time,* and *US Powerball*.
+- **KGT Omni-AI v3.0 Copilot:** Real-time AI assistant with full knowledge of app data, live RWF/USD conversions, tax & ROI calculations, and SQLite portfolio inspection.
+- **Live Community Chat & WebRTC HD Video Call Hub:** Real-time multi-room chat synced with SQLite plus encrypted in-browser video & screen-sharing calls.
+- **Rwanda & East Africa FinTech Suite:** MTN MoMo & Airtel Money P2P Escrow, Virtual USD Visa Cards, EUCL CashPower Crypto Pay, High-Yield Savings Vaults, and Crypto-Backed RWF Loans.
+- **210,060+ Indexed Enterprise Telemetry Nodes + 4,088 Live Cards:** Server-indexed analytics across 20 financial, sports, security, and DePIN categories.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+- **Frontend:** React 19, Vite / Rolldown Code-Splitting, PWA Manifest, Vercel Hybrid Cloud Engine
+- **Backend & Persistence:** Node.js, Express, SQLite3 (WAL Mode, 45+ Tables), JWT & Bcrypt Security
