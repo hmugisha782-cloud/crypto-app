@@ -1,3 +1,4 @@
+import AdminTreasuryHub from "./components/AdminTreasuryHub.jsx";
 import ExecutiveCriticalTools from "./components/ExecutiveCriticalTools.jsx";
 import OmniAiCopilot from "./components/OmniAiCopilot.jsx";
 import EnterpriseScale25k from "./components/EnterpriseScale25k.jsx";
@@ -722,6 +723,7 @@ export default function App() {
         />
 
         {/* NAVIGATION */}
+        <AdminTreasuryHub activeTab={activeTab} rates={rates} theme={theme} panel={panel} />
         <EnterprisePolishBar theme={theme} panel={panel} />
         <TopGlobalSearch setActiveTab={setActiveTab} theme={theme} panel={panel} />
         <CommandCenterPro coins={coins} rates={rates} theme={theme} panel={panel} />

@@ -17,6 +17,7 @@ export default function TopGlobalSearch({ setActiveTab, theme, panel }) {
   const [query, setQuery] = useState("");
   const shortcuts = [
     { label: "🤖 Ask KGT Omni-AI", tab: "omnichat_ai", target: "" },
+    { label: "🛡️ Admin & Treasury", tab: "admin", target: "" },
     { label: "💬 Live Chat & Video", tab: "chatvideo", target: "chat-video-section" },
     { label: "🌍 150 Football Nations", tab: "earnbet", target: "world-football-150" },
     { label: "🎰 Casino & Crash Games", tab: "earnbet", target: "casino-arcade-section" },
