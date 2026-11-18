@@ -73,7 +73,7 @@ export default function AdminTreasuryHub({ activeTab, rates = {}, theme, panel }
             </div>
             <div style={{ padding: 14, borderRadius: 10, background: theme.input, border: `1px solid ${theme.border}` }}>
               <div style={{ fontSize: 11, color: theme.muted }}>Active Telemetry & Sports Markets</div>
-              <div style={{ fontSize: 20, fontWeight: 800, color: "#f59e0b", marginTop: 4 }}>19,250,000+</div>
+              <div style={{ fontSize: 20, fontWeight: 800, color: "#f59e0b", marginTop: 4 }}>30,000,000+</div>
               <div style={{ fontSize: 11, color: theme.muted }}>150 Football Nations · 600 Leagues</div>
             </div>
             <div style={{ padding: 14, borderRadius: 10, background: theme.input, border: `1px solid ${theme.border}` }}>
