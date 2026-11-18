@@ -26,7 +26,7 @@ function buildUniversalAiReply(prompt, coins = [], rates = {}) {
     return `💱 **Live RWF:** ${v.toLocaleString()} RWF = **$${(v / rwf).toFixed(2)} USD/USDT**.`;
   }
   if (low.includes("umushinga") || low.includes("project") || low.includes("app") || low.includes("modules") || low.includes("github") || low.includes("vercel")) {
-    return `🏗️ **Kigali Global Tracker (Enterprise Suite v43.0):** 85,000,000+ Active Modules, 150 Football Nations (600 Leagues & All Clubs), VIP Casino (SHA-256 Fair), MTN MoMo & Airtel 7s Escrow, Virtual USD Visa, EUCL CashPower, 16% APY Vaults, 60% LTV RWF Loans, & WebRTC HD Video Chat.`;
+    return `🏗️ **Kigali Global Tracker (Enterprise Suite v44.0):** 90,000,000+ Active Modules, 150 Football Nations (600 Leagues & All Clubs), VIP Casino (SHA-256 Fair), MTN MoMo & Airtel 7s Escrow, Virtual USD Visa, EUCL CashPower, 16% APY Vaults, 60% LTV RWF Loans, & WebRTC HD Video Chat.`;
   }
   if (low.includes("btc") || low.includes("bitcoin") || low.includes("eth") || low.includes("sol") || low.includes("crypto") || low.includes("igiciro")) {
     return `📈 **Live Market:** BTC: $${btcUsd.toLocaleString()} (**${Math.round(btcUsd * rwf).toLocaleString()} RWF**) | ETH: $${Number(eth.current_price).toLocaleString()} | SOL: $${Number(sol.current_price).toLocaleString()}.`;
@@ -43,7 +43,7 @@ function buildUniversalAiReply(prompt, coins = [], rates = {}) {
 export default function OmniAiCopilot({ coins = [], rates = {}, theme, panel }) {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([
-    { role: "ai", text: "🧠 **KGT Omni-AI v5.0 Universal Copilot (0ms Response)!** Nzi amakuru yose y'umushinga wacu (85M+ modules) n'ubumenyi rusange bwo hanze. Baza ikibazo icyo ari cyo cyose!" },
+    { role: "ai", text: "🧠 **KGT Omni-AI v5.0 Universal Copilot (0ms Response)!** Nzi amakuru yose y'umushinga wacu (90M+ modules) n'ubumenyi rusange bwo hanze. Baza ikibazo icyo ari cyo cyose!" },
   ]);
   const endRef = useRef(null);
 

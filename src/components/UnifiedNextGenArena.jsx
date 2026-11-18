@@ -13,7 +13,7 @@ const MICRO_MODULES_250000 = Array.from({ length: 250000 }, (_, i) => {
   return { id: i + 1, title: `${dom} · Pro Engine #${i + 1}`, latency: `${4 + (i % 15)}ms` };
 });
 
-const TOTAL_MICRO = 5000000;
+const TOTAL_MICRO = 5500000;
 
 export default function UnifiedNextGenArena({ rates = {}, theme, panel }) {
   const [tab, setTab] = useState("esports");
@@ -46,13 +46,13 @@ export default function UnifiedNextGenArena({ rates = {}, theme, panel }) {
   return (
     <section style={{ ...panel, marginBottom: 18, borderTop: "3px solid #ec4899", display: "grid", gap: 12 }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
-        <strong style={{ fontSize: 13, color: "#f472b6" }}>🚀 NEXT-GEN ARENA & 5,000,000+ UNIFIED PROJECT MODULES (v41.0)</strong>
+        <strong style={{ fontSize: 13, color: "#f472b6" }}>🚀 NEXT-GEN ARENA & 5,500,000+ UNIFIED PROJECT MODULES (v44.0)</strong>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
           {[
             ["esports", "🎮 Esports & Virtuals"],
             ["depin", "☀️ Solar DePIN & AI GPU"],
             ["binary", "🔮 15-Min Binary (1.88x)"],
-            ["matrix5k", "⚡ 5,000,000+ Micro-Modules"],
+            ["matrix5k", "⚡ 5,500,000+ Micro-Modules"],
           ].map(([id, label]) => (
             <button
               key={id}
