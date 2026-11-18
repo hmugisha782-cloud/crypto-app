@@ -1,3 +1,4 @@
+import ExecutiveHeroBanner from "./components/ExecutiveHeroBanner.jsx";
 import AdminTreasuryHub from "./components/AdminTreasuryHub.jsx";
 import ExecutiveCriticalTools from "./components/ExecutiveCriticalTools.jsx";
 import OmniAiCopilot from "./components/OmniAiCopilot.jsx";
@@ -725,6 +726,7 @@ export default function App() {
         {/* NAVIGATION */}
         <AdminTreasuryHub activeTab={activeTab} rates={rates} theme={theme} panel={panel} />
         <EnterprisePolishBar theme={theme} panel={panel} />
+        <ExecutiveHeroBanner setActiveTab={setActiveTab} rates={rates} />
         <TopGlobalSearch setActiveTab={setActiveTab} theme={theme} panel={panel} />
         <CommandCenterPro coins={coins} rates={rates} theme={theme} panel={panel} />
         <LiveTickerHeatmap coins={coins} rates={rates} theme={theme} panel={panel} setActiveTab={setActiveTab} />
