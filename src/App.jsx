@@ -1,3 +1,4 @@
+import LiveNotificationBell from "./components/LiveNotificationBell.jsx";
 import ExecutiveHeroBanner from "./components/ExecutiveHeroBanner.jsx";
 import AdminTreasuryHub from "./components/AdminTreasuryHub.jsx";
 import ExecutiveCriticalTools from "./components/ExecutiveCriticalTools.jsx";
@@ -732,6 +733,7 @@ export default function App() {
         <LiveTickerHeatmap coins={coins} rates={rates} theme={theme} panel={panel} setActiveTab={setActiveTab} />
         <Navigation activeTab={activeTab} setActiveTab={setActiveTab} button={button} />
         <EarnAndBetHub activeTab={activeTab} setActiveTab={setActiveTab} rates={rates} theme={theme} panel={panel} />
+        <LiveNotificationBell coins={coins} rates={rates} theme={theme} panel={panel} />
         <OmniAiCopilot activeTab={activeTab} setActiveTab={setActiveTab} coins={coins} rates={rates} theme={theme} panel={panel} />
         <LiveChatAndVideo activeTab={activeTab} theme={theme} panel={panel} />
       <FearGreedIndex activeTab={activeTab} theme={theme} panel={panel} />
