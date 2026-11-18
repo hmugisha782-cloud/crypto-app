@@ -25,23 +25,7 @@ const SEEDS = [
   ["Enterprise Webhooks", "🔌", "REST & WebSocket Banking API Gateway", "99.99% SLA", "50K req/s", true, "Direct fintech, SACCO & enterprise ERP integration"],
 ];
 
-// Generate 244,820 indexed enterprise telemetry modules in memory (20 categories x 10,503 batches)
-const CARDS_210K = [];
-let id = 4089;
-for (let batch = 1; batch <= 12241; batch++) {
-  for (const [cat, icon, title, value, delta, pos, sub] of SEEDS) {
-    CARDS_210K.push({
-      id: id++,
-      cat,
-      icon,
-      title: batch === 1 ? title : `${title} · Node #${batch}`,
-      value,
-      delta,
-      pos,
-      sub,
-    });
-  }
-}
+const TOTAL_NODES = 9000000;
 
 router.get("/cards-25k", (req, res) => {
   const cat = String(req.query.cat || "ALL");
@@ -49,19 +33,40 @@ router.get("/cards-25k", (req, res) => {
   const page = Math.max(1, Number(req.query.page) || 1);
   const limit = Math.min(60, Math.max(6, Number(req.query.limit) || 24));
 
-  const filtered = CARDS_210K.filter((c) => {
-    const okCat = cat === "ALL" || c.cat === cat;
-    const okQ = !q || c.title.toLowerCase().includes(q) || c.cat.toLowerCase().includes(q) || c.sub.toLowerCase().includes(q);
+  const matchingSeeds = SEEDS.filter(([c, , t, , , , s]) => {
+    const okCat = cat === "ALL" || c === cat;
+    const okQ = !q || t.toLowerCase().includes(q) || c.toLowerCase().includes(q) || s.toLowerCase().includes(q);
     return okCat && okQ;
   });
 
-  const totalPages = Math.max(1, Math.ceil(filtered.length / limit));
+  if (!matchingSeeds.length) {
+    return res.json({ totalAll: TOTAL_NODES, totalMatches: 0, page: 1, totalPages: 1, categories: ["ALL", ...SEEDS.map((s) => s)], items: [] });
+  }
+
+  const totalMatches = Math.floor((TOTAL_NODES * matchingSeeds.length) / SEEDS.length);
+  const totalPages = Math.max(1, Math.ceil(totalMatches / limit));
   const safePage = Math.min(page, totalPages);
-  const items = filtered.slice((safePage - 1) * limit, safePage * limit);
+  const startIdx = (safePage - 1) * limit;
+
+  const items = Array.from({ length: Math.min(limit, totalMatches - startIdx) }, (_, offset) => {
+    const globalIdx = startIdx + offset;
+    const [c, icon, title, value, delta, pos, sub] = matchingSeeds[globalIdx % matchingSeeds.length];
+    const nodeNum = Math.floor(globalIdx / matchingSeeds.length) + 1;
+    return {
+      id: 4089 + globalIdx,
+      cat: c,
+      icon,
+      title: nodeNum === 1 ? title : `${title} · Hyper-Node #${nodeNum.toLocaleString()}`,
+      value,
+      delta,
+      pos,
+      sub,
+    };
+  });
 
   res.json({
-    totalAll: CARDS_210K.length,
-    totalMatches: filtered.length,
+    totalAll: TOTAL_NODES,
+    totalMatches,
     page: safePage,
     totalPages,
     categories: ["ALL", ...SEEDS.map((s) => s)],
