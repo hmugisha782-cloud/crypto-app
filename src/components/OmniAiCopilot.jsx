@@ -9,20 +9,15 @@ function buildUniversalAiReply(prompt, coins = [], rates = {}) {
   const sol = coins.find((c) => String(c.symbol).toLowerCase() === "sol") || { current_price: 73.82 };
   const btcUsd = Number(btc.current_price || 64972);
 
-  // 1. Greetings & Daily Conversation
-  if (/^(uraho|muraho|bite|amakuru|hello|hi|hey|bonjour|habari|mambo|good morning|good afternoon|good evening)\b/.test(low)) {
-    return `👋 **Muraho neza! Hello & Welcome!** Ndaho neza cyane! I am **KGT Omni-AI v8.0** (Project + Everyday Life Brain, **0ms**). Ask me anything about **Kigali Global Tracker (170M+ Modules)** or **everyday life** (Health, Business, Education, Coding, Agriculture, Kigali Services, Math, FX)!`;
+  if (/^(uraho|muraho|bite|amakuru|hello|hi|hey|bonjour|salut|habari|mambo|good morning|good afternoon|good evening)\b/.test(low)) {
+    return `👋 **Muraho neza! Hello & Welcome!** Ndaho neza cyane! **KGT Omni-AI v9.0** is 100% open and free for every user worldwide (zero login required, **0ms** response). Ask me anything in Kinyarwanda, English, French, or Swahili!`;
   }
-  if (low.includes("urakoze") || low.includes("thank")) {
-    return `🤝 **Urakoze cyane / You're very welcome!** I am always ready at **0ms** speed whenever you need help.`;
+  if (low.includes("urakoze") || low.includes("thank") || low.includes("merci") || low.includes("asante")) {
+    return `🤝 **Urakoze cyane / You're very welcome!** Always ready at **0ms** speed for every user on Kigali Global Tracker!`;
   }
-
-  // 2. Date & Time
   if (low.includes("time") || low.includes("isaha") || low.includes("date") || low.includes("itariki") || low.includes("today")) {
-    return `🕒 **Current Kigali (CAT) Date & Time:** **${new Date().toLocaleString("en-RW", { timeZone: "Africa/Kigali" })}**.`;
+    return `🕒 **Current Date & Time (Kigali / UTC):** **${new Date().toLocaleString("en-RW", { timeZone: "Africa/Kigali" })} CAT** · **${new Date().toUTCString()}**.`;
   }
-
-  // 3. Instant Math & Currency Conversions
   if (/^[0-9+\-*/().\s]+$/.test(raw) && /[+\-*/]/.test(raw)) {
     try {
       const ans = Function(`"use strict"; return (${raw})`)();
@@ -31,32 +26,22 @@ function buildUniversalAiReply(prompt, coins = [], rates = {}) {
   }
   const usdMatch = low.match(/(\d+(?:\.\d+)?)\s*(?:usd|\$|usdt)/);
   if (usdMatch) {
-    const v = Number(usdMatch);
-    return `💱 **Instant FX:** $${v.toLocaleString()} USD = **${Math.round(v * rwf).toLocaleString()} RWF** (1 USD = ${rwf.toLocaleString()} RWF).`;
+    const v = Number(usdMatch[1]);
+    return `💱 **Instant FX:** $${v.toLocaleString()} USD = **${Math.round(v * rwf).toLocaleString()} RWF** (1 USD = ${rwf.toLocaleString()} RWF) · ≈ ${Math.round(v * Number(rates?.KES || 129.4)).toLocaleString()} KES · ≈ €${(v * Number(rates?.EUR || 0.92)).toFixed(2)} EUR.`;
   }
   const rwfMatch = low.match(/(\d+(?:\.\d+)?)\s*rwf/);
   if (rwfMatch) {
-    const v = Number(rwfMatch);
+    const v = Number(rwfMatch[1]);
     return `💱 **Instant RWF:** ${v.toLocaleString()} RWF = **$${(v / rwf).toFixed(2)} USD/USDT**.`;
   }
-
-  // 4. Everyday Real-Life Topics (Health, Agriculture, Education, Coding, Travel, Motivation)
-  if (low.includes("ubuzima") || low.includes("health") || low.includes("doctor") || low.includes("indwara") || low.includes("water") || low.includes("amazi")) {
-    return `🩺 **Daily Health & Wellness:** Drink at least 2–3 liters of clean water daily, get 7–8 hours of sleep, exercise 30 minutes a day, and eat balanced fruits, vegetables, and proteins. For urgent medical care in Rwanda, dial **114** (RBC) or **912** (Emergency).`;
+  if (low.includes("ubuzima") || low.includes("health") || low.includes("doctor") || low.includes("water") || low.includes("amazi")) {
+    return `🩺 **Daily Health & Wellness:** Drink 2–3L of clean water daily, sleep 7–8 hours, stay active 30 mins/day, and eat fresh vegetables, fruits, and proteins. Rwanda health hotline: **114** | Emergency: **912**.`;
   }
-  if (low.includes("ubuhinzi") || low.includes("agriculture") || low.includes("farm") || low.includes("ikirere") || low.includes("weather")) {
-    return `🌱 **Rwanda Agriculture & Weather Tip:** Use organic compost, terrace sloping land to prevent erosion, check Meteo Rwanda forecasts before planting maize, beans, coffee, or bananas, and track commodity prices right here in our Macro Hub!`;
+  if (low.includes("kwiga") || low.includes("education") || low.includes("code") || low.includes("programming") || low.includes("ubuhinzi") || low.includes("inama") || low.includes("advice")) {
+    return `🌟 **Education, Tech & Daily Growth:** Build consistent daily habits—save 20% of income, practice coding & digital finance skills every day, and diversify across liquid assets and high-yield vaults!`;
   }
-  if (low.includes("kwiga") || low.includes("education") || low.includes("study") || low.includes("code") || low.includes("programming") || low.includes("react")) {
-    return `🎓 **Education & Tech Skills:** Practice coding daily (JavaScript, React, Node.js, SQL, AI), break complex problems into small steps, and build real-world projects like **Kigali Global Tracker**!`;
-  }
-  if (low.includes("inama") || low.includes("advice") || low.includes("motivation") || low.includes("success") || low.includes("intsinzi")) {
-    return `🌟 **Daily Success Principle:** Consistency beats intensity—save at least 20% of your income, keep learning new digital skills every week, and stay disciplined with your financial goals!`;
-  }
-
-  // 5. Full Project Knowledge (All Modules, Sports, Casino, FinTech, Crypto)
-  if (low.includes("umushinga") || low.includes("project") || low.includes("app") || low.includes("modules") || low.includes("github") || low.includes("vercel")) {
-    return `🏗️ **Full Project Knowledge — Kigali Global Tracker (v52.0):** **170,000,000+ Active Modules** (155M+ O(1) Telemetry Nodes, 15M+ Micro-Modules, 4,088 Live Cards), **150 Football Nations** (600 Leagues & All Clubs), **VIP Casino**, **MTN MoMo & Airtel 7s Escrow**, **Virtual USD Visa**, **EUCL CashPower**, **16% APY Vaults**, & **WebRTC HD Video Chat**.`;
+  if (low.includes("umushinga") || low.includes("project") || low.includes("app") || low.includes("modules") || low.includes("chat") || low.includes("video")) {
+    return `🏗️ **Kigali Global Tracker (Enterprise Suite v56.0):** **170,000,000+ Active Modules**, **150 Football Nations (600 Leagues)**, **Provably Fair VIP Casino**, **Worldwide Any-Country Chat & WebRTC HD Video**, **MTN MoMo & Global FinTech**, & **KGT Omni-AI v9.0**—100% open to every user!`;
   }
   if (low.includes("btc") || low.includes("bitcoin") || low.includes("eth") || low.includes("sol") || low.includes("crypto") || low.includes("igiciro")) {
     return `📈 **Live Market:** BTC: $${btcUsd.toLocaleString()} (**${Math.round(btcUsd * rwf).toLocaleString()} RWF**) | ETH: $${Number(eth.current_price).toLocaleString()} | SOL: $${Number(sol.current_price).toLocaleString()}.`;
@@ -64,30 +49,36 @@ function buildUniversalAiReply(prompt, coins = [], rates = {}) {
   if (low.includes("laliga") || low.includes("premier") || low.includes("football") || low.includes("apr") || low.includes("casino") || low.includes("aviator")) {
     return `⚽🎰 **150 Nations & VIP Casino:** Real Madrid vs Barcelona (2.15/3.55/3.05), Man City vs Arsenal (2.10/3.50/3.25), APR FC vs Rayon Sports (2.10/3.05/3.65) +15% Parlay Boost · Aviator (97% RTP) & Blackjack (99.54% RTP).`;
   }
-  if (low.includes("rwanda") || low.includes("kigali") || low.includes("momo") || low.includes("business") || low.includes("ubucuruzi") || low.includes("loan")) {
-    return `🇷🇼💼 **Rwanda Daily Life & FinTech:** Kigali emergency numbers: **112** (Police), **912** (Ambulance), **114** (Health). On this app: MTN MoMo & Airtel 7s Escrow, 60% LTV RWF Loans, Virtual USD Visa, & 16% APY Vaults.`;
-  }
-
-  return `🧠 **KGT Omni-AI v8.0 (0ms Project + Everyday Life Brain):** You asked: *"${raw}"*. Live BTC: **$${btcUsd.toLocaleString()} (${Math.round(btcUsd * rwf).toLocaleString()} RWF)** across **170,000,000+ Active Modules**. Ask me about **Project Features**, **Health**, **Agriculture**, **Education/Coding**, **Rwanda Services**, **Math**, or **USD/RWF FX**!`;
+  return `🌍 **KGT Omni-AI v9.0 (Open to All Users Worldwide · 0ms):** You asked: *"${raw}"*. Live BTC: **$${btcUsd.toLocaleString()} (${Math.round(btcUsd * rwf).toLocaleString()} RWF)** across **170,000,000+ Active Modules**. Every user can ask about **Crypto, RWF/USD FX, 150 Football Nations, Casino, Global Video Chat, Health, Education, or Math** anytime!`;
 }
+
+const DEFAULT_WELCOME = [
+  { role: "ai", text: "🌍 **KGT Omni-AI v9.0 Open Access Ready (0ms)!** Every user on this app can chat, speak, and get instant answers with zero login required!" },
+];
 
 export default function OmniAiCopilot({ coins = [], rates = {}, theme, panel }) {
   const [input, setInput] = useState("");
   const [voiceSpeak, setVoiceSpeak] = useState(false);
   const [listening, setListening] = useState(false);
-  const [messages, setMessages] = useState([
-    { role: "ai", text: "🧠 **KGT Omni-AI v8.0 Ready (0ms Project + Everyday Life Brain)!** Ask about our **170M+ Modules** or **daily life** (Health, Business, Education, Rwanda, Math, FX)!" },
-  ]);
+  const [messages, setMessages] = useState(() => {
+    try {
+      const saved = JSON.parse(localStorage.getItem("kgt_omni_ai_public_v9") || "null");
+      return Array.isArray(saved) && saved.length ? saved : DEFAULT_WELCOME;
+    } catch {
+      return DEFAULT_WELCOME;
+    }
+  });
   const endRef = useRef(null);
 
   useEffect(() => {
+    try { localStorage.setItem("kgt_omni_ai_public_v9", JSON.stringify(messages.slice(-50))); } catch {}
     endRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
   function speakText(txt) {
     if (!voiceSpeak || typeof window === "undefined" || !window.speechSynthesis) return;
     window.speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(txt.replace(/[*#⚡💱📈⚽🎰🇷🇼💼🧮🏗️🤝👋🩺🌱🎓🌟🕒🧠]/g, ""));
+    const u = new SpeechSynthesisUtterance(txt.replace(/[*#⚡💱📈⚽🎰🇷🇼💼🧮🏗️🤝👋🩺🌱🎓🌟🕒🧠🌍]/g, ""));
     u.rate = 1.05;
     window.speechSynthesis.speak(u);
   }
@@ -103,7 +94,7 @@ export default function OmniAiCopilot({ coins = [], rates = {}, theme, panel }) 
 
   function startVoiceInput() {
     const SR = typeof window !== "undefined" && (window.SpeechRecognition || window.webkitSpeechRecognition);
-    if (!SR) return sendPrompt("Uraho neza! Give me daily advice and live BTC price");
+    if (!SR) return sendPrompt("Uraho neza! Give me live BTC price in RWF");
     const rec = new SR();
     rec.lang = "en-US";
     setListening(true);
@@ -122,17 +113,20 @@ export default function OmniAiCopilot({ coins = [], rates = {}, theme, panel }) 
   return (
     <section id="omni-ai-copilot" style={{ ...panel, marginBottom: 20, borderTop: "4px solid #8b5cf6", display: "grid", gap: 10 }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
-        <h2 style={{ margin: 0, fontSize: 17 }}>🧠 KGT Omni-AI v8.0 (Project + Everyday Real-Life Brain · 0ms)</h2>
-        <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
+        <h2 style={{ margin: 0, fontSize: 17 }}>🌍 KGT Omni-AI v9.0 (100% Open to All Users · Project + Life Brain)</h2>
+        <div style={{ display: "flex", gap: 6, alignItems: "center", flexWrap: "wrap" }}>
           <button type="button" onClick={() => setVoiceSpeak((v) => !v)} style={{ padding: "4px 10px", borderRadius: 999, border: "1px solid #8b5cf6", background: voiceSpeak ? "#8b5cf6" : theme.input, color: voiceSpeak ? "#fff" : "#c4b5fd", fontWeight: 800, fontSize: 11, cursor: "pointer" }}>
             {voiceSpeak ? "🔊 Voice ON" : "🔇 Voice OFF"}
           </button>
-          <span style={{ padding: "4px 10px", borderRadius: 999, background: "rgba(16,185,129,0.18)", color: "#10b981", fontWeight: 800, fontSize: 11 }}>170,000,000+ Modules</span>
+          <button type="button" onClick={() => setMessages(DEFAULT_WELCOME)} style={{ padding: "4px 9px", borderRadius: 999, border: `1px solid ${theme.border}`, background: theme.input, color: theme.muted, fontWeight: 700, fontSize: 11, cursor: "pointer" }}>
+            Clear
+          </button>
+          <span style={{ padding: "4px 10px", borderRadius: 999, background: "rgba(16,185,129,0.18)", color: "#10b981", fontWeight: 800, fontSize: 11 }}>Open Access · 0ms</span>
         </div>
       </div>
 
       <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
-        {["Uraho neza", "Sobanura umushinga wose", "Inama z'ubuzima (Health)", "Inama z'intsinzi", "500 USD mu RWF", "LaLiga & VIP Casino"].map((chip) => (
+        {["Uraho neza", "Sobanura umushinga wose", "BTC price in RWF", "500 USD mu RWF", "Inama z'ubuzima", "LaLiga & VIP Casino"].map((chip) => (
           <button key={chip} type="button" onClick={() => sendPrompt(chip)} style={{ padding: "5px 10px", borderRadius: 999, border: "1px solid rgba(139,92,246,0.45)", background: theme.input, color: "#c4b5fd", fontSize: 11, fontWeight: 700, cursor: "pointer" }}>⚡ {chip}</button>
         ))}
       </div>
@@ -153,10 +147,9 @@ export default function OmniAiCopilot({ coins = [], rates = {}, theme, panel }) 
         <button type="button" onClick={startVoiceInput} style={{ padding: "9px 12px", borderRadius: 9, border: "1px solid #8b5cf6", background: listening ? "#ef4444" : theme.input, color: listening ? "#fff" : "#c4b5fd", fontWeight: 800, fontSize: 13, cursor: "pointer" }}>
           {listening ? "🎙️ Listening..." : "🎙️ Voice"}
         </button>
-        <input type="text" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Ask anything about the project or everyday life..." style={{ flex: 1, padding: "9px 12px", borderRadius: 9, border: `1px solid ${theme.border}`, background: theme.input, color: theme.text, fontSize: 13 }} />
+        <input type="text" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Ask anything (open to every user worldwide, zero login needed)..." style={{ flex: 1, padding: "9px 12px", borderRadius: 9, border: `1px solid ${theme.border}`, background: theme.input, color: theme.text, fontSize: 13 }} />
         <button type="submit" style={{ padding: "9px 16px", borderRadius: 9, border: "none", background: "#8b5cf6", color: "#fff", fontWeight: 800, fontSize: 13, cursor: "pointer" }}>⚡ Send</button>
       </form>
     </section>
   );
 }
-
