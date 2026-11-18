@@ -1,3 +1,4 @@
+import GlobalMacroCommoditiesHub from "./components/GlobalMacroCommoditiesHub.jsx";
 import EacFintechSuperHub from "./components/EacFintechSuperHub.jsx";
 import MasterSystemFooterV20 from "./components/MasterSystemFooterV20.jsx";
 import MasterTelemetryHub250 from "./components/MasterTelemetryHub250.jsx";
@@ -904,6 +905,7 @@ export default function App() {
         <ExecutiveToolsPro portfolioValue={portfolioValue} rates={rates} theme={theme} panel={panel} />
         <MasterTelemetryHub250 rates={rates} theme={theme} panel={panel} />
         <AcademyAndShortcuts setActiveTab={setActiveTab} theme={theme} panel={panel} />
+        <GlobalMacroCommoditiesHub rates={rates} theme={theme} panel={panel} />
         <EacFintechSuperHub rates={rates} theme={theme} panel={panel} />
         <UnifiedWorkspaceHub coins={coins} rates={rates} theme={theme} panel={panel} />
         <EnterpriseScale25k theme={theme} panel={panel} />
