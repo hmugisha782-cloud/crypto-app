@@ -1,3 +1,4 @@
+import AcademyAndShortcuts from "./components/AcademyAndShortcuts.jsx";
 import UnifiedWorkspaceHub from "./components/UnifiedWorkspaceHub.jsx";
 import ShareAndEnterpriseFooter from "./components/ShareAndEnterpriseFooter.jsx";
 import LiveNotificationBell from "./components/LiveNotificationBell.jsx";
@@ -898,6 +899,7 @@ export default function App() {
 
         {/* FOOTER */}
         <ExecutiveToolsPro portfolioValue={portfolioValue} rates={rates} theme={theme} panel={panel} />
+        <AcademyAndShortcuts setActiveTab={setActiveTab} theme={theme} panel={panel} />
         <UnifiedWorkspaceHub coins={coins} rates={rates} theme={theme} panel={panel} />
         <EnterpriseScale25k theme={theme} panel={panel} />
         <MarketCards50 theme={theme} panel={panel} />
