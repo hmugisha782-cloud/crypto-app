@@ -7,7 +7,7 @@ export default function OmniAiCopilot({ activeTab, setActiveTab, coins = [], rat
   const [history, setHistory] = useState([
     {
       role: "ai",
-      text: "Hello! I am **KGT Omni-AI**, connected to all **225,400+ modules**, **SQLite database**, **live crypto & RWF rates**, **150 football nations (600 leagues)**, and **VIP Casino**. Ask me anything about this app!",
+      text: "Hello! I am **KGT Omni-AI**, connected to all **230,600+ modules**, **SQLite database**, **live crypto & RWF rates**, **150 football nations (600 leagues)**, and **VIP Casino**. Ask me anything about this app!",
       action: null,
     },
   ]);
@@ -103,7 +103,7 @@ export default function OmniAiCopilot({ activeTab, setActiveTab, coins = [], rat
             )}
           </div>
         ))}
-        {loading && <div style={{ fontSize: 12, color: "#06b6d4" }}>🤖 Analyzing live SQLite & 225,400+ modules...</div>}
+        {loading && <div style={{ fontSize: 12, color: "#06b6d4" }}>🤖 Analyzing live SQLite & 230,600+ modules...</div>}
       </div>
 
       <form onSubmit={(e) => { e.preventDefault(); askAi(prompt); }} style={{ display: "flex", gap: 8 }}>
@@ -158,7 +158,7 @@ export default function OmniAiCopilot({ activeTab, setActiveTab, coins = [], rat
         <section style={{ ...panel, borderTop: "4px solid #8b5cf6", marginBottom: 24 }}>
           <h2 style={{ marginTop: 0 }}>🤖 KGT Omni-AI Full-App Intelligence & Live Data Assistant</h2>
           <p style={{ color: theme.muted, fontSize: 13 }}>
-            Trained on all 225,400+ Kigali Global Tracker modules, live Binance/CoinGecko feeds, RWF/EAC exchange rates, 150 world football nations, VIP Casino RTPs, and SQLite records.
+            Trained on all 230,600+ Kigali Global Tracker modules, live Binance/CoinGecko feeds, RWF/EAC exchange rates, 150 world football nations, VIP Casino RTPs, and SQLite records.
           </p>
           {renderChatBox(360)}
         </section>
