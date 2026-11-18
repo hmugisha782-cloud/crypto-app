@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 
 const ROOMS = [
-  "🇺🇸🇺🇸 Kigali ↔ USA Direct VIP Bridge",
+  "🌍 Worldwide Direct VIP Bridge (All Countries)",
   "🇷🇼 Kigali VIP Trading Desk",
   "⚽ World Football & 150 Nations",
   "🎰 Casino & Crash Winners",
-  "📱 MTN MoMo & International Remittance",
+  "🌐 Global Remittance & Multi-FX Desk",
 ];
 
 const ICE_SERVERS = {
@@ -17,13 +17,13 @@ const ICE_SERVERS = {
 
 export default function CommunityVideoChatHub({ theme, panel }) {
   const urlRoom = typeof window !== "undefined" ? new URLSearchParams(window.location.search).get("room") : "";
-  const [roomCode, setRoomCode] = useState(urlRoom || "KIGALI-USA-8842");
+  const [roomCode, setRoomCode] = useState(urlRoom || "GLOBAL-VIP-8842");
   const [room, setRoom] = useState(ROOMS[0]);
   const [sender, setSender] = useState("Kigali_Host");
   const [text, setText] = useState("");
   const [copiedLink, setCopiedLink] = useState(false);
   const [messages, setMessages] = useState([
-    { id: 1, room: ROOMS[0], sender: "NewYork_Partner (USA)", text: "Hello from New York, USA! Connection to Kigali is crystal clear (14ms RTT). Ready for HD video!", time: "Live" },
+    { id: 1, room: ROOMS[0], sender: "Global_Partner (Worldwide)", text: "Hello from anywhere in the world! Universal WebRTC & Chat bridge is crystal clear (14ms RTT).", time: "Live" },
     { id: 2, room: ROOMS[0], sender: "Kigali_Host (Rwanda)", text: "Muraho from Kigali, Rwanda! Share the room link above to talk live via chat or HD video.", time: "Just now" },
   ]);
 
@@ -31,7 +31,7 @@ export default function CommunityVideoChatHub({ theme, panel }) {
   const [micOn, setMicOn] = useState(true);
   const [camOn, setCamOn] = useState(true);
   const [screenSharing, setScreenSharing] = useState(false);
-  const [callStatus, setCallStatus] = useState("🌐 Global STUN/ICE Bridge Ready · Kigali ↔ USA");
+  const [callStatus, setCallStatus] = useState("🌍 Worldwide STUN/ICE Bridge Ready · All 195+ Countries");
 
   const localVideoRef = useRef(null);
   const remoteVideoRef = useRef(null);
@@ -102,7 +102,7 @@ export default function CommunityVideoChatHub({ theme, panel }) {
       setMicOn(true);
       setCamOn(true);
       setScreenSharing(false);
-      setCallStatus(`🟢 LIVE GLOBAL HD CALL ACTIVE (Room: ${roomCode} · Kigali ↔ USA Encrypted)`);
+      setCallStatus(`🟢 LIVE GLOBAL HD CALL ACTIVE (Room: ${roomCode} · Worldwide Any-Country Encrypted)`);
     } catch {
       setCallActive(true);
       setCallStatus(`🟢 GLOBAL BRIDGE ACTIVE (Room: ${roomCode} · Audio/Text Mode — Enable Camera in Browser for Video)`);
@@ -167,12 +167,12 @@ export default function CommunityVideoChatHub({ theme, panel }) {
     <section id="community-video-chat" style={{ ...panel, marginBottom: 20, borderTop: "4px solid #10b981", display: "grid", gap: 12 }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
         <div>
-          <h2 style={{ margin: 0, fontSize: 17 }}>🌍 Global Cross-Border Chat & WebRTC HD Video Call (Kigali ↔ USA Live)</h2>
-          <p style={{ margin: "2px 0 0", fontSize: 12, color: theme.muted }}>Copy your Room Invite Link and send it via WhatsApp/Email to anyone in the USA or worldwide to chat & video-call live!</p>
+          <h2 style={{ margin: 0, fontSize: 17 }}>🌍 Worldwide Global Chat & WebRTC HD Video Call (All 195+ Countries Live)</h2>
+          <p style={{ margin: "2px 0 0", fontSize: 12, color: theme.muted }}>Copy your Room Invite Link and send it via WhatsApp/Email to anyone in ANY country worldwide to chat & video-call live!</p>
         </div>
         <div style={{ display: "flex", gap: 6, alignItems: "center", flexWrap: "wrap" }}>
           <input type="text" value={roomCode} onChange={(e) => setRoomCode(e.target.value.toUpperCase())} style={{ width: 145, padding: "5px 8px", borderRadius: 7, border: `1px solid ${theme.border}`, background: theme.input, color: "#10b981", fontWeight: 800, fontSize: 11 }} />
-          <button type="button" onClick={copyInviteLink} style={{ padding: "6px 11px", borderRadius: 8, border: "none", background: "#06b6d4", color: "#02131d", fontWeight: 800, fontSize: 11, cursor: "pointer" }}>{copiedLink ? "✅ USA Invite Link Copied!" : "🔗 Copy USA/Global Invite Link"}</button>
+          <button type="button" onClick={copyInviteLink} style={{ padding: "6px 11px", borderRadius: 8, border: "none", background: "#06b6d4", color: "#02131d", fontWeight: 800, fontSize: 11, cursor: "pointer" }}>{copiedLink ? "✅ Worldwide Invite Link Copied!" : "🔗 Copy Worldwide Invite Link"}</button>
         </div>
       </div>
 
@@ -194,14 +194,14 @@ export default function CommunityVideoChatHub({ theme, panel }) {
             </div>
             <div style={{ position: "relative", height: 195, borderRadius: 10, overflow: "hidden", background: "#020617", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(6,182,212,0.4)" }}>
               <video ref={remoteVideoRef} autoPlay playsInline style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-              <div style={{ position: "absolute", textAlign: "center", padding: 8, fontSize: 11, color: "#94a3b8", pointerEvents: "none" }}>🇺🇸 Global Partner (USA)<br /><span style={{ fontSize: 10, color: "#38bdf8" }}>Room: {roomCode}</span></div>
-              <span style={{ position: "absolute", bottom: 6, left: 6, padding: "2px 6px", borderRadius: 5, background: "rgba(2,6,23,0.8)", color: "#38bdf8", fontSize: 9.5, fontWeight: 800 }}>🇺🇸 USA / Remote</span>
+              <div style={{ position: "absolute", textAlign: "center", padding: 8, fontSize: 11, color: "#94a3b8", pointerEvents: "none" }}>🌍 Global Partner (Any Country)<br /><span style={{ fontSize: 10, color: "#38bdf8" }}>Room: {roomCode}</span></div>
+              <span style={{ position: "absolute", bottom: 6, left: 6, padding: "2px 6px", borderRadius: 5, background: "rgba(2,6,23,0.8)", color: "#38bdf8", fontSize: 9.5, fontWeight: 800 }}>🌍 Worldwide / Remote</span>
             </div>
           </div>
 
           <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
             {!callActive ? (
-              <button type="button" onClick={startGlobalHdCall} style={{ flex: 1, padding: "9px 12px", borderRadius: 8, border: "none", background: "#10b981", color: "#02131d", fontWeight: 800, fontSize: 12, cursor: "pointer" }}>📹 Start Kigali ↔ USA HD Video Call</button>
+              <button type="button" onClick={startGlobalHdCall} style={{ flex: 1, padding: "9px 12px", borderRadius: 8, border: "none", background: "#10b981", color: "#02131d", fontWeight: 800, fontSize: 12, cursor: "pointer" }}>📹 Start Worldwide HD Video Call</button>
             ) : (
               <>
                 <button type="button" onClick={toggleMic} style={{ flex: 1, padding: "8px", borderRadius: 8, border: "1px solid #06b6d4", background: micOn ? "rgba(6,182,212,0.2)" : "#ef4444", color: "#fff", fontWeight: 800, fontSize: 11, cursor: "pointer" }}>{micOn ? "🎙️ Mic ON" : "🔇 Muted"}</button>
@@ -228,7 +228,7 @@ export default function CommunityVideoChatHub({ theme, panel }) {
             <div ref={chatEndRef} />
           </div>
           <form onSubmit={sendChatMessage} style={{ display: "flex", gap: 6 }}>
-            <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder={`Send instant message to USA / ${roomCode}...`} style={{ flex: 1, padding: "8px 10px", borderRadius: 8, border: `1px solid ${theme.border}`, background: theme.card, color: theme.text, fontSize: 12 }} />
+            <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder={`Send instant message worldwide / ${roomCode}...`} style={{ flex: 1, padding: "8px 10px", borderRadius: 8, border: `1px solid ${theme.border}`, background: theme.card, color: theme.text, fontSize: 12 }} />
             <button type="submit" style={{ padding: "8px 14px", borderRadius: 8, border: "none", background: "#10b981", color: "#02131d", fontWeight: 800, fontSize: 12, cursor: "pointer" }}>Send</button>
           </form>
         </div>
