@@ -15,7 +15,7 @@ export default function MasterSystemFooterV20({ theme, panel }) {
   return (
     <div style={{ ...panel, marginTop: 14, padding: "12px 14px", borderTop: "2px solid #10b981", fontSize: 11 }}>
       <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8, marginBottom: 8 }}>
-        <strong style={{ color: "#10b981" }}>🏆 KIGALI GLOBAL TRACKER — Enterprise Suite v42.0 PRODUCTION CERTIFICATION</strong>
+        <strong style={{ color: "#10b981" }}>🏆 KIGALI GLOBAL TRACKER — Enterprise Suite v43.0 PRODUCTION CERTIFICATION</strong>
         <span style={{ color: theme.muted }}>All 20 Core Subsystems & 85,000,000+ Modules 100% Operational</span>
       </div>
       <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
