@@ -1,3 +1,4 @@
+import DefiMerchantRibbon50 from "./components/DefiMerchantRibbon50.jsx";
 import SecurityComplianceRibbon50 from "./components/SecurityComplianceRibbon50.jsx";
 import FintechAiRibbon50 from "./components/FintechAiRibbon50.jsx";
 import SportsCasinoRibbon50 from "./components/SportsCasinoRibbon50.jsx";
@@ -903,6 +904,7 @@ export default function App() {
 
         {/* FOOTER */}
         <ExecutiveToolsPro portfolioValue={portfolioValue} rates={rates} theme={theme} panel={panel} />
+        <DefiMerchantRibbon50 theme={theme} panel={panel} />
         <SecurityComplianceRibbon50 theme={theme} panel={panel} />
         <FintechAiRibbon50 theme={theme} panel={panel} />
         <SportsCasinoRibbon50 theme={theme} panel={panel} />
