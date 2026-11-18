@@ -1,3 +1,4 @@
+import VirtualCardAndBillPayHub from "./components/VirtualCardAndBillPayHub.jsx";
 import InstantLoanAndSwapHub from "./components/InstantLoanAndSwapHub.jsx";
 import MasterSystemFooterV20 from "./components/MasterSystemFooterV20.jsx";
 import MasterTelemetryHub250 from "./components/MasterTelemetryHub250.jsx";
@@ -904,6 +905,7 @@ export default function App() {
         <ExecutiveToolsPro portfolioValue={portfolioValue} rates={rates} theme={theme} panel={panel} />
         <MasterTelemetryHub250 rates={rates} theme={theme} panel={panel} />
         <AcademyAndShortcuts setActiveTab={setActiveTab} theme={theme} panel={panel} />
+        <VirtualCardAndBillPayHub rates={rates} theme={theme} panel={panel} />
         <InstantLoanAndSwapHub rates={rates} theme={theme} panel={panel} />
         <UnifiedWorkspaceHub coins={coins} rates={rates} theme={theme} panel={panel} />
         <EnterpriseScale25k theme={theme} panel={panel} />
