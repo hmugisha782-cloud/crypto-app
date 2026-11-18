@@ -1,4 +1,4 @@
-# 🇷🇼 Kigali Global Tracker — Enterprise Suite v41.0
+# 🇷🇼 Kigali Global Tracker — Enterprise Suite v42.0
 
 **Live Production App:** [https://vercel.app](https://vercel.app)
 
