@@ -39,7 +39,7 @@ export default function EnterprisePolishBar({ theme, panel }) {
     <>
       <div style={{ ...panel, padding: "8px 14px", marginBottom: 12, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 10, fontSize: 12, borderLeft: "4px solid #10b981" }}>
         <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
-          <span style={{ color: "#10b981", fontWeight: 800 }}>● Enterprise Suite v53.0</span>
+          <span style={{ color: "#10b981", fontWeight: 800 }}>● Enterprise Suite v54.0</span>
           <span>🕒 <strong>Kigali:</strong> {kigaliTime}</span>
           <span>📊 <strong>170,000,000+ Active Modules</strong></span>
           <span style={{ color: "#06b6d4", fontWeight: 700 }}>⚡ API Ping: {pingMs} ms</span>
