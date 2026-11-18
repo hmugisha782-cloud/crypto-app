@@ -8,7 +8,7 @@ const DOMAINS_20 = [
   "Cross-Border Trade", "Merchant QR & POS", "Whale & Risk Alerts", "Enterprise Webhooks"
 ];
 
-const MICRO_MODULES_15340 = Array.from({ length: 15340 }, (_, i) => {
+const MICRO_MODULES_20740 = Array.from({ length: 20740 }, (_, i) => {
   const dom = DOMAINS_20[i % DOMAINS_20.length];
   return { id: i + 1, title: `${dom} · Pro Engine #${i + 1}`, latency: `${4 + (i % 15)}ms` };
 });
@@ -25,8 +25,8 @@ export default function UnifiedNextGenArena({ rates = {}, theme, panel }) {
 
   const rwfRate = Number(rates?.RWF || 1480);
   const filteredMods = searchMod.trim()
-    ? MICRO_MODULES_15340.filter((m) => m.title.toLowerCase().includes(searchMod.toLowerCase()))
-    : MICRO_MODULES_15340;
+    ? MICRO_MODULES_20740.filter((m) => m.title.toLowerCase().includes(searchMod.toLowerCase()))
+    : MICRO_MODULES_20740;
   const totalPages = Math.max(1, Math.ceil(filteredMods.length / 18));
   const safePage = Math.min(modPage, totalPages);
   const pageItems = filteredMods.slice((safePage - 1) * 18, safePage * 18);
@@ -36,13 +36,13 @@ export default function UnifiedNextGenArena({ rates = {}, theme, panel }) {
   return (
     <section style={{ ...panel, marginBottom: 18, borderTop: "3px solid #ec4899", display: "grid", gap: 12 }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
-        <strong style={{ fontSize: 13, color: "#f472b6" }}>🚀 NEXT-GEN ARENA & 15,340+ UNIFIED PROJECT MODULES (v32.0)</strong>
+        <strong style={{ fontSize: 13, color: "#f472b6" }}>🚀 NEXT-GEN ARENA & 20,740+ UNIFIED PROJECT MODULES (v33.0)</strong>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
           {[
             ["esports", "🎮 Esports & Virtuals"],
             ["depin", "☀️ Solar DePIN & AI GPU"],
             ["binary", "🔮 15-Min Binary (1.88x)"],
-            ["matrix5k", "⚡ 15,340+ Micro-Modules"],
+            ["matrix5k", "⚡ 20,740+ Micro-Modules"],
           ].map(([id, label]) => (
             <button
               key={id}
