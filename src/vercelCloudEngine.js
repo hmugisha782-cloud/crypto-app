@@ -85,7 +85,7 @@ window.fetch = async (input, init) => {
         sub: "Vercel Edge + SQLite Hybrid Telemetry Node",
       };
     });
-    return jsonResponse({ totalAll: 47500000, totalMatches: 47500000, page, totalPages: 1979167, categories: TELEMETRY_CATS, items });
+    return jsonResponse({ totalAll: 49500000, totalMatches: 49500000, page, totalPages: 2062500, categories: TELEMETRY_CATS, items });
   }
 
   if (url.startsWith("/api/ai/ask")) {

@@ -1,3 +1,4 @@
+import InteractiveSportsAndGamesHub from "./components/InteractiveSportsAndGamesHub.jsx";
 import UnifiedNextGenArena from "./components/UnifiedNextGenArena.jsx";
 import WealthAndMacroSuperHub from "./components/WealthAndMacroSuperHub.jsx";
 import EacFintechSuperHub from "./components/EacFintechSuperHub.jsx";
@@ -735,6 +736,7 @@ export default function App() {
         <AdminTreasuryHub activeTab={activeTab} rates={rates} theme={theme} panel={panel} />
         <EnterprisePolishBar theme={theme} panel={panel} />
         <ExecutiveHeroBanner setActiveTab={setActiveTab} rates={rates} />
+        <InteractiveSportsAndGamesHub rates={rates} theme={theme} panel={panel} />
         <TopGlobalSearch setActiveTab={setActiveTab} theme={theme} panel={panel} />
         <CommandCenterPro coins={coins} rates={rates} theme={theme} panel={panel} />
         <LiveTickerHeatmap coins={coins} rates={rates} theme={theme} panel={panel} setActiveTab={setActiveTab} />
