@@ -41,7 +41,7 @@ function buildUniversalAiReply(prompt, coins = [], rates = {}) {
     return `🌟 **Education, Tech & Daily Growth:** Build consistent daily habits—save 20% of income, practice coding & digital finance skills every day, and diversify across liquid assets and high-yield vaults!`;
   }
   if (low.includes("umushinga") || low.includes("project") || low.includes("app") || low.includes("modules") || low.includes("chat") || low.includes("video")) {
-    return `🏗️ **Kigali Global Tracker (Enterprise Suite v56.0):** **170,000,000+ Active Modules**, **150 Football Nations (600 Leagues)**, **Provably Fair VIP Casino**, **Worldwide Any-Country Chat & WebRTC HD Video**, **MTN MoMo & Global FinTech**, & **KGT Omni-AI v9.0**—100% open to every user!`;
+    return `🏗️ **Kigali Global Tracker (Enterprise Suite v57.0):** **175,000,000+ Active Modules**, **150 Football Nations (600 Leagues)**, **Provably Fair VIP Casino**, **Worldwide Any-Country Chat & WebRTC HD Video**, **MTN MoMo & Global FinTech**, & **KGT Omni-AI v9.0**—100% open to every user!`;
   }
   if (low.includes("btc") || low.includes("bitcoin") || low.includes("eth") || low.includes("sol") || low.includes("crypto") || low.includes("igiciro")) {
     return `📈 **Live Market:** BTC: $${btcUsd.toLocaleString()} (**${Math.round(btcUsd * rwf).toLocaleString()} RWF**) | ETH: $${Number(eth.current_price).toLocaleString()} | SOL: $${Number(sol.current_price).toLocaleString()}.`;
@@ -49,7 +49,7 @@ function buildUniversalAiReply(prompt, coins = [], rates = {}) {
   if (low.includes("laliga") || low.includes("premier") || low.includes("football") || low.includes("apr") || low.includes("casino") || low.includes("aviator")) {
     return `⚽🎰 **150 Nations & VIP Casino:** Real Madrid vs Barcelona (2.15/3.55/3.05), Man City vs Arsenal (2.10/3.50/3.25), APR FC vs Rayon Sports (2.10/3.05/3.65) +15% Parlay Boost · Aviator (97% RTP) & Blackjack (99.54% RTP).`;
   }
-  return `🌍 **KGT Omni-AI v9.0 (Open to All Users Worldwide · 0ms):** You asked: *"${raw}"*. Live BTC: **$${btcUsd.toLocaleString()} (${Math.round(btcUsd * rwf).toLocaleString()} RWF)** across **170,000,000+ Active Modules**. Every user can ask about **Crypto, RWF/USD FX, 150 Football Nations, Casino, Global Video Chat, Health, Education, or Math** anytime!`;
+  return `🌍 **KGT Omni-AI v9.0 (Open to All Users Worldwide · 0ms):** You asked: *"${raw}"*. Live BTC: **$${btcUsd.toLocaleString()} (${Math.round(btcUsd * rwf).toLocaleString()} RWF)** across **175,000,000+ Active Modules**. Every user can ask about **Crypto, RWF/USD FX, 150 Football Nations, Casino, Global Video Chat, Health, Education, or Math** anytime!`;
 }
 
 const DEFAULT_WELCOME = [
