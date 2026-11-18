@@ -1,3 +1,4 @@
+import FintechAiRibbon50 from "./components/FintechAiRibbon50.jsx";
 import SportsCasinoRibbon50 from "./components/SportsCasinoRibbon50.jsx";
 import MarketProRibbon50 from "./components/MarketProRibbon50.jsx";
 import AcademyAndShortcuts from "./components/AcademyAndShortcuts.jsx";
@@ -901,6 +902,7 @@ export default function App() {
 
         {/* FOOTER */}
         <ExecutiveToolsPro portfolioValue={portfolioValue} rates={rates} theme={theme} panel={panel} />
+        <FintechAiRibbon50 theme={theme} panel={panel} />
         <SportsCasinoRibbon50 theme={theme} panel={panel} />
         <MarketProRibbon50 rates={rates} theme={theme} panel={panel} />
         <AcademyAndShortcuts setActiveTab={setActiveTab} theme={theme} panel={panel} />
