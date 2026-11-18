@@ -1,3 +1,4 @@
+import LiveAiSignalsBoard from "./components/LiveAiSignalsBoard.jsx";
 import MarketVisualAnalytics from "./components/MarketVisualAnalytics.jsx";
 import ShareAndEnterpriseFooter from "./components/ShareAndEnterpriseFooter.jsx";
 import VipLeaderboardHub from "./components/VipLeaderboardHub.jsx";
@@ -900,6 +901,7 @@ export default function App() {
 
         {/* FOOTER */}
         <ExecutiveToolsPro portfolioValue={portfolioValue} rates={rates} theme={theme} panel={panel} />
+        <LiveAiSignalsBoard coins={coins} rates={rates} theme={theme} panel={panel} />
         <MarketVisualAnalytics rates={rates} theme={theme} panel={panel} />
         <VipLeaderboardHub rates={rates} theme={theme} panel={panel} />
         <ExecutiveCriticalTools coins={coins} rates={rates} theme={theme} panel={panel} />
