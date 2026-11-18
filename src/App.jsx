@@ -1,8 +1,4 @@
-import DefiMerchantRibbon50 from "./components/DefiMerchantRibbon50.jsx";
-import SecurityComplianceRibbon50 from "./components/SecurityComplianceRibbon50.jsx";
-import FintechAiRibbon50 from "./components/FintechAiRibbon50.jsx";
-import SportsCasinoRibbon50 from "./components/SportsCasinoRibbon50.jsx";
-import MarketProRibbon50 from "./components/MarketProRibbon50.jsx";
+import MasterTelemetryHub250 from "./components/MasterTelemetryHub250.jsx";
 import AcademyAndShortcuts from "./components/AcademyAndShortcuts.jsx";
 import UnifiedWorkspaceHub from "./components/UnifiedWorkspaceHub.jsx";
 import ShareAndEnterpriseFooter from "./components/ShareAndEnterpriseFooter.jsx";
@@ -904,11 +900,7 @@ export default function App() {
 
         {/* FOOTER */}
         <ExecutiveToolsPro portfolioValue={portfolioValue} rates={rates} theme={theme} panel={panel} />
-        <DefiMerchantRibbon50 theme={theme} panel={panel} />
-        <SecurityComplianceRibbon50 theme={theme} panel={panel} />
-        <FintechAiRibbon50 theme={theme} panel={panel} />
-        <SportsCasinoRibbon50 theme={theme} panel={panel} />
-        <MarketProRibbon50 rates={rates} theme={theme} panel={panel} />
+        <MasterTelemetryHub250 rates={rates} theme={theme} panel={panel} />
         <AcademyAndShortcuts setActiveTab={setActiveTab} theme={theme} panel={panel} />
         <UnifiedWorkspaceHub coins={coins} rates={rates} theme={theme} panel={panel} />
         <EnterpriseScale25k theme={theme} panel={panel} />
