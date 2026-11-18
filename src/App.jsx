@@ -1,3 +1,4 @@
+import ShareAndEnterpriseFooter from "./components/ShareAndEnterpriseFooter.jsx";
 import VipLeaderboardHub from "./components/VipLeaderboardHub.jsx";
 import LiveNotificationBell from "./components/LiveNotificationBell.jsx";
 import ExecutiveHeroBanner from "./components/ExecutiveHeroBanner.jsx";
@@ -904,6 +905,7 @@ export default function App() {
         <MarketCards50 theme={theme} panel={panel} />
         <Footer theme={theme} />
       </div>
-    </main>
+      <ShareAndEnterpriseFooter setActiveTab={setActiveTab} theme={theme} panel={panel} />
+      </main>
   );
 }
