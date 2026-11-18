@@ -1,3 +1,4 @@
+import MarketVisualAnalytics from "./components/MarketVisualAnalytics.jsx";
 import ShareAndEnterpriseFooter from "./components/ShareAndEnterpriseFooter.jsx";
 import VipLeaderboardHub from "./components/VipLeaderboardHub.jsx";
 import LiveNotificationBell from "./components/LiveNotificationBell.jsx";
@@ -899,6 +900,7 @@ export default function App() {
 
         {/* FOOTER */}
         <ExecutiveToolsPro portfolioValue={portfolioValue} rates={rates} theme={theme} panel={panel} />
+        <MarketVisualAnalytics rates={rates} theme={theme} panel={panel} />
         <VipLeaderboardHub rates={rates} theme={theme} panel={panel} />
         <ExecutiveCriticalTools coins={coins} rates={rates} theme={theme} panel={panel} />
         <EnterpriseScale25k theme={theme} panel={panel} />
