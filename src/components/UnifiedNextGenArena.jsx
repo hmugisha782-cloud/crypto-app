@@ -13,6 +13,8 @@ const MICRO_MODULES_250000 = Array.from({ length: 250000 }, (_, i) => {
   return { id: i + 1, title: `${dom} · Pro Engine #${i + 1}`, latency: `${4 + (i % 15)}ms` };
 });
 
+const TOTAL_MICRO = 2500000;
+
 export default function UnifiedNextGenArena({ rates = {}, theme, panel }) {
   const [tab, setTab] = useState("esports");
   const [stakeRwf, setStakeRwf] = useState("5000");
