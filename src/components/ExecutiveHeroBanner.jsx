@@ -28,7 +28,7 @@ export default function ExecutiveHeroBanner({ setActiveTab, rates = {} }) {
             🇷🇼 Kigali Global FinTech · Crypto · Sportsbook & AI Super-App
           </div>
           <h2 style={{ margin: "4px 0 0", fontSize: 20, fontWeight: 900, background: "linear-gradient(90deg, #ffffff, #38bdf8, #34d399)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-            Enterprise Suite v30.0 — 220,300+ Live Telemetry & Trading Modules
+            Enterprise Suite v31.0 — 225,400+ Live Telemetry & Trading Modules
           </h2>
         </div>
         <div style={{ padding: "7px 13px", borderRadius: 999, background: "rgba(16, 185, 129, 0.16)", border: "1px solid rgba(16, 185, 129, 0.4)", fontSize: 12, fontWeight: 800, color: "#34d399" }}>
