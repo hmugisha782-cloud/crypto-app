@@ -1,11 +1,8 @@
-import LiveAiSignalsBoard from "./components/LiveAiSignalsBoard.jsx";
-import MarketVisualAnalytics from "./components/MarketVisualAnalytics.jsx";
+import UnifiedWorkspaceHub from "./components/UnifiedWorkspaceHub.jsx";
 import ShareAndEnterpriseFooter from "./components/ShareAndEnterpriseFooter.jsx";
-import VipLeaderboardHub from "./components/VipLeaderboardHub.jsx";
 import LiveNotificationBell from "./components/LiveNotificationBell.jsx";
 import ExecutiveHeroBanner from "./components/ExecutiveHeroBanner.jsx";
 import AdminTreasuryHub from "./components/AdminTreasuryHub.jsx";
-import ExecutiveCriticalTools from "./components/ExecutiveCriticalTools.jsx";
 import OmniAiCopilot from "./components/OmniAiCopilot.jsx";
 import EnterpriseScale25k from "./components/EnterpriseScale25k.jsx";
 import EnterprisePolishBar from "./components/EnterprisePolishBar.jsx";
@@ -901,10 +898,7 @@ export default function App() {
 
         {/* FOOTER */}
         <ExecutiveToolsPro portfolioValue={portfolioValue} rates={rates} theme={theme} panel={panel} />
-        <LiveAiSignalsBoard coins={coins} rates={rates} theme={theme} panel={panel} />
-        <MarketVisualAnalytics rates={rates} theme={theme} panel={panel} />
-        <VipLeaderboardHub rates={rates} theme={theme} panel={panel} />
-        <ExecutiveCriticalTools coins={coins} rates={rates} theme={theme} panel={panel} />
+        <UnifiedWorkspaceHub coins={coins} rates={rates} theme={theme} panel={panel} />
         <EnterpriseScale25k theme={theme} panel={panel} />
         <MarketCards50 theme={theme} panel={panel} />
         <Footer theme={theme} />
