@@ -25,7 +25,7 @@ const SEEDS = [
   ["Enterprise Webhooks", "🔌", "REST & WebSocket Banking API Gateway", "99.99% SLA", "50K req/s", true, "Direct fintech, SACCO & enterprise ERP integration"],
 ];
 
-const TOTAL_NODES = 125000000;
+const TOTAL_NODES = 138000000;
 
 router.get("/cards-25k", (req, res) => {
   const cat = String(req.query.cat || "ALL");

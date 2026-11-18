@@ -8,7 +8,7 @@ export default function FloatingCommandDock({ theme }) {
     ["⬆️ Top", () => window.scrollTo({ top: 0, behavior: "smooth" })],
     ["⚽ 150 Nations", () => document.getElementById("interactive-sports-games")?.scrollIntoView({ behavior: "smooth" })],
     ["⚡ Omni-AI v7", () => document.getElementById("omni-ai-copilot")?.scrollIntoView({ behavior: "smooth" })],
-    ["📊 135M+ Nodes", () => document.getElementById("enterprise-scale-25k")?.scrollIntoView({ behavior: "smooth" })],
+    ["📊 150M+ Nodes", () => document.getElementById("enterprise-scale-25k")?.scrollIntoView({ behavior: "smooth" })],
   ];
 
   const accents = [
@@ -41,7 +41,7 @@ export default function FloatingCommandDock({ theme }) {
       fontSize: 11,
     }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 10 }}>
-        <strong style={{ color: accent }}>🧭 KGT Quick-Dock (v49)</strong>
+        <strong style={{ color: accent }}>🧭 KGT Quick-Dock (v50)</strong>
         <button type="button" onClick={() => setOpen((o) => !o)} style={{ border: "none", background: "transparent", color: "#cbd5e1", cursor: "pointer", fontWeight: 800 }}>
           {open ? "—" : "+"}
         </button>

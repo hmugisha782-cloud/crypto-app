@@ -10,7 +10,7 @@ function buildUniversalAiReply(prompt, coins = [], rates = {}) {
   const btcUsd = Number(btc.current_price || 64972);
 
   if (/^(uraho|muraho|bite|amakuru|hello|hi|hey|bonjour|habari|mambo|good morning|good afternoon|good evening)\b/.test(low)) {
-    return `👋 **Muraho neza! Hello & Welcome!** Ndaho neza cyane! I am **KGT Omni-AI v7.0** (Voice + 0ms Brain) powering **135,000,000+ Active Modules**. Ask me anything in Kinyarwanda, English, French, or Swahili!`;
+    return `👋 **Muraho neza! Hello & Welcome!** Ndaho neza cyane! I am **KGT Omni-AI v7.0** (Voice + 0ms Brain) powering **150,000,000+ Active Modules**. Ask me anything in Kinyarwanda, English, French, or Swahili!`;
   }
   if (low.includes("urakoze") || low.includes("thank")) {
     return `🤝 **Urakoze cyane / You're very welcome!** Ready whenever you need instant market prices, RWF conversions, football odds, or general answers.`;
@@ -32,7 +32,7 @@ function buildUniversalAiReply(prompt, coins = [], rates = {}) {
     return `💱 **Instant RWF:** ${v.toLocaleString()} RWF = **$${(v / rwf).toFixed(2)} USD/USDT**.`;
   }
   if (low.includes("umushinga") || low.includes("project") || low.includes("app") || low.includes("modules") || low.includes("github") || low.includes("vercel")) {
-    return `🏗️ **Kigali Global Tracker (Enterprise Suite v49.0):** **135,000,000+ Active Modules** (94M+ O(1) Telemetry Nodes, 6M+ Next-Gen Micro-Modules, 4,088 Live Cards), **150 Football Nations** (600 Leagues & All Clubs), **VIP Casino**, **MTN MoMo & Airtel Escrow**, **Virtual USD Visa**, **EUCL CashPower**, & **WebRTC HD Video Chat**.`;
+    return `🏗️ **Kigali Global Tracker (Enterprise Suite v50.0):** **150,000,000+ Active Modules** (94M+ O(1) Telemetry Nodes, 6M+ Next-Gen Micro-Modules, 4,088 Live Cards), **150 Football Nations** (600 Leagues & All Clubs), **VIP Casino**, **MTN MoMo & Airtel Escrow**, **Virtual USD Visa**, **EUCL CashPower**, & **WebRTC HD Video Chat**.`;
   }
   if (low.includes("btc") || low.includes("bitcoin") || low.includes("eth") || low.includes("sol") || low.includes("crypto") || low.includes("igiciro") || low.includes("price")) {
     return `📈 **Live Market:** BTC: $${btcUsd.toLocaleString()} (**${Math.round(btcUsd * rwf).toLocaleString()} RWF**) | ETH: $${Number(eth.current_price).toLocaleString()} (**${Math.round(Number(eth.current_price) * rwf).toLocaleString()} RWF**) | SOL: $${Number(sol.current_price).toLocaleString()}.`;
@@ -43,7 +43,7 @@ function buildUniversalAiReply(prompt, coins = [], rates = {}) {
   if (low.includes("rwanda") || low.includes("kigali") || low.includes("momo") || low.includes("business") || low.includes("loan") || low.includes("inguzanyo")) {
     return `🇷🇼💼 **Rwanda FinTech & Wealth:** MTN MoMo & Airtel 7s Escrow (0.8% fee), 60% LTV Crypto-Backed RWF Loans, Tokenized Gold (PAXG $2,745.50/oz), and 16% APY Savings Vaults.`;
   }
-  return `⚡ **KGT Omni-AI v7.0 (0ms Voice & Text Brain):** You asked: *"${raw}"*. Live BTC is **$${btcUsd.toLocaleString()} (${Math.round(btcUsd * rwf).toLocaleString()} RWF)** across **135,000,000+ Active Modules**. Ask me anything—greetings, math, USD/RWF conversions, football, casino, or project architecture!`;
+  return `⚡ **KGT Omni-AI v7.0 (0ms Voice & Text Brain):** You asked: *"${raw}"*. Live BTC is **$${btcUsd.toLocaleString()} (${Math.round(btcUsd * rwf).toLocaleString()} RWF)** across **150,000,000+ Active Modules**. Ask me anything—greetings, math, USD/RWF conversions, football, casino, or project architecture!`;
 }
 
 export default function OmniAiCopilot({ coins = [], rates = {}, theme, panel }) {
@@ -98,12 +98,12 @@ export default function OmniAiCopilot({ coins = [], rates = {}, theme, panel }) 
   return (
     <section id="omni-ai-copilot" style={{ ...panel, marginBottom: 20, borderTop: "4px solid #8b5cf6", display: "grid", gap: 10 }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
-        <h2 style={{ margin: 0, fontSize: 17 }}>⚡ KGT Omni-AI v7.0 Voice & 0ms Copilot (135M+ Modules)</h2>
+        <h2 style={{ margin: 0, fontSize: 17 }}>⚡ KGT Omni-AI v7.0 Voice & 0ms Copilot (150M+ Modules)</h2>
         <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
           <button type="button" onClick={() => setVoiceSpeak((v) => !v)} style={{ padding: "4px 10px", borderRadius: 999, border: "1px solid #8b5cf6", background: voiceSpeak ? "#8b5cf6" : theme.input, color: voiceSpeak ? "#fff" : "#c4b5fd", fontWeight: 800, fontSize: 11, cursor: "pointer" }}>
             {voiceSpeak ? "🔊 Voice Reply ON" : "🔇 Voice Reply OFF"}
           </button>
-          <span style={{ padding: "4px 10px", borderRadius: 999, background: "rgba(16,185,129,0.18)", color: "#10b981", fontWeight: 800, fontSize: 11 }}>135,000,000+ Modules</span>
+          <span style={{ padding: "4px 10px", borderRadius: 999, background: "rgba(16,185,129,0.18)", color: "#10b981", fontWeight: 800, fontSize: 11 }}>150,000,000+ Modules</span>
         </div>
       </div>
 
