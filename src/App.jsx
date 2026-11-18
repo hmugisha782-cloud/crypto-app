@@ -1,3 +1,4 @@
+import MarketProRibbon50 from "./components/MarketProRibbon50.jsx";
 import AcademyAndShortcuts from "./components/AcademyAndShortcuts.jsx";
 import UnifiedWorkspaceHub from "./components/UnifiedWorkspaceHub.jsx";
 import ShareAndEnterpriseFooter from "./components/ShareAndEnterpriseFooter.jsx";
@@ -899,6 +900,7 @@ export default function App() {
 
         {/* FOOTER */}
         <ExecutiveToolsPro portfolioValue={portfolioValue} rates={rates} theme={theme} panel={panel} />
+        <MarketProRibbon50 rates={rates} theme={theme} panel={panel} />
         <AcademyAndShortcuts setActiveTab={setActiveTab} theme={theme} panel={panel} />
         <UnifiedWorkspaceHub coins={coins} rates={rates} theme={theme} panel={panel} />
         <EnterpriseScale25k theme={theme} panel={panel} />
