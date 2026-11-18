@@ -1,3 +1,4 @@
+import MasterSystemFooterV20 from "./components/MasterSystemFooterV20.jsx";
 import MasterTelemetryHub250 from "./components/MasterTelemetryHub250.jsx";
 import AcademyAndShortcuts from "./components/AcademyAndShortcuts.jsx";
 import UnifiedWorkspaceHub from "./components/UnifiedWorkspaceHub.jsx";
@@ -907,7 +908,8 @@ export default function App() {
         <MarketCards50 theme={theme} panel={panel} />
         <Footer theme={theme} />
       </div>
-      <ShareAndEnterpriseFooter setActiveTab={setActiveTab} theme={theme} panel={panel} />
+      <MasterSystemFooterV20 theme={theme} panel={panel} />
+        <ShareAndEnterpriseFooter setActiveTab={setActiveTab} theme={theme} panel={panel} />
       </main>
   );
 }
