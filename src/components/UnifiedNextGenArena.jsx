@@ -44,13 +44,13 @@ export default function UnifiedNextGenArena({ rates = {}, theme, panel }) {
   return (
     <section style={{ ...panel, marginBottom: 18, borderTop: "3px solid #ec4899", display: "grid", gap: 12 }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
-        <strong style={{ fontSize: 13, color: "#f472b6" }}>🚀 NEXT-GEN ARENA & 1,500,000+ UNIFIED PROJECT MODULES (v37.0)</strong>
+        <strong style={{ fontSize: 13, color: "#f472b6" }}>🚀 NEXT-GEN ARENA & 2,500,000+ UNIFIED PROJECT MODULES (v38.0)</strong>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
           {[
             ["esports", "🎮 Esports & Virtuals"],
             ["depin", "☀️ Solar DePIN & AI GPU"],
             ["binary", "🔮 15-Min Binary (1.88x)"],
-            ["matrix5k", "⚡ 1,500,000+ Micro-Modules"],
+            ["matrix5k", "⚡ 2,500,000+ Micro-Modules"],
           ].map(([id, label]) => (
             <button
               key={id}
