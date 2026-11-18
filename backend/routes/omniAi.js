@@ -76,7 +76,7 @@ router.post("/ask", (req, res) => {
     answer = `💬 **Live Chat & WebRTC HD Video Call Hub:** 4 SQLite-synced rooms (${chatCount} messages) + encrypted HD Video & Screen-Share.`;
     quickAction = { label: "Open Live Chat & Video", tab: "chatvideo" };
   } else {
-    answer = `🤖 **KGT Omni-AI v3.0 Full System Report (Suite v8.0):**\n• **160,000,000+ Active Modules** (210,060 Indexed Telemetry Nodes + 4,088 Live Cards)\n• **45 SQLite Tables:** ${usersCount} Users · ${betsCount} Bets · ${p2pCount} P2P Orders · ${vaultsCount} Vaults · ${chatCount} Chat Messages\n• **150 Football Nations (600 Leagues)** + **VIP Casino** + **WebRTC Video Chat**.`;
+    answer = `🤖 **KGT Omni-AI v3.0 Full System Report (Suite v8.0):**\n• **170,000,000+ Active Modules** (210,060 Indexed Telemetry Nodes + 4,088 Live Cards)\n• **45 SQLite Tables:** ${usersCount} Users · ${betsCount} Bets · ${p2pCount} P2P Orders · ${vaultsCount} Vaults · ${chatCount} Chat Messages\n• **150 Football Nations (600 Leagues)** + **VIP Casino** + **WebRTC Video Chat**.`;
     quickAction = { label: "Explore 210,060 Modules", tab: "market" };
   }
 
