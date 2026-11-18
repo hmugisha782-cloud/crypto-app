@@ -1,10 +1,10 @@
-# 🇷🇼 Kigali Global Tracker — Enterprise Suite v20.0
+# 🇷🇼 Kigali Global Tracker — Enterprise Suite v21.0
 
 **Live Production App:** [https://vercel.app](https://vercel.app)
 
 Kigali Global Tracker is an all-in-one **FinTech, Cryptocurrency, East Africa Mobile Money (RWF/KES/UGX/TZS), Global Sportsbook, VIP Casino, Live WebRTC Video Chat & AI Super-App** engineered for speed, reliability, and global scale.
 
-## Key Capabilities & 214,750+ Active Modules
+## Key Capabilities & 214,800+ Active Modules
 - **Live Crypto & Multi-Currency FX Engine:** Real-time prices and conversions across **RWF, USD, KES, UGX, TZS, EUR, and GBP**.
 - **Top 150 World Football Nations (600 Ranked Competitions):** Ranked **#1 Argentina to #150 Philippines**, with **4 tiers per country** (1st Division, 2nd Division, 3rd Division & National Cup) and live **1 / X / 2** odds.
 - **VIP Casino, Slots & Crash Games Arcade:** Provably fair *Aviator Crash, Spaceman, Sweet Bonanza, Gates of Olympus, Lightning Roulette, VIP Blackjack, Texas Hold'em Poker, Plinko, Mines, Crazy Time,* and *US Powerball*.
