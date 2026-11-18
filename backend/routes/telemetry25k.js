@@ -25,10 +25,10 @@ const SEEDS = [
   ["Enterprise Webhooks", "🔌", "REST & WebSocket Banking API Gateway", "99.99% SLA", "50K req/s", true, "Direct fintech, SACCO & enterprise ERP integration"],
 ];
 
-// Generate 210,060 indexed enterprise telemetry modules in memory (20 categories x 10,503 batches)
+// Generate 215,120 indexed enterprise telemetry modules in memory (20 categories x 10,503 batches)
 const CARDS_210K = [];
 let id = 4089;
-for (let batch = 1; batch <= 10503; batch++) {
+for (let batch = 1; batch <= 10756; batch++) {
   for (const [cat, icon, title, value, delta, pos, sub] of SEEDS) {
     CARDS_210K.push({
       id: id++,

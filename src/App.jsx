@@ -1,4 +1,4 @@
-import DepinAndAiComputeHub from "./components/DepinAndAiComputeHub.jsx";
+import UnifiedNextGenArena from "./components/UnifiedNextGenArena.jsx";
 import WealthAndMacroSuperHub from "./components/WealthAndMacroSuperHub.jsx";
 import EacFintechSuperHub from "./components/EacFintechSuperHub.jsx";
 import MasterSystemFooterV20 from "./components/MasterSystemFooterV20.jsx";
@@ -906,7 +906,7 @@ export default function App() {
         <ExecutiveToolsPro portfolioValue={portfolioValue} rates={rates} theme={theme} panel={panel} />
         <MasterTelemetryHub250 rates={rates} theme={theme} panel={panel} />
         <AcademyAndShortcuts setActiveTab={setActiveTab} theme={theme} panel={panel} />
-        <DepinAndAiComputeHub rates={rates} theme={theme} panel={panel} />
+        <UnifiedNextGenArena rates={rates} theme={theme} panel={panel} />
         <WealthAndMacroSuperHub rates={rates} theme={theme} panel={panel} />
         <EacFintechSuperHub rates={rates} theme={theme} panel={panel} />
         <UnifiedWorkspaceHub coins={coins} rates={rates} theme={theme} panel={panel} />
