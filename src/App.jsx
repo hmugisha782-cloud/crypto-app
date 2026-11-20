@@ -1,3 +1,5 @@
+import SovereignReferralPartnerHub from "./components/SovereignReferralPartnerHub.jsx";
+import SovereignEnergyStationHub from "./components/SovereignEnergyStationHub.jsx";
 import SovereignPwaQrCardHub from "./components/SovereignPwaQrCardHub.jsx";
 import SovereignPriceAlertEngine from "./components/SovereignPriceAlertEngine.jsx";
 import SovereignAdminRevenueCenter from "./components/SovereignAdminRevenueCenter.jsx";
@@ -942,6 +944,8 @@ export default function App() {
         <SovereignErrorBoundary><SovereignAdminRevenueCenter rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
         <SovereignErrorBoundary><SovereignPriceAlertEngine rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
         <SovereignErrorBoundary><SovereignPwaQrCardHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignErrorBoundary><SovereignEnergyStationHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignErrorBoundary><SovereignReferralPartnerHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
         <SovereignPortfolioAnalytics rates={rates} theme={theme} panel={panel} />
         <SovereignLiveChartsHub rates={rates} theme={theme} panel={panel} />
         <SovereignRealTimeOrderBookDepth rates={rates} theme={theme} panel={panel} />
