@@ -1,0 +1,56 @@
+{
+  "app": {
+    "name": "Kigali Global Tracker"
+  },
+  "navigation": {
+    "market": "Isoko",
+    "charts": "Imbonerahamwe",
+    "portfolio": "Umutungo wanjye",
+    "alerts": "Imenyesha ry'ibiciro",
+    "converter": "Guhindura amafaranga",
+    "news": "Amakuru ya Crypto",
+    "sentiment": "Ubwoba n'Umururumba",
+    "transactions": "Ibyakozwe",
+    "dca": "Imibare y'ishoramari rya buri gihe",
+    "accounts": "Konti"
+  },
+  "common": {
+    "search": "Shakisha",
+    "loading": "Birimo gutegurwa...",
+    "save": "Bika",
+    "cancel": "Reka",
+    "delete": "Siba",
+    "edit": "Hindura",
+    "close": "Funga",
+    "language": "Ururimi",
+    "settings": "Igenamiterere"
+  },
+  "header": {
+    "title": "Imbonerahamwe ya Crypto n'amafaranga",
+    "subtitle": "Crypto iriho ubu · Amafaranga yo ku isi · Umutungo · Imenyesha ry'ibiciro",
+    "darkMode": "Uburyo bwijimye",
+    "lightMode": "Uburyo bw'urumuri"
+  },
+  "market": {
+    "searchPlaceholder": "⌕ Shakisha Bitcoin, ETH, Dogecoin...",
+    "searchLabel": "Shakisha amafaranga ya Crypto",
+    "sortLabel": "Tondeka amafaranga",
+    "defaultOrder": "Uko bisanzwe bikurikirana",
+    "nameAZ": "Izina: A kugeza kuri Z",
+    "priceHigh": "Igiciro: Kinini kugeza ku gito",
+    "priceLow": "Igiciro: Gito kugeza ku kinini",
+    "gainers": "Ayazamutse cyane",
+    "losers": "Ayamanutse cyane",
+    "allCoins": "Amafaranga yose",
+    "watchlist": "Amafaranga nakurikirana",
+    "toggleWatchlist": "Hindura urutonde rw’amafaranga ukurikirana",
+    "loadingPrice": "Ibiciro birimo gutegurwa...",
+    "collectingHistory": "Amateka y’ibiciro arimo gukusanywa...",
+    "priceIncreased": "▲ Igiciro cyazamutse kuva giheruka kuvugururwa",
+    "priceDecreased": "▼ Igiciro cyamanutse kuva giheruka kuvugururwa",
+    "waitingMovement": "● Dutegereje ihinduka ry’igiciro",
+    "viewChart": "Reba imbonerahamwe",
+    "noCoinsFound": "Nta mafaranga abonetse. Gerageza gushakisha ukundi cyangwa uhitemo Amafaranga yose.",
+    "marketMovers": "↗ Amafaranga yahindutse cyane (amasaha 24)"
+  }
+}

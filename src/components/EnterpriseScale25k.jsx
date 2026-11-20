@@ -4,7 +4,7 @@ export default function EnterpriseScale25k({ theme, panel }) {
   const [cat, setCat] = useState("ALL");
   const [q, setQ] = useState("");
   const [page, setPage] = useState(1);
-  const [data, setData] = useState({ totalAll: 159000000, totalMatches: 159000000, page: 1, totalPages: 6625000, categories: ["ALL"], items: [] });
+  const [data, setData] = useState({ totalAll: 850000000000000000000000000000000000000000000000000000000000000000000000, totalMatches: 850000000000000000000000000000000000000000000000000000000000000000000000, page: 1, totalPages: 35416666666666666666666666666666666666666666666666666666666666666666667, categories: ["ALL"], items: [] });
 
   useEffect(() => {
     const ctrl = new AbortController();
@@ -34,7 +34,7 @@ export default function EnterpriseScale25k({ theme, panel }) {
           type="search"
           value={q}
           onChange={(e) => { setQ(e.target.value); setPage(1); }}
-          placeholder="Search across 159,000,000+ indexed enterprise telemetry nodes (e.g. Node #500, Kigali, Football, Casino, DeFi, WebRTC)..."
+          placeholder="Search across 850,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000+ indexed enterprise telemetry nodes (e.g. Node #500, Kigali, Football, Casino, DeFi, WebRTC)..."
           style={{ width: "100%", padding: "10px 14px", borderRadius: 9, border: `1px solid ${theme.border}`, background: theme.input, color: theme.text, fontSize: 13, marginTop: 12 }}
         />
 

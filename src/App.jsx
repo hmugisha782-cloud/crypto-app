@@ -1,3 +1,190 @@
+import SovereignPwaQrCardHub from "./components/SovereignPwaQrCardHub.jsx";
+import SovereignPriceAlertEngine from "./components/SovereignPriceAlertEngine.jsx";
+import SovereignAdminRevenueCenter from "./components/SovereignAdminRevenueCenter.jsx";
+import SovereignRwandaLiveMapHub from "./components/SovereignRwandaLiveMapHub.jsx";
+import SovereignVideoCallHub from "./components/SovereignVideoCallHub.jsx";
+import SovereignColdChainLogistics from "./components/SovereignColdChainLogistics.jsx";
+import SovereignDomainDnsWeb3Hub from "./components/SovereignDomainDnsWeb3Hub.jsx";
+import SovereignCharityZakatTitheHub from "./components/SovereignCharityZakatTitheHub.jsx";
+import SovereignFleetFuelEvCard from "./components/SovereignFleetFuelEvCard.jsx";
+import SovereignSystemBackupRestore from "./components/SovereignSystemBackupRestore.jsx";
+import SovereignWebhookAlertBot from "./components/SovereignWebhookAlertBot.jsx";
+import SovereignSmartContractAuditor from "./components/SovereignSmartContractAuditor.jsx";
+import SovereignEcommerceEscrowStore from "./components/SovereignEcommerceEscrowStore.jsx";
+import SovereignDiasporaBondPortal from "./components/SovereignDiasporaBondPortal.jsx";
+import SovereignInsuranceClaimDesk from "./components/SovereignInsuranceClaimDesk.jsx";
+import SovereignTransportTapGoHub from "./components/SovereignTransportTapGoHub.jsx";
+import SovereignAgriMarketPriceTicker from "./components/SovereignAgriMarketPriceTicker.jsx";
+import SovereignSolarPayGoEnergy from "./components/SovereignSolarPayGoEnergy.jsx";
+import SovereignHealthTelemedicineHub from "./components/SovereignHealthTelemedicineHub.jsx";
+import SovereignTelecomDataBundleHub from "./components/SovereignTelecomDataBundleHub.jsx";
+import SovereignRdbBusinessRegistry from "./components/SovereignRdbBusinessRegistry.jsx";
+import SovereignRssbPensionMutuelle from "./components/SovereignRssbPensionMutuelle.jsx";
+import SovereignRwandaLandRegistry from "./components/SovereignRwandaLandRegistry.jsx";
+import SovereignAuditProofOfReserves from "./components/SovereignAuditProofOfReserves.jsx";
+import SovereignSubAccountManager from "./components/SovereignSubAccountManager.jsx";
+import SovereignOptionsVolatilityDesk from "./components/SovereignOptionsVolatilityDesk.jsx";
+import SovereignSubscriptionGuardian from "./components/SovereignSubscriptionGuardian.jsx";
+import SovereignMultiCurrencyIbanHub from "./components/SovereignMultiCurrencyIbanHub.jsx";
+import SovereignCrossBorderSwiftSepa from "./components/SovereignCrossBorderSwiftSepa.jsx";
+import SovereignAutoRebalanceBot from "./components/SovereignAutoRebalanceBot.jsx";
+import SovereignBillSplitGroupPay from "./components/SovereignBillSplitGroupPay.jsx";
+import SovereignSavingsGoalsVault from "./components/SovereignSavingsGoalsVault.jsx";
+import SovereignCreditScoreBureau from "./components/SovereignCreditScoreBureau.jsx";
+import SovereignAiFraudRiskShield from "./components/SovereignAiFraudRiskShield.jsx";
+import SovereignWhaleOnchainRadar from "./components/SovereignWhaleOnchainRadar.jsx";
+import SovereignPnlTaxAuditEngine from "./components/SovereignPnlTaxAuditEngine.jsx";
+import SovereignMarginHealthMonitor from "./components/SovereignMarginHealthMonitor.jsx";
+import SovereignOtcInstitutionalDesk from "./components/SovereignOtcInstitutionalDesk.jsx";
+import SovereignLimitStopOrderDesk from "./components/SovereignLimitStopOrderDesk.jsx";
+import SovereignWorkspaceTabs from "./components/SovereignWorkspaceTabs.jsx";
+import SovereignMerchantPosTerminal from "./components/SovereignMerchantPosTerminal.jsx";
+import SovereignLiquidityPoolAmm from "./components/SovereignLiquidityPoolAmm.jsx";
+import SovereignAcademyCertHub from "./components/SovereignAcademyCertHub.jsx";
+import SovereignVoiceCommandAssistant from "./components/SovereignVoiceCommandAssistant.jsx";
+import SovereignBeneficiaryWillVault from "./components/SovereignBeneficiaryWillVault.jsx";
+import SovereignHardwareColdVault from "./components/SovereignHardwareColdVault.jsx";
+import SovereignRseEquitiesHub from "./components/SovereignRseEquitiesHub.jsx";
+import SovereignTreasuryBondsDesk from "./components/SovereignTreasuryBondsDesk.jsx";
+import SovereignKigaliRealtyVault from "./components/SovereignKigaliRealtyVault.jsx";
+import SovereignCarbonOffsetHub from "./components/SovereignCarbonOffsetHub.jsx";
+import SovereignEnterprisePayrollHub from "./components/SovereignEnterprisePayrollHub.jsx";
+import SovereignCrossChainBridge from "./components/SovereignCrossChainBridge.jsx";
+import SovereignRwandaUtilitiesHub from "./components/SovereignRwandaUtilitiesHub.jsx";
+import SovereignTravelSafariHub from "./components/SovereignTravelSafariHub.jsx";
+import SovereignSmartEscrowHub from "./components/SovereignSmartEscrowHub.jsx";
+import SovereignVirtualCardIssuer from "./components/SovereignVirtualCardIssuer.jsx";
+import SovereignGatsiboAgroVault from "./components/SovereignGatsiboAgroVault.jsx";
+import SovereignNftCulturalVault from "./components/SovereignNftCulturalVault.jsx";
+import SovereignCopyTradingHub from "./components/SovereignCopyTradingHub.jsx";
+import SovereignErrorBoundary from "./components/SovereignErrorBoundary.jsx";
+import SovereignDeveloperApiPortal from "./components/SovereignDeveloperApiPortal.jsx";
+import SovereignSystemHealthMonitor from "./components/SovereignSystemHealthMonitor.jsx";
+import SovereignDaoGovernanceHub from "./components/SovereignDaoGovernanceHub.jsx";
+import SovereignCollateralLoanDesk from "./components/SovereignCollateralLoanDesk.jsx";
+import SovereignReferralPartnerEngine from "./components/SovereignReferralPartnerEngine.jsx";
+import SovereignStakingYieldAggregator from "./components/SovereignStakingYieldAggregator.jsx";
+import SovereignRealTimeOrderBookDepth from "./components/SovereignRealTimeOrderBookDepth.jsx";
+import SovereignFloatingDockV2 from "./components/SovereignFloatingDockV2.jsx";
+import SovereignCommandPaletteModal from "./components/SovereignCommandPaletteModal.jsx";
+import SovereignMultiSigTreasuryVault from "./components/SovereignMultiSigTreasuryVault.jsx";
+import SovereignPriceAlertWatchlist from "./components/SovereignPriceAlertWatchlist.jsx";
+import SovereignRwandaTaxEbmCalculator from "./components/SovereignRwandaTaxEbmCalculator.jsx";
+import SovereignAutoInvestDcaEngine from "./components/SovereignAutoInvestDcaEngine.jsx";
+import SovereignKycIdentityPassport from "./components/SovereignKycIdentityPassport.jsx";
+import SovereignQrPaymentHub from "./components/SovereignQrPaymentHub.jsx";
+import SovereignP2pOrderbookHub from "./components/SovereignP2pOrderbookHub.jsx";
+import SovereignLiveChartsHub from "./components/SovereignLiveChartsHub.jsx";
+import SovereignPortfolioAnalytics from "./components/SovereignPortfolioAnalytics.jsx";
+import SovereignVipLoyaltyCard from "./components/SovereignVipLoyaltyCard.jsx";
+import SovereignNotificationCenter from "./components/SovereignNotificationCenter.jsx";
+import SovereignLanguageLocaleBar from "./components/SovereignLanguageLocaleBar.jsx";
+import SovereignQuickBetSlip from "./components/SovereignQuickBetSlip.jsx";
+import SovereignFxConverterBar from "./components/SovereignFxConverterBar.jsx";
+import SovereignSecurityPinVault from "./components/SovereignSecurityPinVault.jsx";
+import SovereignOmniAiCopilot from "./components/SovereignOmniAiCopilot.jsx";
+import SovereignSpotFuturesEngine from "./components/SovereignSpotFuturesEngine.jsx";
+import SovereignSuperAppDirectory from "./components/SovereignSuperAppDirectory.jsx";
+import SovereignMasterWalletBar from "./components/SovereignMasterWalletBar.jsx";
+import OmniGlobalMiningMineralsHub from "./components/OmniGlobalMiningMineralsHub.jsx";
+import OmniParametricInsurancePensionHub from "./components/OmniParametricInsurancePensionHub.jsx";
+import OmniGlobalPublishingResearchHub from "./components/OmniGlobalPublishingResearchHub.jsx";
+import OmniSocialImpactCrowdfundingHub from "./components/OmniSocialImpactCrowdfundingHub.jsx";
+import OmniGlobalTradeFinanceHub from "./components/OmniGlobalTradeFinanceHub.jsx";
+import OmniQuantumComputeMiningHub from "./components/OmniQuantumComputeMiningHub.jsx";
+import OmniGlobalAutoMobilityHub from "./components/OmniGlobalAutoMobilityHub.jsx";
+import OmniCbdcDexClearingHub from "./components/OmniCbdcDexClearingHub.jsx";
+import OmniGlobalTelecom6GMeshHub from "./components/OmniGlobalTelecom6GMeshHub.jsx";
+import OmniLuxuryJetsConciergeHub from "./components/OmniLuxuryJetsConciergeHub.jsx";
+import OmniGlobalStockExchangeEtfHub from "./components/OmniGlobalStockExchangeEtfHub.jsx";
+import OmniSportsEsportsAcademyHub from "./components/OmniSportsEsportsAcademyHub.jsx";
+import OmniMetaverseDigitalTwinHub from "./components/OmniMetaverseDigitalTwinHub.jsx";
+import OmniSmartInfraClimateBondsHub from "./components/OmniSmartInfraClimateBondsHub.jsx";
+import OmniPanAfricanEdTechTalentHub from "./components/OmniPanAfricanEdTechTalentHub.jsx";
+import OmniBioTechGenomicsHub from "./components/OmniBioTechGenomicsHub.jsx";
+import OmniMaritimeBlueEconomyHub from "./components/OmniMaritimeBlueEconomyHub.jsx";
+import OmniSpaceTechRoboticsHub from "./components/OmniSpaceTechRoboticsHub.jsx";
+import OmniGlobalBankingRemittanceHub from "./components/OmniGlobalBankingRemittanceHub.jsx";
+import OmniCreatorMediaStreamingHub from "./components/OmniCreatorMediaStreamingHub.jsx";
+import OmniTokenizedRealEstateGoldHub from "./components/OmniTokenizedRealEstateGoldHub.jsx";
+import OmniAiAgentsAutomationHub from "./components/OmniAiAgentsAutomationHub.jsx";
+import OmniGlobalEcommerceLogisticsHub from "./components/OmniGlobalEcommerceLogisticsHub.jsx";
+import OmniCloudTelecomSatelliteHub from "./components/OmniCloudTelecomSatelliteHub.jsx";
+import OmniGovTechIremboHub from "./components/OmniGovTechIremboHub.jsx";
+import OmniCyberSecurityQuantumIdHub from "./components/OmniCyberSecurityQuantumIdHub.jsx";
+import OmniEnterpriseErpPayrollHub from "./components/OmniEnterpriseErpPayrollHub.jsx";
+import OmniAviationSmartCityHub from "./components/OmniAviationSmartCityHub.jsx";
+import OmniCleanEnergyUtilitiesHub from "./components/OmniCleanEnergyUtilitiesHub.jsx";
+import OmniAgriTechSupplyChainHub from "./components/OmniAgriTechSupplyChainHub.jsx";
+import OmniLegalTechNotaryHub from "./components/OmniLegalTechNotaryHub.jsx";
+import OmniHealthcarePharmacyHub from "./components/OmniHealthcarePharmacyHub.jsx";
+import OmniHospitalityTourismHub from "./components/OmniHospitalityTourismHub.jsx";
+import OmniEdTechVentureHub from "./components/OmniEdTechVentureHub.jsx";
+import OmniFrontierRoyaltiesHub from "./components/OmniFrontierRoyaltiesHub.jsx";
+import OmniTenTrillionSuperHub from "./components/OmniTenTrillionSuperHub.jsx";
+import OmniOneTrillionSuperHub from "./components/OmniOneTrillionSuperHub.jsx";
+import OmniHundredBillionSuperHub from "./components/OmniHundredBillionSuperHub.jsx";
+import OmniTenBillionSuperHub from "./components/OmniTenBillionSuperHub.jsx";
+import OmniOneBillionSuperHub from "./components/OmniOneBillionSuperHub.jsx";
+import OmniHundredMillionSuperHub from "./components/OmniHundredMillionSuperHub.jsx";
+import OmniFiftyMillionSuperHub from "./components/OmniFiftyMillionSuperHub.jsx";
+import OmniTwentyFiveMillionHub from "./components/OmniTwentyFiveMillionHub.jsx";
+import OmniTenMillionSuperHub from "./components/OmniTenMillionSuperHub.jsx";
+import OmniFiveMillionSuperHub from "./components/OmniFiveMillionSuperHub.jsx";
+import OmniTwoPointFiveMillionHub from "./components/OmniTwoPointFiveMillionHub.jsx";
+import OmniOneMillionSuperHub from "./components/OmniOneMillionSuperHub.jsx";
+import OmniUniversal500kHub from "./components/OmniUniversal500kHub.jsx";
+import OmniGlobalTrade250kHub from "./components/OmniGlobalTrade250kHub.jsx";
+import OmniSuperDirectory100kHub from "./components/OmniSuperDirectory100kHub.jsx";
+import OmniBankingForex75kHub from "./components/OmniBankingForex75kHub.jsx";
+import OmniSportsCasino50kHub from "./components/OmniSportsCasino50kHub.jsx";
+import OmniMegaCatalog35kHub from "./components/OmniMegaCatalog35kHub.jsx";
+import TenQuintillionHyperNexusHub from "./components/TenQuintillionHyperNexusHub.jsx";
+import OneQuintillionHyperContinuumHub from "./components/OneQuintillionHyperContinuumHub.jsx";
+import HundredQuadrillionHyperEmpireHub from "./components/HundredQuadrillionHyperEmpireHub.jsx";
+import FiftyQuadrillionHyperGalaxyHub from "./components/FiftyQuadrillionHyperGalaxyHub.jsx";
+import TwentyFiveQuadrillionContinuumHub from "./components/TwentyFiveQuadrillionContinuumHub.jsx";
+import TenQuadrillionHyperNexusHub from "./components/TenQuadrillionHyperNexusHub.jsx";
+import FiveQuadrillionSuperOsHub from "./components/FiveQuadrillionSuperOsHub.jsx";
+import OneQuadrillionCentennialHub from "./components/OneQuadrillionCentennialHub.jsx";
+import FiveHundredTrillionCivilizationHub from "./components/FiveHundredTrillionCivilizationHub.jsx";
+import QuantumBiometricBankingHub from "./components/QuantumBiometricBankingHub.jsx";
+import HundredTrillionSuperCoreHub from "./components/HundredTrillionSuperCoreHub.jsx";
+import FusionEnergyHyperGridHub from "./components/FusionEnergyHyperGridHub.jsx";
+import UniversalCbdcQuantumHub from "./components/UniversalCbdcQuantumHub.jsx";
+import GlobalMasterControlHub from "./components/GlobalMasterControlHub.jsx";
+import OmniverseSuperIntelligenceHub from "./components/OmniverseSuperIntelligenceHub.jsx";
+import InterstellarQuantumGridHub from "./components/InterstellarQuantumGridHub.jsx";
+import PlanetaryAiQuantumMeshHub from "./components/PlanetaryAiQuantumMeshHub.jsx";
+import GlobalTelecomEsimHub from "./components/GlobalTelecomEsimHub.jsx";
+import GlobalStockExchangeHub from "./components/GlobalStockExchangeHub.jsx";
+import GlobalCentralClearingHub from "./components/GlobalCentralClearingHub.jsx";
+import AerospaceSpaceTelemetryHub from "./components/AerospaceSpaceTelemetryHub.jsx";
+import BioTechGenomicsHub from "./components/BioTechGenomicsHub.jsx";
+import QuantumSovereignHub from "./components/QuantumSovereignHub.jsx";
+import IoTRoboticsSmartGridHub from "./components/IoTRoboticsSmartGridHub.jsx";
+import LegalTechNotaryHub from "./components/LegalTechNotaryHub.jsx";
+import SupplyChainCustomsHub from "./components/SupplyChainCustomsHub.jsx";
+import AutonomousAiBotsHub from "./components/AutonomousAiBotsHub.jsx";
+import MetaverseDigitalTwinHub from "./components/MetaverseDigitalTwinHub.jsx";
+import EnterpriseErpPayrollHub from "./components/EnterpriseErpPayrollHub.jsx";
+import CrowdfundingImpactHub from "./components/CrowdfundingImpactHub.jsx";
+import CleanEnergyCarbonHub from "./components/CleanEnergyCarbonHub.jsx";
+import SatelliteCloudApiHub from "./components/SatelliteCloudApiHub.jsx";
+import SmartMobilityEvHub from "./components/SmartMobilityEvHub.jsx";
+import AgriTechCommodityHub from "./components/AgriTechCommodityHub.jsx";
+import LiveMediaCreatorHub from "./components/LiveMediaCreatorHub.jsx";
+import EducationTechJobsHub from "./components/EducationTechJobsHub.jsx";
+import GovTechIremboCityHub from "./components/GovTechIremboCityHub.jsx";
+import TelemedicineInsuranceHub from "./components/TelemedicineInsuranceHub.jsx";
+import GlobalMarketplaceTravelHub from "./components/GlobalMarketplaceTravelHub.jsx";
+import VipRewardsReferralHub from "./components/VipRewardsReferralHub.jsx";
+import CopyTradingAcademyHub from "./components/CopyTradingAcademyHub.jsx";
+import RealEstateCommoditiesHub from "./components/RealEstateCommoditiesHub.jsx";
+import DepinComputeStakingHub from "./components/DepinComputeStakingHub.jsx";
+import SecurityKycVaultGuard from "./components/SecurityKycVaultGuard.jsx";
+import AiWealthRebalancerHub from "./components/AiWealthRebalancerHub.jsx";
+import GlobalBankingRemittanceHub from "./components/GlobalBankingRemittanceHub.jsx";
 import FloatingCommandDock from "./components/FloatingCommandDock.jsx";
 import LiveGlobalTickerStrip from "./components/LiveGlobalTickerStrip.jsx";
 import InteractiveSportsAndGamesHub from "./components/InteractiveSportsAndGamesHub.jsx";
@@ -740,6 +927,159 @@ export default function App() {
         <ExecutiveHeroBanner setActiveTab={setActiveTab} rates={rates} />
         <LiveGlobalTickerStrip rates={rates} theme={theme} />
         <InteractiveSportsAndGamesHub rates={rates} theme={theme} panel={panel} />
+        <SovereignCommandPaletteModal />
+        <SovereignFloatingDockV2 />
+        <SovereignErrorBoundary><SovereignLanguageLocaleBar theme={theme} panel={panel} /></SovereignErrorBoundary>
+        
+        <SovereignNotificationCenter theme={theme} panel={panel} />
+        <SovereignWorkspaceTabs theme={theme} panel={panel} />
+        <SovereignSuperAppDirectory theme={theme} panel={panel} />
+        <SovereignVipLoyaltyCard rates={rates} theme={theme} panel={panel} />
+        <SovereignMasterWalletBar rates={rates} theme={theme} panel={panel} />
+        <SovereignErrorBoundary><SovereignOmniAiCopilot rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignErrorBoundary><SovereignVideoCallHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignErrorBoundary><SovereignRwandaLiveMapHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignErrorBoundary><SovereignAdminRevenueCenter rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignErrorBoundary><SovereignPriceAlertEngine rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignErrorBoundary><SovereignPwaQrCardHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignPortfolioAnalytics rates={rates} theme={theme} panel={panel} />
+        <SovereignLiveChartsHub rates={rates} theme={theme} panel={panel} />
+        <SovereignRealTimeOrderBookDepth rates={rates} theme={theme} panel={panel} />
+        <SovereignStakingYieldAggregator rates={rates} theme={theme} panel={panel} />
+        <SovereignAutoInvestDcaEngine rates={rates} theme={theme} panel={panel} />
+        <SovereignPriceAlertWatchlist rates={rates} theme={theme} panel={panel} />
+        <SovereignRwandaTaxEbmCalculator rates={rates} theme={theme} panel={panel} />
+        <SovereignCollateralLoanDesk rates={rates} theme={theme} panel={panel} />
+        <SovereignMultiSigTreasuryVault rates={rates} theme={theme} panel={panel} />
+        <SovereignReferralPartnerEngine rates={rates} theme={theme} panel={panel} />
+        <SovereignDaoGovernanceHub theme={theme} panel={panel} />
+        <SovereignDeveloperApiPortal theme={theme} panel={panel} />
+        <SovereignSystemHealthMonitor theme={theme} panel={panel} />
+        <SovereignCopyTradingHub rates={rates} theme={theme} panel={panel} />
+        <SovereignNftCulturalVault rates={rates} theme={theme} panel={panel} />
+        <SovereignGatsiboAgroVault rates={rates} theme={theme} panel={panel} />
+        <SovereignVirtualCardIssuer rates={rates} theme={theme} panel={panel} />
+        <SovereignSmartEscrowHub rates={rates} theme={theme} panel={panel} />
+        <SovereignTravelSafariHub rates={rates} theme={theme} panel={panel} />
+        <SovereignRwandaUtilitiesHub rates={rates} theme={theme} panel={panel} />
+        <SovereignCrossChainBridge rates={rates} theme={theme} panel={panel} />
+        <SovereignEnterprisePayrollHub rates={rates} theme={theme} panel={panel} />
+        <SovereignCarbonOffsetHub rates={rates} theme={theme} panel={panel} />
+        <SovereignKigaliRealtyVault rates={rates} theme={theme} panel={panel} />
+        <SovereignTreasuryBondsDesk rates={rates} theme={theme} panel={panel} />
+        <SovereignRseEquitiesHub rates={rates} theme={theme} panel={panel} />
+        <SovereignHardwareColdVault rates={rates} theme={theme} panel={panel} />
+        <SovereignBeneficiaryWillVault rates={rates} theme={theme} panel={panel} />
+        <SovereignVoiceCommandAssistant rates={rates} theme={theme} panel={panel} />
+        <SovereignAcademyCertHub rates={rates} theme={theme} panel={panel} />
+        <SovereignLiquidityPoolAmm rates={rates} theme={theme} panel={panel} />
+        <SovereignMerchantPosTerminal rates={rates} theme={theme} panel={panel} />
+        <SovereignP2pOrderbookHub rates={rates} theme={theme} panel={panel} />
+        <SovereignQrPaymentHub rates={rates} theme={theme} panel={panel} />
+        <SovereignFxConverterBar rates={rates} theme={theme} panel={panel} />
+        <SovereignErrorBoundary><SovereignSpotFuturesEngine rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignQuickBetSlip rates={rates} theme={theme} panel={panel} />
+        
+        <SovereignSecurityPinVault theme={theme} panel={panel} />
+        <OmniGlobalMiningMineralsHub rates={rates} theme={theme} panel={panel} />
+        <OmniParametricInsurancePensionHub rates={rates} theme={theme} panel={panel} />
+        <OmniGlobalPublishingResearchHub rates={rates} theme={theme} panel={panel} />
+        <OmniSocialImpactCrowdfundingHub rates={rates} theme={theme} panel={panel} />
+        <OmniGlobalTradeFinanceHub rates={rates} theme={theme} panel={panel} />
+        <OmniQuantumComputeMiningHub rates={rates} theme={theme} panel={panel} />
+        <OmniGlobalAutoMobilityHub rates={rates} theme={theme} panel={panel} />
+        <OmniCbdcDexClearingHub rates={rates} theme={theme} panel={panel} />
+        <OmniGlobalTelecom6GMeshHub rates={rates} theme={theme} panel={panel} />
+        <OmniLuxuryJetsConciergeHub rates={rates} theme={theme} panel={panel} />
+        <OmniGlobalStockExchangeEtfHub rates={rates} theme={theme} panel={panel} />
+        <OmniSportsEsportsAcademyHub rates={rates} theme={theme} panel={panel} />
+        <OmniMetaverseDigitalTwinHub rates={rates} theme={theme} panel={panel} />
+        <OmniSmartInfraClimateBondsHub rates={rates} theme={theme} panel={panel} />
+        <OmniPanAfricanEdTechTalentHub rates={rates} theme={theme} panel={panel} />
+        <OmniBioTechGenomicsHub rates={rates} theme={theme} panel={panel} />
+        <OmniMaritimeBlueEconomyHub rates={rates} theme={theme} panel={panel} />
+        <OmniSpaceTechRoboticsHub rates={rates} theme={theme} panel={panel} />
+        <OmniGlobalBankingRemittanceHub rates={rates} theme={theme} panel={panel} />
+        <OmniCreatorMediaStreamingHub rates={rates} theme={theme} panel={panel} />
+        <OmniTokenizedRealEstateGoldHub rates={rates} theme={theme} panel={panel} />
+        <OmniAiAgentsAutomationHub rates={rates} theme={theme} panel={panel} />
+        <OmniGlobalEcommerceLogisticsHub rates={rates} theme={theme} panel={panel} />
+        <OmniCloudTelecomSatelliteHub rates={rates} theme={theme} panel={panel} />
+        <OmniGovTechIremboHub rates={rates} theme={theme} panel={panel} />
+        <OmniCyberSecurityQuantumIdHub rates={rates} theme={theme} panel={panel} />
+        <OmniEnterpriseErpPayrollHub rates={rates} theme={theme} panel={panel} />
+        <OmniAviationSmartCityHub rates={rates} theme={theme} panel={panel} />
+        <OmniCleanEnergyUtilitiesHub rates={rates} theme={theme} panel={panel} />
+        <OmniAgriTechSupplyChainHub rates={rates} theme={theme} panel={panel} />
+        <OmniLegalTechNotaryHub rates={rates} theme={theme} panel={panel} />
+        <OmniHealthcarePharmacyHub rates={rates} theme={theme} panel={panel} />
+        <OmniHospitalityTourismHub rates={rates} theme={theme} panel={panel} />
+        <OmniEdTechVentureHub rates={rates} theme={theme} panel={panel} />
+        <OmniFrontierRoyaltiesHub rates={rates} theme={theme} panel={panel} />
+        <OmniTenTrillionSuperHub rates={rates} theme={theme} panel={panel} />
+        <OmniOneTrillionSuperHub rates={rates} theme={theme} panel={panel} />
+        <OmniHundredBillionSuperHub rates={rates} theme={theme} panel={panel} />
+        <OmniTenBillionSuperHub rates={rates} theme={theme} panel={panel} />
+        <OmniOneBillionSuperHub rates={rates} theme={theme} panel={panel} />
+        <OmniHundredMillionSuperHub rates={rates} theme={theme} panel={panel} />
+        <OmniFiftyMillionSuperHub rates={rates} theme={theme} panel={panel} />
+        <OmniTwentyFiveMillionHub rates={rates} theme={theme} panel={panel} />
+        <OmniTenMillionSuperHub rates={rates} theme={theme} panel={panel} />
+        <OmniFiveMillionSuperHub rates={rates} theme={theme} panel={panel} />
+        <OmniTwoPointFiveMillionHub rates={rates} theme={theme} panel={panel} />
+        <OmniOneMillionSuperHub rates={rates} theme={theme} panel={panel} />
+        <OmniUniversal500kHub rates={rates} theme={theme} panel={panel} />
+        <OmniGlobalTrade250kHub rates={rates} theme={theme} panel={panel} />
+        <OmniSuperDirectory100kHub rates={rates} theme={theme} panel={panel} />
+        <OmniBankingForex75kHub rates={rates} theme={theme} panel={panel} />
+        <OmniSportsCasino50kHub rates={rates} theme={theme} panel={panel} />
+        <OmniMegaCatalog35kHub rates={rates} theme={theme} panel={panel} />
+        <TenQuintillionHyperNexusHub rates={rates} theme={theme} panel={panel} />
+        <OneQuintillionHyperContinuumHub rates={rates} theme={theme} panel={panel} />
+        <HundredQuadrillionHyperEmpireHub rates={rates} theme={theme} panel={panel} />
+        <FiftyQuadrillionHyperGalaxyHub rates={rates} theme={theme} panel={panel} />
+        <TwentyFiveQuadrillionContinuumHub rates={rates} theme={theme} panel={panel} />
+        <TenQuadrillionHyperNexusHub rates={rates} theme={theme} panel={panel} />
+        <FiveQuadrillionSuperOsHub rates={rates} theme={theme} panel={panel} />
+        <OneQuadrillionCentennialHub rates={rates} theme={theme} panel={panel} />
+        <FiveHundredTrillionCivilizationHub rates={rates} theme={theme} panel={panel} />
+        <QuantumBiometricBankingHub rates={rates} theme={theme} panel={panel} />
+        <HundredTrillionSuperCoreHub rates={rates} theme={theme} panel={panel} />
+        <FusionEnergyHyperGridHub rates={rates} theme={theme} panel={panel} />
+        <UniversalCbdcQuantumHub rates={rates} theme={theme} panel={panel} />
+        <GlobalMasterControlHub rates={rates} theme={theme} panel={panel} />
+        <OmniverseSuperIntelligenceHub rates={rates} theme={theme} panel={panel} />
+        <InterstellarQuantumGridHub rates={rates} theme={theme} panel={panel} />
+        <PlanetaryAiQuantumMeshHub rates={rates} theme={theme} panel={panel} />
+        <GlobalTelecomEsimHub rates={rates} theme={theme} panel={panel} />
+        <GlobalStockExchangeHub rates={rates} theme={theme} panel={panel} />
+        <GlobalCentralClearingHub rates={rates} theme={theme} panel={panel} />
+        <AerospaceSpaceTelemetryHub rates={rates} theme={theme} panel={panel} />
+        <BioTechGenomicsHub rates={rates} theme={theme} panel={panel} />
+        <QuantumSovereignHub rates={rates} theme={theme} panel={panel} />
+        <IoTRoboticsSmartGridHub rates={rates} theme={theme} panel={panel} />
+        <LegalTechNotaryHub rates={rates} theme={theme} panel={panel} />
+        <SupplyChainCustomsHub rates={rates} theme={theme} panel={panel} />
+        <AutonomousAiBotsHub rates={rates} theme={theme} panel={panel} />
+        <MetaverseDigitalTwinHub rates={rates} theme={theme} panel={panel} />
+        <EnterpriseErpPayrollHub rates={rates} theme={theme} panel={panel} />
+        <CrowdfundingImpactHub rates={rates} theme={theme} panel={panel} />
+        <CleanEnergyCarbonHub rates={rates} theme={theme} panel={panel} />
+        <SatelliteCloudApiHub rates={rates} theme={theme} panel={panel} />
+        <SmartMobilityEvHub rates={rates} theme={theme} panel={panel} />
+        <AgriTechCommodityHub rates={rates} theme={theme} panel={panel} />
+        <LiveMediaCreatorHub rates={rates} theme={theme} panel={panel} />
+        <EducationTechJobsHub rates={rates} theme={theme} panel={panel} />
+        <GovTechIremboCityHub rates={rates} theme={theme} panel={panel} />
+        <TelemedicineInsuranceHub rates={rates} theme={theme} panel={panel} />
+        <GlobalMarketplaceTravelHub rates={rates} theme={theme} panel={panel} />
+        <VipRewardsReferralHub rates={rates} theme={theme} panel={panel} />
+        <CopyTradingAcademyHub rates={rates} theme={theme} panel={panel} />
+        <RealEstateCommoditiesHub rates={rates} theme={theme} panel={panel} />
+        <DepinComputeStakingHub rates={rates} theme={theme} panel={panel} />
+        <SecurityKycVaultGuard rates={rates} theme={theme} panel={panel} />
+        <AiWealthRebalancerHub rates={rates} theme={theme} panel={panel} />
+        <GlobalBankingRemittanceHub rates={rates} theme={theme} panel={panel} />
         <TopGlobalSearch setActiveTab={setActiveTab} theme={theme} panel={panel} />
         <CommandCenterPro coins={coins} rates={rates} theme={theme} panel={panel} />
         <LiveTickerHeatmap coins={coins} rates={rates} theme={theme} panel={panel} setActiveTab={setActiveTab} />

@@ -1,3 +1,5 @@
+import omniAiGateway from "./routes/omniAiGateway.js";
+import sovereignLedgerApi from "./routes/sovereignLedgerApi.js";
 import "dotenv/config";
 import express from "express";
 import helmet from "helmet";
@@ -47,6 +49,8 @@ const apiLimiter = rateLimit({
 });
 
 app.use(apiLimiter);
+app.use("/api/ai", omniAiGateway);
+app.use("/api/sovereign", sovereignLedgerApi);
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userDataRoutes);
 app.use("/api/market", marketExtraRoutes);

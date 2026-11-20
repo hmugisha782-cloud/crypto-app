@@ -39,6 +39,79 @@ const ALL_150_NATIONS = [
   "Estonia","Latvia","Lithuania","Faroe Islands","Moldova","Malta","Andorra","Liechtenstein","Indonesia","Philippines"
 ];
 
+
+const VOLLEYBALL_LEAGUES = {
+  "🇷🇼 Rwanda National Volleyball League": {
+    teams: ["REG VC", "Gisagara VC", "APR VC", "Kigali Volleyball Club (KVC)", "UTB VC", "IPRC Ngoma VC", "IPRC Musanze VC", "Police VC"],
+    fixtures: [
+      ["REG VC vs Gisagara VC", 1.85, 2.05],
+      ["APR VC vs Kigali Volleyball Club (KVC)", 1.90, 1.98],
+      ["UTB VC vs IPRC Ngoma VC", 1.75, 2.15],
+    ],
+  },
+  "🌍 FIVB Volleyball Nations League (World)": {
+    teams: ["Poland", "USA", "Italy", "Brazil", "France", "Japan", "Slovenia", "Argentina", "Serbia", "Canada", "Germany", "Egypt"],
+    fixtures: [
+      ["Poland vs USA", 1.72, 2.18],
+      ["Italy vs Brazil", 1.88, 1.96],
+      ["France vs Japan", 1.80, 2.08],
+    ],
+  },
+  "🏆 CAVB African & CEV Champions Volleyball": {
+    teams: ["Al Ahly VC (Egypt)", "Zamalek VC", "Espérance Tunis", "REG VC (Rwanda)", "Gisagara VC (Rwanda)", "Trentino Itas", "Perugia", "ZAKSA"],
+    fixtures: [
+      ["Al Ahly VC vs REG VC (Rwanda)", 1.68, 2.25],
+      ["Trentino Itas vs Perugia", 1.92, 1.92],
+    ],
+  },
+};
+
+
+const BASKETBALL_LEAGUES = {
+  "🇷🇼 Rwanda Basketball League & BAL": {
+    teams: ["APR BBC", "Patriots BBC", "REG BBC", "Kepler BBC", "Espoir BBC", "UGB BBC", "Orion BBC", "Tigers BBC"],
+    fixtures: [
+      ["APR BBC vs Patriots BBC", 1.82, 2.05],
+      ["REG BBC vs Kepler BBC", 1.76, 2.12],
+      ["Espoir BBC vs UGB BBC", 1.90, 1.95],
+    ],
+  },
+  "🇺🇸 NBA & EuroLeague Pro": {
+    teams: ["Boston Celtics", "Denver Nuggets", "Los Angeles Lakers", "Golden State Warriors", "Milwaukee Bucks", "Dallas Mavericks", "Real Madrid Baloncesto", "Panathinaikos"],
+    fixtures: [
+      ["Boston Celtics vs Denver Nuggets", 1.85, 2.02],
+      ["LA Lakers vs Golden State Warriors", 1.92, 1.94],
+      ["Real Madrid Baloncesto vs Panathinaikos", 1.78, 2.10],
+    ],
+  },
+  "🎾 Tennis Grand Slam & 🏎️ Formula 1": {
+    teams: ["Carlos Alcaraz", "Jannik Sinner", "Novak Djokovic", "Max Verstappen (Red Bull)", "Lewis Hamilton (Ferrari)", "Charles Leclerc (Ferrari)"],
+    fixtures: [
+      ["Carlos Alcaraz vs Jannik Sinner (Final)", 1.88, 1.96],
+      ["Max Verstappen vs Lewis Hamilton (GP Race)", 1.75, 2.15],
+    ],
+  },
+};
+
+
+const ESPORTS_LEAGUES = {
+  "🎮 CS2, LoL & Dota 2 World Masters": {
+    teams: ["Natus Vincere (NAVI)", "FaZe Clan", "T1 (Faker)", "Gen.G Esports", "Team Spirit", "G2 Esports", "Team Liquid", "Vitality"],
+    fixtures: [
+      ["Natus Vincere (NAVI) vs FaZe Clan (CS2 Major)", 1.84, 2.04],
+      ["T1 vs Gen.G Esports (LoL Worlds Final)", 1.90, 1.95],
+      ["Team Spirit vs Team Liquid (Dota 2 TI)", 1.78, 2.10],
+    ],
+  },
+  "⚡ 24/7 Virtual Football & Horse Racing": {
+    teams: ["Kigali Cyber Lions", "Nairobi Digital Stars", "London Virtual FC", "Madrid AI United", "Thunderbolt Horse #1", "Silver Arrow #4"],
+    fixtures: [
+      ["Kigali Cyber Lions vs London Virtual FC (3-Min Match)", 1.88, 1.98],
+      ["Thunderbolt Horse #1 vs Silver Arrow #4 (Turbo Derby)", 1.72, 2.18],
+    ],
+  },
+};
+
 const GAMES = [
   ["✈️","Aviator Crash","97.0% RTP",2.5],["🚀","Spaceman Turbo","96.8% RTP",3.2],
   ["🍭","Sweet Bonanza","96.5% RTP",5.0],["⚡","Gates of Olympus","96.5% RTP",4.5],
@@ -70,6 +143,9 @@ export default function InteractiveSportsAndGamesHub({ rates = {}, theme, panel 
   const [mode, setMode] = useState("football");
   const [selectedCountry, setSelectedCountry] = useState("Spain");
   const [selectedDiv, setSelectedDiv] = useState("1st Premier Division");
+  const [volleyLeague, setVolleyLeague] = useState("🇷🇼 Rwanda National Volleyball League");
+  const [basketLeague, setBasketLeague] = useState("🇷🇼 Rwanda Basketball League & BAL");
+  const [esportLeague, setEsportLeague] = useState("🎮 CS2, LoL & Dota 2 World Masters");
   const [nationSearch, setNationSearch] = useState("");
   const [team, setTeam] = useState("");
   const [stakeRwf, setStakeRwf] = useState("5000");
@@ -107,6 +183,9 @@ export default function InteractiveSportsAndGamesHub({ rates = {}, theme, panel 
           <input type="number" value={stakeRwf} onChange={(e) => setStakeRwf(e.target.value)} style={{ width: 90, padding: "6px 8px", borderRadius: 7, border: `1px solid ${theme.border}`, background: theme.input, color: theme.text }} />
           <button type="button" onClick={() => setMode("football")} style={{ padding: "7px 12px", borderRadius: 8, border: "none", background: mode === "football" ? "#06b6d4" : theme.input, color: mode === "football" ? "#02131d" : theme.text, fontWeight: 800, fontSize: 12, cursor: "pointer" }}>🌍 150 Nations & Clubs</button>
           <button type="button" onClick={() => setMode("casino")} style={{ padding: "7px 12px", borderRadius: 8, border: "none", background: mode === "casino" ? "#f59e0b" : theme.input, color: mode === "casino" ? "#02131d" : theme.text, fontWeight: 800, fontSize: 12, cursor: "pointer" }}>🎰 VIP Casino & Games</button>
+          <button type="button" onClick={() => setMode("volleyball")} style={{ padding: "7px 12px", borderRadius: 8, border: "none", background: mode === "volleyball" ? "#10b981" : theme.input, color: mode === "volleyball" ? "#02131d" : theme.text, fontWeight: 800, fontSize: 12, cursor: "pointer" }}>🏐 Volleyball Pro</button>
+          <button type="button" onClick={() => setMode("basketball")} style={{ padding: "7px 12px", borderRadius: 8, border: "none", background: mode === "basketball" ? "#f97316" : theme.input, color: mode === "basketball" ? "#02131d" : theme.text, fontWeight: 800, fontSize: 12, cursor: "pointer" }}>🏀 Basketball & F1</button>
+          <button type="button" onClick={() => setMode("esports")} style={{ padding: "7px 12px", borderRadius: 8, border: "none", background: mode === "esports" ? "#a855f7" : theme.input, color: mode === "esports" ? "#fff" : theme.text, fontWeight: 800, fontSize: 12, cursor: "pointer" }}>🎮 Esports & Virtuals</button>
         </div>
       </div>
 
@@ -148,6 +227,105 @@ export default function InteractiveSportsAndGamesHub({ rates = {}, theme, panel 
                   <button type="button" onClick={() => betMatch(m, "Home 1", o1)} style={{ flex: 1, padding: "5px", borderRadius: 6, border: "1px solid #06b6d4", background: "rgba(6,182,212,0.15)", color: theme.text, fontSize: 11, fontWeight: 800, cursor: "pointer" }}>1 · {o1}</button>
                   <button type="button" onClick={() => betMatch(m, "Draw X", ox)} style={{ flex: 1, padding: "5px", borderRadius: 6, border: `1px solid ${theme.border}`, background: theme.card, color: theme.text, fontSize: 11, fontWeight: 800, cursor: "pointer" }}>X · {ox}</button>
                   <button type="button" onClick={() => betMatch(m, "Away 2", o2)} style={{ flex: 1, padding: "5px", borderRadius: 6, border: "1px solid #10b981", background: "rgba(16,185,129,0.15)", color: theme.text, fontSize: 11, fontWeight: 800, cursor: "pointer" }}>2 · {o2}</button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      
+      {mode === "volleyball" && (
+        <div style={{ display: "grid", gap: 10 }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+            {Object.keys(VOLLEYBALL_LEAGUES).map((vl) => (
+              <button key={vl} type="button" onClick={() => setVolleyLeague(vl)} style={{ padding: "6px 11px", borderRadius: 8, border: `1px solid ${volleyLeague === vl ? "#10b981" : theme.border}`, background: volleyLeague === vl ? "rgba(16,185,129,0.22)" : theme.input, color: volleyLeague === vl ? "#10b981" : theme.text, fontSize: 12, fontWeight: 800, cursor: "pointer" }}>
+                {vl}
+              </button>
+            ))}
+          </div>
+          <div style={{ padding: 10, borderRadius: 10, background: theme.input, border: `1px solid ${theme.border}` }}>
+            <div style={{ fontSize: 11, fontWeight: 800, color: "#10b981", marginBottom: 6 }}>🏐 All Clubs in {volleyLeague}:</div>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
+              {VOLLEYBALL_LEAGUES[volleyLeague].teams.map((t, i) => (
+                <span key={t} style={{ padding: "4px 9px", borderRadius: 999, border: `1px solid ${theme.border}`, background: theme.card, fontSize: 11, fontWeight: 700 }}>#{i + 1} {t}</span>
+              ))}
+            </div>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 8 }}>
+            {VOLLEYBALL_LEAGUES[volleyLeague].fixtures.map(([m, o1, o2]) => (
+              <div key={m} style={{ padding: 10, borderRadius: 10, background: theme.input, border: `1px solid ${theme.border}`, display: "grid", gap: 6 }}>
+                <div style={{ fontSize: 10, color: "#10b981", fontWeight: 800 }}>● LIVE VOLLEYBALL ODDS (+15% BOOST)</div>
+                <div style={{ fontSize: 13, fontWeight: 800 }}>{m}</div>
+                <div style={{ display: "flex", gap: 6 }}>
+                  <button type="button" onClick={() => betMatch(m, "Team 1 Win", o1)} style={{ flex: 1, padding: "6px", borderRadius: 6, border: "1px solid #06b6d4", background: "rgba(6,182,212,0.15)", color: theme.text, fontSize: 11, fontWeight: 800, cursor: "pointer" }}>1 · {o1}</button>
+                  <button type="button" onClick={() => betMatch(m, "Team 2 Win", o2)} style={{ flex: 1, padding: "6px", borderRadius: 6, border: "1px solid #10b981", background: "rgba(16,185,129,0.15)", color: theme.text, fontSize: 11, fontWeight: 800, cursor: "pointer" }}>2 · {o2}</button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      
+      {mode === "basketball" && (
+        <div style={{ display: "grid", gap: 10 }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+            {Object.keys(BASKETBALL_LEAGUES).map((bl) => (
+              <button key={bl} type="button" onClick={() => setBasketLeague(bl)} style={{ padding: "6px 11px", borderRadius: 8, border: `1px solid ${basketLeague === bl ? "#f97316" : theme.border}`, background: basketLeague === bl ? "rgba(249,115,22,0.22)" : theme.input, color: basketLeague === bl ? "#fb923c" : theme.text, fontSize: 12, fontWeight: 800, cursor: "pointer" }}>
+                {bl}
+              </button>
+            ))}
+          </div>
+          <div style={{ padding: 10, borderRadius: 10, background: theme.input, border: `1px solid ${theme.border}` }}>
+            <div style={{ fontSize: 11, fontWeight: 800, color: "#fb923c", marginBottom: 6 }}>🏀 All Teams & Stars in {basketLeague}:</div>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
+              {BASKETBALL_LEAGUES[basketLeague].teams.map((t, i) => (
+                <span key={t} style={{ padding: "4px 9px", borderRadius: 999, border: `1px solid ${theme.border}`, background: theme.card, fontSize: 11, fontWeight: 700 }}>#{i + 1} {t}</span>
+              ))}
+            </div>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 8 }}>
+            {BASKETBALL_LEAGUES[basketLeague].fixtures.map(([m, o1, o2]) => (
+              <div key={m} style={{ padding: 10, borderRadius: 10, background: theme.input, border: `1px solid ${theme.border}`, display: "grid", gap: 6 }}>
+                <div style={{ fontSize: 10, color: "#fb923c", fontWeight: 800 }}>● LIVE PRO ODDS (+15% BOOST)</div>
+                <div style={{ fontSize: 13, fontWeight: 800 }}>{m}</div>
+                <div style={{ display: "flex", gap: 6 }}>
+                  <button type="button" onClick={() => betMatch(m, "Team/Player 1 Win", o1)} style={{ flex: 1, padding: "6px", borderRadius: 6, border: "1px solid #f97316", background: "rgba(249,115,22,0.15)", color: theme.text, fontSize: 11, fontWeight: 800, cursor: "pointer" }}>1 · {o1}</button>
+                  <button type="button" onClick={() => betMatch(m, "Team/Player 2 Win", o2)} style={{ flex: 1, padding: "6px", borderRadius: 6, border: "1px solid #10b981", background: "rgba(16,185,129,0.15)", color: theme.text, fontSize: 11, fontWeight: 800, cursor: "pointer" }}>2 · {o2}</button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      
+      {mode === "esports" && (
+        <div style={{ display: "grid", gap: 10 }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+            {Object.keys(ESPORTS_LEAGUES).map((el) => (
+              <button key={el} type="button" onClick={() => setEsportLeague(el)} style={{ padding: "6px 11px", borderRadius: 8, border: `1px solid ${esportLeague === el ? "#a855f7" : theme.border}`, background: esportLeague === el ? "rgba(168,85,247,0.22)" : theme.input, color: esportLeague === el ? "#d8b4fe" : theme.text, fontSize: 12, fontWeight: 800, cursor: "pointer" }}>
+                {el}
+              </button>
+            ))}
+          </div>
+          <div style={{ padding: 10, borderRadius: 10, background: theme.input, border: `1px solid ${theme.border}` }}>
+            <div style={{ fontSize: 11, fontWeight: 800, color: "#d8b4fe", marginBottom: 6 }}>🎮 Pro Squads & Virtual Runners in {esportLeague}:</div>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
+              {ESPORTS_LEAGUES[esportLeague].teams.map((t, i) => (
+                <span key={t} style={{ padding: "4px 9px", borderRadius: 999, border: `1px solid ${theme.border}`, background: theme.card, fontSize: 11, fontWeight: 700 }}>#{i + 1} {t}</span>
+              ))}
+            </div>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 8 }}>
+            {ESPORTS_LEAGUES[esportLeague].fixtures.map(([m, o1, o2]) => (
+              <div key={m} style={{ padding: 10, borderRadius: 10, background: theme.input, border: `1px solid ${theme.border}`, display: "grid", gap: 6 }}>
+                <div style={{ fontSize: 10, color: "#d8b4fe", fontWeight: 800 }}>● 24/7 INSTANT SETTLEMENT (+15% BOOST)</div>
+                <div style={{ fontSize: 13, fontWeight: 800 }}>{m}</div>
+                <div style={{ display: "flex", gap: 6 }}>
+                  <button type="button" onClick={() => betMatch(m, "Side 1 Win", o1)} style={{ flex: 1, padding: "6px", borderRadius: 6, border: "1px solid #a855f7", background: "rgba(168,85,247,0.18)", color: theme.text, fontSize: 11, fontWeight: 800, cursor: "pointer" }}>1 · {o1}</button>
+                  <button type="button" onClick={() => betMatch(m, "Side 2 Win", o2)} style={{ flex: 1, padding: "6px", borderRadius: 6, border: "1px solid #10b981", background: "rgba(16,185,129,0.15)", color: theme.text, fontSize: 11, fontWeight: 800, cursor: "pointer" }}>2 · {o2}</button>
                 </div>
               </div>
             ))}

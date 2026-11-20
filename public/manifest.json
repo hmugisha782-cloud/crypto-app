@@ -1,9 +1,9 @@
 {
-  "name": "Kigali Global Tracker Pro",
-  "short_name": "KGT Pro",
+  "name": "Kigali Global Tracker — Sovereign Super-App",
+  "short_name": "KigaliTracker",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#020617",
-  "theme_color": "#06b6d4",
-  "description": "Institutional Crypto, Regional FX & Wealth Analytics Platform"
+  "theme_color": "#10b981",
+  "description": "Rwanda & Global FinTech, Crypto, Gold, AI & HD Video Super-App"
 }

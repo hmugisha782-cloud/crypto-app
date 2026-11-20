@@ -41,7 +41,7 @@ export default function FloatingCommandDock({ theme }) {
       fontSize: 11,
     }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 10 }}>
-        <strong style={{ color: accent }}>🧭 KGT Quick-Dock (v57)</strong>
+        <strong style={{ color: accent }}>🧭 KGT Quick-Dock (v202)</strong>
         <button type="button" onClick={() => setOpen((o) => !o)} style={{ border: "none", background: "transparent", color: "#cbd5e1", cursor: "pointer", fontWeight: 800 }}>
           {open ? "—" : "+"}
         </button>

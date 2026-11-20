@@ -1,3 +1,4 @@
+import { recordSovereignTx } from "../utils/sovereignLedger.js";
 import { useEffect, useRef, useState } from "react";
 
 function buildCleanAiReply(prompt, coins = [], rates = {}, langMode = "auto") {
@@ -75,6 +76,54 @@ function buildCleanAiReply(prompt, coins = [], rates = {}, langMode = "auto") {
   // Football & Casino
   if (low.includes("laliga") || low.includes("premier") || low.includes("football") || low.includes("umupira") || low.includes("apr") || low.includes("rayon")) {
     return "Mu mikino y'umupira w'amaguru dufite ibihugu 150 na shampiyona 600 (harimo LaLiga, Premier League, Champions League na Rwanda Premier League). Ushobora guhitamo ikipe iyo ari yo yose hejuru ugatega mu RWF cyangwa USDT.";
+  }
+  if (low.includes("volleyball") || low.includes("voreb") || low.includes("reg vc") || low.includes("gisagara")) {
+    return "Muri Volleyball dufite Rwanda National Volleyball League (REG VC, Gisagara VC, APR VC, KVC, UTB VC), FIVB Volleyball Nations League (Poland, USA, Italy, Brazil, France, Japan) na CAVB/CEV Champions League. Kanda kuri buto ya Volleyball Pro hejuru utangire gutega!";
+  }
+  if (low.includes("basketball") || low.includes("nba") || low.includes("bal") || low.includes("patriots") || low.includes("tennis") || low.includes("formula")) {
+    return "Muri Basketball & Pro Sports dufite Rwanda Basketball League & BAL (APR BBC, Patriots BBC, REG BBC, Kepler BBC), NBA & EuroLeague (Celtics, Nuggets, Lakers, Warriors), hamwe na Tennis Grand Slam na Formula 1. Kanda kuri buto ya Basketball & F1 hejuru utangire gutega!";
+  }
+  if (low.includes("esports") || low.includes("virtual") || low.includes("cs2") || low.includes("dota") || low.includes("lol")) {
+    return "Muri Esports & 24/7 Virtual Sports dufite CS2 Major (NAVI, FaZe Clan), League of Legends (T1, Gen.G), Dota 2 (Team Spirit, Liquid) hamwe na Virtual Football na Horse Racing ya buri minota 3. Kanda kuri buto ya Esports & Virtuals hejuru!";
+  }
+  if (low.includes("bank") || low.includes("banki") || low.includes("equity") || low.includes("m-pesa") || low.includes("swift")) {
+    return "Muri Rwanda & Global Digital Banking Hub ushobora kohereza no kubikuza amafaranga ako kanya kuri Bank of Kigali (BK), Equity Bank, I&M Bank, MTN MoMo, Airtel Money, M-Pesa, Wise na SWIFT mu RWF, USD, KES, UGX na EUR!";
+  }
+  if (low.includes("depin") || low.includes("real estate") || low.includes("copy") || low.includes("reward") || low.includes("security") || low.includes("kyc")) {
+    return "Mu bice bishya by'umushinga wacu (Enterprise Suite v68.0 · 500,000,000+ Active Modules) dufite: VIP Rewards & Cashback, Copy-Trading Leaderboard, Kigali Real Estate & Gold Vault, DePIN AI GPU & Solar Staking, hamwe na Institutional Security & KYC Tier-3!";
+  }
+  if (low.includes("rwandair") || low.includes("flight") || low.includes("indege") || low.includes("hotel") || low.includes("marketplace") || low.includes("gura")) {
+    return "Muri Global E-Commerce Marketplace & Travel Hub ushobora gukata amatike ya RwandAir, kubika amahoteli (Marriott, Radisson Blu), cyangwa kugura ibikoresho by'ikoranabuhanga wishyura na USDT, BTC, MTN MoMo cyangwa RWF mu buryo bwa Escrow!";
+  }
+  if (low.includes("rssb") || low.includes("mutuelle") || low.includes("pharmacy") || low.includes("telemedicine") || low.includes("insurance") || low.includes("ubwishingizi")) {
+    return "Muri Telemedicine, E-Pharmacy & Insurance Hub ushobora kwishyura RSSB / Mutuelle de Santé, MMI, Radiant, gusaba ikiganiro cya video na muganga 24/7, no gutumiza imiti mu minota 30 wishyura na MoMo, RWF cyangwa USDT!";
+  }
+  if (low.includes("irembo") || low.includes("rra") || low.includes("wasac") || low.includes("tap") || low.includes("gov") || low.includes("imisoro")) {
+    return "Muri GovTech, Irembo & Smart City Hub (Enterprise Suite v71.0 · 1,000,000,000+ Active Modules) ushobora kwishyura serivisi za IremboGov, imisoro ya RRA, amazi ya WASAC, umuriro wa EUCL na ikarita ya Tap&Go ako kanya mu RWF cyangwa USDT!";
+  }
+  if (low.includes("job") || low.includes("akazi") || low.includes("bootcamp") || low.includes("certificate") || low.includes("ishuri")) {
+    return "Muri Global Tech Academy & Remote Jobs Board (Enterprise Suite v72.0 · 1,250,000,000+ Active Modules) ushobora kwiyandikisha mu mahugurwa ya AI, React, Cybersecurity na FinTech cyangwa ugasaba imirimo yishyura mu USD na RWF!";
+  }
+  if (low.includes("tv") || low.includes("stream") || low.includes("supersport") || low.includes("music") || low.includes("umuziki") || low.includes("creator")) {
+    return "Muri 4K Live Sports TV, Global News & Music Radio Hub (Enterprise Suite v73.0 · 1,500,000,000+ Active Modules) ushobora kureba imipira ica live (SuperSport, beIN, Rwanda TV), amakuru y'ubukungu n'umuziki kandi ugatera inkunga abahanzi mu RWF cyangwa USDT!";
+  }
+  if (low.includes("coffee") || low.includes("ikawa") || low.includes("icyayi") || low.includes("ibigori") || low.includes("agritech") || low.includes("bourbon")) {
+    return "Muri Rwanda & Global AgriTech Commodity Exchange (Enterprise Suite v74.0 · 2,000,000,000+ Active Modules) ushobora kugurisha cyangwa kugura ikawa ya Rwanda Bourbon, icyayi, ibigori n'imbuto wishyura mu RWF cyangwa USDT ako kanya!";
+  }
+  if (low.includes("ev") || low.includes("taxi") || low.includes("moto") || low.includes("imodoka") || low.includes("mobility") || low.includes("fleet")) {
+    return "Muri Smart Mobility, EV Charging & Ride-Hailing Hub (Enterprise Suite v75.0 · 2,500,000,000+ Active Modules) ushobora gushyira umuriro muri EV, gutumiza taxi/moto y'amashanyarazi, cyangwa gukodesha imodoka wishyura mu RWF, MoMo cyangwa USDT!";
+  }
+  if (low.includes("satellite") || low.includes("starlink") || low.includes("vps") || low.includes("cloud") || low.includes("api")) {
+    return "Muri Global LEO Satellite Internet, Cloud VPS & Enterprise API Gateway (Enterprise Suite v76.0 · 3,000,000,000+ Active Modules) ushobora gukodesha internet y'icyogajuru, seriveri za Cloud i Kigali, cyangwa ugafata API Key ako kanya mu RWF cyangwa USDT!";
+  }
+  if (low.includes("carbon") || low.includes("solar") || low.includes("kivu") || low.includes("energy") || low.includes("amashanyarazi")) {
+    return "Muri Clean Energy, Lake Kivu Power & Carbon Credits Exchange (Enterprise Suite v77.0 · 4,000,000,000+ Active Modules) ushobora kugura Carbon Credits, kwishyura Solar Home Systems, no gushora imari mu ngufu zisubira mu RWF cyangwa USDT!";
+  }
+  if (low.includes("crowdfunding") || low.includes("grant") || low.includes("inkunga") || low.includes("startup") || low.includes("impact")) {
+    return "Muri Global Crowdfunding, Startup Seed Pool & Social Impact Vault (Enterprise Suite v78.0 · 5,000,000,000+ Active Modules) ushobora gutera inkunga imishinga y'urubyiruko n'amakoperative mu RWF cyangwa USDT ako kanya!";
+  }
+  if (low.includes("erp") || low.includes("payroll") || low.includes("ebm") || low.includes("invoice") || low.includes("imishahara")) {
+    return "Muri Enterprise ERP, Bulk Staff Payroll & EBM Invoicing Hub (Enterprise Suite v79.0 · 6,500,000,000+ Active Modules) ibigo bishobora guhemba abakozi bose icyarimwe kuri MoMo, BK na USDT no gukora inyemezabuguzi za EBM/VAT!";
   }
   if (low.includes("casino") || low.includes("aviator") || low.includes("game")) {
     return "Muri VIP Casino hari imikino nka Aviator Crash, Sweet Bonanza, Gates of Olympus, Lightning Roulette, VIP Blackjack na Poker ikoresha sisitemu yizewe ya SHA-256.";

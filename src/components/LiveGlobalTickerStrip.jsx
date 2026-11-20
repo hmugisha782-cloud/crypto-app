@@ -9,7 +9,7 @@ export default function LiveGlobalTickerStrip({ rates = {}, theme }) {
     `🇪🇸 LaLiga: Real Madrid vs Barcelona (2.15 / 3.55 / 3.05)`,
     `🏴󠁧󠁢󠁥󠁮󠁧󠁿 EPL: Man City vs Arsenal (2.10 / 3.50 / 3.25)`,
     `🇷🇼 Rwanda PL: APR FC vs Rayon Sports (2.10 / 3.05 / 3.65)`,
-    `⚡ 175,000,000+ Active Modules · 99.99% SLA`,
+    `⚡ 1,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000+ Active Modules · 99.99% SLA`,
   ];
 
   return (
