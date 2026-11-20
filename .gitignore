@@ -9,3 +9,7 @@ dist
 *.db
 *.backup-*
 *.before-*
+backups/
+backup-*/
+*.tar.gz
+*.sqlite*
