@@ -1,3 +1,4 @@
+import SovereignBrandHeader from "./components/SovereignBrandHeader.jsx";
 import SovereignReferralPartnerHub from "./components/SovereignReferralPartnerHub.jsx";
 import SovereignEnergyStationHub from "./components/SovereignEnergyStationHub.jsx";
 import SovereignPwaQrCardHub from "./components/SovereignPwaQrCardHub.jsx";
@@ -931,6 +932,7 @@ export default function App() {
         <InteractiveSportsAndGamesHub rates={rates} theme={theme} panel={panel} />
         <SovereignCommandPaletteModal />
         <SovereignFloatingDockV2 />
+        <SovereignErrorBoundary><SovereignBrandHeader theme={theme} panel={panel} /></SovereignErrorBoundary>
         <SovereignErrorBoundary><SovereignLanguageLocaleBar theme={theme} panel={panel} /></SovereignErrorBoundary>
         
         <SovereignNotificationCenter theme={theme} panel={panel} />
