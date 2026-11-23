@@ -1,0 +1,2 @@
+export const ALERT_RULES=[{id:"AL-BTC",asset:"BTC/USDT",trigger:"Above $68,000",channel:"SMS + Push"},{id:"AL-GOLD",asset:"PAXG/USDT",trigger:"Above $2,750/oz",channel:"WhatsApp + App"},{id:"AL-RWF",asset:"USD/RWF",trigger:"Rate > 1,490 RWF",channel:"Instant Ledger"}];
+export function formatAlertBanner(asset,price){return `🔔 LIVE SIGNAL: ${asset} hit $${Number(price||0).toLocaleString()} — Ready for 1-Tap Execution`;}

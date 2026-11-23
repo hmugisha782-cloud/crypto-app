@@ -1,0 +1,5 @@
+export const RWANDA_DISTRICTS=["Nyarugenge","Gasabo","Kicukiro","Gatsibo","Nyagatare","Kayonza","Rwamagana","Ngoma","Kirehe","Bugesera","Musanze","Rubavu","Rusizi","Huye","Muhanga","Nyanza","Karongi","Rutsiro","Nyabihu","Ngororero","Burera","Gakenke","Rulindo","Gicumbi","Kamonyi","Ruhango","Gisagara","Nyaruguru","Nyamagabe","Nyamasheke"];
+export const RWANDA_BANKS=["Bank of Kigali (BK)","I&M Bank Rwanda","Equity Bank Rwanda","BPR Bank Rwanda","Access Bank Rwanda","Cogebanque / Equity","GT Bank Rwanda","NCBA Bank Rwanda","Unguka Bank","Zigama CSS"];
+export const RWANDA_TELCOS=["MTN MoMo Rwanda (*182#)","Airtel Money Rwanda (*500#)","Liquid Intelligent Tech","BSC Fiber Kigali","Starlink Rwanda Kit"];
+export const RWANDA_GOV_PORTALS=["IremboGov (irembo.gov.rw)","RRA E-Tax & EBM","BNR Central Bank FX","RDB Business Registration","RSSB EjoHeza & Medical","REG EUCL CashPower","WASAC Water Pay"];
+export function findDistrict(q){const s=String(q||"").toLowerCase();return RWANDA_DISTRICTS.filter(d=>d.toLowerCase().includes(s));}

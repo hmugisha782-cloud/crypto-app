@@ -234,7 +234,7 @@ export default function InteractiveSportsAndGamesHub({ rates = {}, theme, panel 
         </div>
       )}
 
-      
+
       {mode === "volleyball" && (
         <div style={{ display: "grid", gap: 10 }}>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
@@ -267,7 +267,7 @@ export default function InteractiveSportsAndGamesHub({ rates = {}, theme, panel 
         </div>
       )}
 
-      
+
       {mode === "basketball" && (
         <div style={{ display: "grid", gap: 10 }}>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
@@ -300,7 +300,7 @@ export default function InteractiveSportsAndGamesHub({ rates = {}, theme, panel 
         </div>
       )}
 
-      
+
       {mode === "esports" && (
         <div style={{ display: "grid", gap: 10 }}>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>

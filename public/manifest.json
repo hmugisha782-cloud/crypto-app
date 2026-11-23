@@ -5,5 +5,7 @@
   "display": "standalone",
   "background_color": "#020617",
   "theme_color": "#10b981",
-  "description": "Rwanda & Global FinTech, Crypto, Gold, AI & HD Video Super-App"
+  "description": "Rwanda & Global FinTech, Crypto, Gold, AI & HD Video Super-App",
+  "orientation": "any",
+  "lang": "rw"
 }

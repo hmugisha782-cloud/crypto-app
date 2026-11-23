@@ -98,3 +98,48 @@ input:focus, select:focus, textarea:focus {
 ::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.45); }
 ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #10b981, #8b5cf6); border-radius: 999px; }
+
+/* === 10,000-CYCLE SOVEREIGN PERFORMANCE, MOBILE & ACCESSIBILITY TUNING === */
+*, *::before, *::after { box-sizing: border-box; }
+img, video, svg, iframe { max-width: 100%; }
+button, input, select { min-height: 34px; touch-action: manipulation; }
+@media (max-width: 640px) {
+  section[id^="sovereign-"], section[id^="omni-"], header[id="sovereign-brand-header"] {
+    padding: 12px !important;
+    border-radius: 12px !important;
+  }
+}
+
+/* Polish #11-20: Smooth Typography & Cards */
+body{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;}
+section{scroll-margin-top:24px;}
+table{border-collapse:collapse;width:100%;}
+th,td{padding:6px 8px;text-align:left;}
+code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;}
+button:focus-visible{outline:2px solid #38bdf8;outline-offset:2px;}
+input::placeholder{opacity:0.72;}
+@media print{button,input,select{display:none!important;}}
+@keyframes kgtPulse{0%,100%{opacity:1}50%{opacity:.55}}
+.kgt-live-dot{animation:kgtPulse 1.8s infinite;}
+
+/* Polish #21-45: Responsive Grid, Badges & Elevation */
+.kgt-badge{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:999px;font-size:11px;font-weight:800;}
+.kgt-card-glow{border:1px solid rgba(16,185,129,0.28)!important;}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}}
+select{cursor:pointer;}
+a{color:#38bdf8;text-decoration:none;}
+a:hover{text-decoration:underline;}
+strong{letter-spacing:-0.01em;}
+input[type=number]{font-variant-numeric:tabular-nums;}
+main{max-width:1440px;margin:0 auto;}
+@media (max-width:480px){body{font-size:14px;}}
+
+/* Polish #46-60: High-Contrast Cards & Smooth Focus */
+section[id^="sovereign-"] strong{color:inherit;}
+
+/* Polish #61-75: Enterprise Grid & Scrollbar Smoothness */
+section[id^="sovereign-"]{border-radius:14px;}
+button{letter-spacing:0.01em;}
+select option{background:#0f172a;color:#f8fafc;}
+@media (min-width:1280px){main{padding-left:20px;padding-right:20px;}}
+.kgt-tabular{font-variant-numeric:tabular-nums;}

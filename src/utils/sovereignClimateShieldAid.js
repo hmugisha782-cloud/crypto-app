@@ -1,0 +1,2 @@
+export const PARAMETRIC_POLICIES=[{id:"CL-01",name:"🌧️ Gatsibo & Eastern Drought/Flood Parametric Crop Shield",rwf:7500,payoutRwf:150000},{id:"CL-02",name:"🏔️ Northern & Western Landslide & Home Weather Cover",rwf:10000,payoutRwf:250000}];
+export const AID_VOUCHERS=[{id:"AD-01",name:"🍲 Instant Mobile Cash & Food Security Solidarity Voucher",usd:15},{id:"AD-02",name:"🏥 Emergency Clean Water & Solar Lantern Relief Pack",usd:25}];

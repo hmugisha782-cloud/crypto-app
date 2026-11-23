@@ -1,3 +1,5 @@
+import { initSovereignGlobalSync } from "./utils/sovereignSyncEngine.js";
+initSovereignGlobalSync();
 import "./vercelCloudEngine.js";
 import React from "react";
 import ReactDOM from "react-dom/client";

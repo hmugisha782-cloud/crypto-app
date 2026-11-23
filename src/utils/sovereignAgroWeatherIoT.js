@@ -1,0 +1,2 @@
+export const AGRO_ZONES=[{id:"AG-01",zone:"🌾 Gatsibo / Kabarore Valley (25°C · Sunny · Optimal Maize)",cropPriceRwf:480},{id:"AG-02",zone:"☕ Huye / Nyamagabe Highlands (21°C · Light Rain · Coffee)",cropPriceRwf:6200},{id:"AG-03",zone:"🥛 Nyagatare Dairy Belt (26°C · Pasture Index 94%)",cropPriceRwf:420}];
+export const AGRO_INPUTS=[{id:"IN-01",name:"🌱 Smart NPK Fertilizer & Hybrid Seed Pack (50kg)",rwf:28000},{id:"IN-02",name:"📡 Solar Soil Moisture & Weather IoT Sensor Kit",rwf:45000}];

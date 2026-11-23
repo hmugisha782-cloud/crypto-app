@@ -1,0 +1,2 @@
+export const DIGITAL_BOOKS=[{id:"BK-01",title:"📘 Rwanda FinTech & Crypto Economy Blueprint 2026",rwf:4500},{id:"BK-02",title:"📗 Kinyarwanda-English-French AI & Engineering Handbook",rwf:3500},{id:"BK-03",title:"📙 East Africa Agribusiness & Export Mastery Guide",rwf:4000}];
+export const RESEARCH_JOURNALS=[{id:"JR-01",title:"🔬 KGT Sovereign AI & Blockchain Quarterly Whitepaper",usd:8},{id:"JR-02",title:"📊 Kigali International Financial Centre (KIFC) Macro Report",usd:12}];

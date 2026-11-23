@@ -1,0 +1,2 @@
+import { KGT_CONFIG, getKigaliTimestamp } from "../utils/sovereignConfig.js";
+export default function SovereignSystemStatusFooter({theme,panel}){return(<footer id="sovereign-system-status-footer" style={{...panel,marginTop:18,borderTop:"3px solid #10b981",display:"flex",justifyContent:"space-between",flexWrap:"wrap",gap:8,fontSize:11.5}}><strong>🇷🇼 Kigali Global Tracker {KGT_CONFIG.version} · {KGT_CONFIG.hubs} Hubs · {KGT_CONFIG.nodes.toLocaleString()} Nodes</strong><span style={{color:theme.muted}}>🕒 {getKigaliTimestamp()} (CAT) · 100% Operational</span></footer>);}

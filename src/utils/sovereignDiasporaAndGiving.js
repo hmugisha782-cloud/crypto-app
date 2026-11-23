@@ -1,0 +1,2 @@
+export const DIASPORA_CORRIDORS=[{id:"DP-01",name:"🇺🇸 USA / Canada Diaspora → 🇷🇼 Kigali / Gatsibo Family",bonusPct:1.5},{id:"DP-02",name:"🇪🇺 Europe (Belgium / UK / France) → 🇷🇼 Rwanda Instant",bonusPct:1.5},{id:"DP-03",name:"🕌 Zakat, Church Tithe & Community Solidarity Vault",bonusPct:0}];
+export function calcDiasporaBonusRwf(usd,rate=1480,pct=1.5){return Math.round(Number(usd||0)*Number(rate||1480)*(1+Number(pct||0)/100));}

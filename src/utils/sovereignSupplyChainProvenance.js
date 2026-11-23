@@ -1,0 +1,2 @@
+export const PROVENANCE_BATCHES=[{id:"PR-01",name:"☕ Gatsibo & Kayonza Washed Bourbon Coffee Lot #804",origin:"Gatsibo Highlands · Elevation 1,780m"},{id:"PR-02",name:"🍃 Gisovu & Nyabihu Organic Orthodox Tea Lot #412",origin:"Western Crest · Rainforest Certified"},{id:"PR-03",name:"⛏️ Rwamagana Traceable Cassiterite & Coltan Bag #919",origin:"ITSCI & RMB Digital Chain-of-Custody"}];
+export function mintTraceQr(batchId){return "TRACE-RW-"+String(batchId||"001")+"-"+Date.now().toString(36).toUpperCase();}

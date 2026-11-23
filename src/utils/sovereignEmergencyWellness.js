@@ -1,0 +1,2 @@
+export const EMERGENCY_HOTLINES=[{id:"EM-01",name:"🚑 SAMU Rwanda Emergency Ambulance (912)",code:"912"},{id:"EM-02",name:"🚔 Rwanda National Police Rapid Response (112)",code:"112"},{id:"EM-03",name:"🔥 Fire & Rescue Brigade Kigali / Gatsibo (111)",code:"111"}];
+export const WELLNESS_PLANS=[{id:"WL-01",name:"🧘 KGT Executive Health & Tele-Pharmacy Pass",rwf:8000},{id:"WL-02",name:"🏋️ Kigali & Gatsibo Fitness Club + Nutrition AI",rwf:12000}];

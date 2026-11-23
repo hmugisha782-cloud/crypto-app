@@ -1,3 +1,57 @@
+import SovereignAuthGate from "./components/SovereignAuthGate.jsx";
+import SovereignGlobalSearchBar from "./components/SovereignGlobalSearchBar.jsx";
+import SovereignOmniAiSuperHub from "./components/SovereignOmniAiSuperHub.jsx";
+import SovereignSupplyChainProvenanceHub from "./components/SovereignSupplyChainProvenanceHub.jsx";
+import SovereignClimateShieldAndAidHub from "./components/SovereignClimateShieldAndAidHub.jsx";
+import SovereignColdChainAndAviationHub from "./components/SovereignColdChainAndAviationHub.jsx";
+import SovereignRetailInventoryAndB2bHub from "./components/SovereignRetailInventoryAndB2bHub.jsx";
+import SovereignTeleHealthAndClaimsHub from "./components/SovereignTeleHealthAndClaimsHub.jsx";
+import SovereignEnergyGridAndEvHub from "./components/SovereignEnergyGridAndEvHub.jsx";
+import SovereignMicroCreditAndSmeLoanHub from "./components/SovereignMicroCreditAndSmeLoanHub.jsx";
+import SovereignMerchantPosAndLoyaltyHub from "./components/SovereignMerchantPosAndLoyaltyHub.jsx";
+import SovereignLegalAndGovernanceHub from "./components/SovereignLegalAndGovernanceHub.jsx";
+import SovereignFamilyTrustAndLegacyHub from "./components/SovereignFamilyTrustAndLegacyHub.jsx";
+import SovereignPublishingAndLibraryHub from "./components/SovereignPublishingAndLibraryHub.jsx";
+import SovereignSportsAcademyAndEsportsHub from "./components/SovereignSportsAcademyAndEsportsHub.jsx";
+import SovereignWaterAndSmartCityHub from "./components/SovereignWaterAndSmartCityHub.jsx";
+import SovereignInstitutionalOtcHub from "./components/SovereignInstitutionalOtcHub.jsx";
+import SovereignCyberSocAndShieldHub from "./components/SovereignCyberSocAndShieldHub.jsx";
+import SovereignWealthRoboAdvisorHub from "./components/SovereignWealthRoboAdvisorHub.jsx";
+import SovereignTelecomAndEsimHub from "./components/SovereignTelecomAndEsimHub.jsx";
+import SovereignCustomsAndTradeHub from "./components/SovereignCustomsAndTradeHub.jsx";
+import SovereignCreatorIpAndMusicHub from "./components/SovereignCreatorIpAndMusicHub.jsx";
+import SovereignManufacturingAndRoboticsHub from "./components/SovereignManufacturingAndRoboticsHub.jsx";
+import SovereignMineralsAndMiningHub from "./components/SovereignMineralsAndMiningHub.jsx";
+import SovereignHospitalityAndEventsHub from "./components/SovereignHospitalityAndEventsHub.jsx";
+import SovereignEducationAndScholarshipsHub from "./components/SovereignEducationAndScholarshipsHub.jsx";
+import SovereignAgroWeatherAndLivestockHub from "./components/SovereignAgroWeatherAndLivestockHub.jsx";
+import SovereignCloudAndDomainHub from "./components/SovereignCloudAndDomainHub.jsx";
+import SovereignEmergencyAndWellnessHub from "./components/SovereignEmergencyAndWellnessHub.jsx";
+import SovereignMultiSigEscrowHub from "./components/SovereignMultiSigEscrowHub.jsx";
+import SovereignDiasporaAndGivingHub from "./components/SovereignDiasporaAndGivingHub.jsx";
+import SovereignKycAndIdentityHub from "./components/SovereignKycAndIdentityHub.jsx";
+import SovereignSaccoAndIkibinaHub from "./components/SovereignSaccoAndIkibinaHub.jsx";
+import SovereignVoiceAndOcrHub from "./components/SovereignVoiceAndOcrHub.jsx";
+import SovereignAutoAndFleetHub from "./components/SovereignAutoAndFleetHub.jsx";
+import SovereignFreelanceAndJobsHub from "./components/SovereignFreelanceAndJobsHub.jsx";
+import SovereignMediaAndImpactHub from "./components/SovereignMediaAndImpactHub.jsx";
+import SovereignCommerceAndNotaryHub from "./components/SovereignCommerceAndNotaryHub.jsx";
+import SovereignTourismAndStocksHub from "./components/SovereignTourismAndStocksHub.jsx";
+import SovereignGovBondsAndCarbonHub from "./components/SovereignGovBondsAndCarbonHub.jsx";
+import SovereignLogisticsPayrollHub from "./components/SovereignLogisticsPayrollHub.jsx";
+import SovereignUtilitiesAndPayeHub from "./components/SovereignUtilitiesAndPayeHub.jsx";
+import SovereignRealEstateInsuranceHub from "./components/SovereignRealEstateInsuranceHub.jsx";
+import SovereignHealthcareAndEducationHub from "./components/SovereignHealthcareAndEducationHub.jsx";
+import SovereignTravelAndMobilityHub from "./components/SovereignTravelAndMobilityHub.jsx";
+import SovereignVirtualCardAndAgroHub from "./components/SovereignVirtualCardAndAgroHub.jsx";
+import SovereignSavingsAndInvoiceHub from "./components/SovereignSavingsAndInvoiceHub.jsx";
+import SovereignEacCrossBorderHub from "./components/SovereignEacCrossBorderHub.jsx";
+import SovereignRwandaFinancialToolsHub from "./components/SovereignRwandaFinancialToolsHub.jsx";
+import SovereignSystemStatusFooter from "./components/SovereignSystemStatusFooter.jsx";
+import SovereignBackupVaultHub from "./components/SovereignBackupVaultHub.jsx";
+import SovereignTenThousandHub from "./components/SovereignTenThousandHub.jsx";
+import SovereignThemeAndCalcStudio from "./components/SovereignThemeAndCalcStudio.jsx";
+import SovereignAnalyticsChartHub from "./components/SovereignAnalyticsChartHub.jsx";
 import SovereignBrandHeader from "./components/SovereignBrandHeader.jsx";
 import SovereignReferralPartnerHub from "./components/SovereignReferralPartnerHub.jsx";
 import SovereignEnergyStationHub from "./components/SovereignEnergyStationHub.jsx";
@@ -896,6 +950,9 @@ export default function App() {
         transition: "background .2s, color .2s",
       }}
     >
+        <SovereignErrorBoundary><SovereignAuthGate />
+        <SovereignGlobalSearchBar theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignErrorBoundary><SovereignOmniAiSuperHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
 
       <div className="layout">
         {/* HEADER */}
@@ -943,8 +1000,23 @@ export default function App() {
         <SovereignErrorBoundary><SovereignOmniAiCopilot rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
         <SovereignErrorBoundary><SovereignVideoCallHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
         <SovereignErrorBoundary><SovereignRwandaLiveMapHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignErrorBoundary><SovereignTenThousandHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignErrorBoundary><SovereignCommerceAndNotaryHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignErrorBoundary><SovereignTourismAndStocksHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignErrorBoundary><SovereignGovBondsAndCarbonHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignErrorBoundary><SovereignLogisticsPayrollHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignErrorBoundary><SovereignRealEstateInsuranceHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignErrorBoundary><SovereignUtilitiesAndPayeHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignErrorBoundary><SovereignHealthcareAndEducationHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignErrorBoundary><SovereignTravelAndMobilityHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignErrorBoundary><SovereignVirtualCardAndAgroHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignErrorBoundary><SovereignSavingsAndInvoiceHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignErrorBoundary><SovereignEacCrossBorderHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignErrorBoundary><SovereignRwandaFinancialToolsHub theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignErrorBoundary><SovereignAnalyticsChartHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
         <SovereignErrorBoundary><SovereignAdminRevenueCenter rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
         <SovereignErrorBoundary><SovereignPriceAlertEngine rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+        <SovereignErrorBoundary><SovereignBackupVaultHub theme={theme} panel={panel} /></SovereignErrorBoundary>
         <SovereignErrorBoundary><SovereignPwaQrCardHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
         <SovereignErrorBoundary><SovereignEnergyStationHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
         <SovereignErrorBoundary><SovereignReferralPartnerHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
@@ -1268,6 +1340,21 @@ export default function App() {
       <FloatingCommandDock theme={theme} />
         <MasterSystemFooterV20 theme={theme} panel={panel} />
         <ShareAndEnterpriseFooter setActiveTab={setActiveTab} theme={theme} panel={panel} />
+        <SovereignErrorBoundary><SovereignSystemStatusFooter theme={theme} panel={panel} /></SovereignErrorBoundary>
+      <SovereignErrorBoundary><SovereignInstitutionalOtcHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+      <SovereignErrorBoundary><SovereignWaterAndSmartCityHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+      <SovereignErrorBoundary><SovereignSportsAcademyAndEsportsHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+      <SovereignErrorBoundary><SovereignPublishingAndLibraryHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+      <SovereignErrorBoundary><SovereignFamilyTrustAndLegacyHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+      <SovereignErrorBoundary><SovereignLegalAndGovernanceHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+      <SovereignErrorBoundary><SovereignMerchantPosAndLoyaltyHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+      <SovereignErrorBoundary><SovereignMicroCreditAndSmeLoanHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+      <SovereignErrorBoundary><SovereignEnergyGridAndEvHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+      <SovereignErrorBoundary><SovereignTeleHealthAndClaimsHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+      <SovereignErrorBoundary><SovereignRetailInventoryAndB2bHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+      <SovereignErrorBoundary><SovereignColdChainAndAviationHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+      <SovereignErrorBoundary><SovereignClimateShieldAndAidHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
+      <SovereignErrorBoundary><SovereignSupplyChainProvenanceHub rates={rates} theme={theme} panel={panel} /></SovereignErrorBoundary>
       </main>
   );
 }

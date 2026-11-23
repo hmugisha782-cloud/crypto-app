@@ -1,0 +1,2 @@
+export const HARDWARE_KITS=[{id:"HW-01",name:"🤖 Kigali Robotics & Embedded IoT Developer Kit",usd:65},{id:"HW-02",name:"🖨️ Industrial 3D Rapid Prototyping Print Batch",usd:40},{id:"HW-03",name:"⚡ Smart Micro-Grid Lithium Battery Assembly",usd:190}];
+export const FACTORY_SLOTS=[{id:"FC-01",name:"🏭 Kigali Special Economic Zone (KSEZ) CNC Slot",rwf:25000},{id:"FC-02",name:"🔧 Gatsibo Agro-Processing Machinery Maintenance",rwf:18000}];

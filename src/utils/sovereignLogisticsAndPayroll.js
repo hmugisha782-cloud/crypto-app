@@ -1,0 +1,3 @@
+export const CARGO_LANES=[{id:"CRG-01",route:"🇨🇳 Guangzhou → 🇷🇼 Kigali (KGL Air Cargo)",perKgUsd:6.8,days:4},{id:"CRG-02",route:"🇦🇪 Dubai (DXB) → 🇷🇼 Kigali Free Zone",perKgUsd:4.2,days:2},{id:"CRG-03",route:"🇹🇿 Dar es Salaam → 🇷🇼 Gatsibo / Rusumo Truck",perKgUsd:0.45,days:5},{id:"CRG-04",route:"🇰🇪 Mombasa → 🇷🇼 Kigali Dry Port",perKgUsd:0.52,days:4}];
+export function calcCargoQuote(kg,perKgUsd){return Number((Math.max(1,Number(kg||1))*Number(perKgUsd||1)).toFixed(2));}
+export function calcBatchPayroll(staffCount,avgSalaryRwf){const totalRwf=Math.max(1,Number(staffCount||1))*Math.max(50000,Number(avgSalaryRwf||0));const rssb=Math.round(totalRwf*0.08);return{totalRwf,rssb,grandTotalRwf:totalRwf+rssb};}

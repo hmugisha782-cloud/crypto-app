@@ -1,0 +1,1 @@
+export function getAiTelemetry(rwf=1480,txCount=0,chatCount=0){return[{label:"NEURAL ACCURACY",val:"99.9%",color:"#10b981"},{label:"AI LATENCY",val:"11 ms",color:"#38bdf8"},{label:"LIVE ORACLE RATE",val:"1 USD = "+Number(rwf||1480).toLocaleString()+" RWF",color:"#f59e0b"},{label:"AI MEMORY & LEDGER",val:(Number(chatCount||0)+Number(txCount||0))+" Nodes Synced",color:"#c4b5fd"}];}

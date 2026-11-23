@@ -1,0 +1,2 @@
+export const RWANDA_HOTELS=[{id:"HT-01",name:"🏨 Kigali Marriott / Radisson Blu Executive Suite",usd:180},{id:"HT-02",name:"🌿 One&Only Gorilla’s Nest / Virunga Eco-Villa",usd:320},{id:"HT-03",name:"🏖️ Lake Kivu Serena Resort & Spa (Rubavu)",usd:145},{id:"HT-04",name:"🏡 Gatsibo & Akagera Safari Luxury Tented Camp",usd:110}];
+export const EVENT_HALLS=[{id:"EV-01",name:"🏛️ Kigali Convention Centre (KCC) VIP Summit Hall",usd:450},{id:"EV-02",name:"💼 Intare Conference Arena Corporate Boardroom",usd:220}];

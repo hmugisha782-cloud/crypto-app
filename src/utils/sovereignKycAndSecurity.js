@@ -1,0 +1,2 @@
+export const KYC_TIERS=[{id:"KYC-1",level:"Tier 1: Mobile & Email Verified ($2,500/day)",limitUsd:2500},{id:"KYC-2",level:"Tier 2: Rwanda NIDA / Passport + Selfie ($50,000/day)",limitUsd:50000},{id:"KYC-3",level:"Tier 3: KIFC Institutional Sovereign ($1M/day)",limitUsd:1000000}];
+export function generatePasskeyHash(l){return "PASSKEY-"+String(l||"KGT").toUpperCase().replace(/[^A-Z0-9]/g,"").slice(0,6)+"-"+Date.now().toString(36).toUpperCase();}

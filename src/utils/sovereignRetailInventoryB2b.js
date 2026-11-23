@@ -1,0 +1,2 @@
+export const WHOLESALE_BUNDLES=[{id:"WH-01",name:"📦 Kigali & Gatsibo Supermarket FMCG Restock Crate",rwf:45000},{id:"WH-02",name:"🌾 Eastern Province Rice, Beans & Cooking Oil Bulk Pallet",rwf:65000},{id:"WH-03",name:"📱 Electronics & Solar Accessories Retail Starter Box",rwf:85000}];
+export const POS_TOOLS=[{id:"PT-01",name:"🧾 RRA EBM v2.1 Cloud POS & Barcode Inventory License",rwf:10000},{id:"PT-02",name:"🚚 Same-Day Kigali → Gatsibo Wholesale Van Delivery",rwf:12000}];

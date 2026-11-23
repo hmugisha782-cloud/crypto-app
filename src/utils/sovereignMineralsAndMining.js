@@ -1,0 +1,2 @@
+export const RWANDA_MINERAL_TOKENS=[{id:"MN-01",name:"⛏️ Gatsibo & Rwamagana Cassiterite (Tin) Vault Token",usdPerUnit:45,purity:"72.4% Sn"},{id:"MN-02",name:"🔋 Coltan (Tantalum) Sovereign Strategic Reserve",usdPerUnit:85,purity:"41.8% Ta2O5"},{id:"MN-03",name:"💎 Rwanda Amethyst & Sapphire Certified Gemstone Vault",usdPerUnit:120,purity:"AAA Grade"}];
+export const MINING_ROYALTIES=[{id:"RY-01",name:"🏛️ RMB Traceable Export Tag & Mineral Assay Certificate",rwf:15000},{id:"RY-02",name:"🌍 Regional Mineral Refinery & Smelting Slot",rwf:35000}];

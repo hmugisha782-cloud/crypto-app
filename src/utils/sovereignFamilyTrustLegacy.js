@@ -1,0 +1,2 @@
+export const TRUST_VAULT_TYPES=[{id:"TR-01",name:"👨‍👩‍👧‍👦 Kigali Family Education & Healthcare Multi-Gen Trust",minUsd:100,apy:14.2},{id:"TR-02",name:"🏛️ Sovereign Next-of-Kin Automated Asset Inheritance Protocol",minUsd:50,apy:12.5},{id:"TR-03",name:"🌾 Gatsibo Family Land & Agribusiness Perpetual Endowment",minUsd:200,apy:15.8}];
+export function calcTrustAnnualYield(usd,apy){return Number((Number(usd||0)*(Number(apy||0)/100)).toFixed(2));}

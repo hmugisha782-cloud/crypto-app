@@ -79,7 +79,7 @@ export default function EarnAndBetHub({ activeTab, setActiveTab, rates = {}, the
               Live Sports & 15-Min Crypto Betting, P2P MoMo Escrow, EAC Remittance, Virtual Visa Cards, CashPower Crypto Pay, High-Yield Vaults & Instant Crypto Loans.
             </p>
           </div>
-          
+
           {/* INSTANT UNIVERSAL GAME, COUNTRY & LEAGUE FINDER */}
           <div style={{ ...panel, border: "1px solid #06b6d4", display: "flex", flexWrap: "wrap", gap: 10, alignItems: "center", justifyContent: "space-between" }}>
             <strong style={{ fontSize: 13, color: "#06b6d4" }}>🔍 Instant Finder (Games, Countries & Leagues):</strong>
@@ -190,7 +190,7 @@ export default function EarnAndBetHub({ activeTab, setActiveTab, rates = {}, the
               {rwaList.slice(0, 1).map((r) => <div key={r.symbol} style={{ fontSize: 11, color: "#06b6d4" }}>🥇 {r.name} · Min {r.minRwf.toLocaleString()} RWF</div>)}
             </div>
           </div>
-          
+
           {/* TOP 150 WORLD FOOTBALL NATIONS & DIVISIONS 1, 2, 3 */}
           <div id="world-football-150" style={{ ...panel, borderTop: "3px solid #06b6d4" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 10, marginBottom: 12 }}>

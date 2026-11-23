@@ -1,0 +1,2 @@
+export const LABOR_CONTRACTS=[{id:"LC-01",name:"📄 Rwanda Labor Law Permanent Staff Contract (RSSB/PAYE)",rwf:5000},{id:"LC-02",name:"🤝 Kigali & Gatsibo B2B Supplier & SLA Service Agreement",rwf:8000},{id:"LC-03",name:"🌐 International Remote Software Developer IP & NDA Pack",rwf:10000}];
+export const GOVERNANCE_PROPOSALS=[{id:"GV-01",title:"🗳️ Proposal #14: Expand Gatsibo & Eastern Agro-Credit Liquidity Pool",quorum:"94.2% YES"},{id:"GV-02",title:"🗳️ Proposal #15: Increase Staking Vault APY to 17.5% for VIP Holders",quorum:"91.8% YES"}];

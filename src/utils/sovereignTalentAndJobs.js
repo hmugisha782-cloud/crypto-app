@@ -1,0 +1,2 @@
+export const FREELANCE_GIGS=[{id:"JB-01",title:"💻 Full-Stack React & Node.js Engineer (Kigali)",usd:120},{id:"JB-02",title:"🎨 UI/UX Mobile App & Brand Designer (Gatsibo)",usd:75},{id:"JB-03",title:"📊 RRA EBM Tax & Financial Auditor Consultant",usd:90}];
+export const REMOTE_CONTRACTS=[{id:"CT-01",role:"🌍 Global AI Prompt & FinTech Analyst",monthlyUsd:850},{id:"CT-02",role:"🛡️ Smart Contract & Cybersecurity Specialist",monthlyUsd:1200}];

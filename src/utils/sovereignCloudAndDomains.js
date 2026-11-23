@@ -1,0 +1,2 @@
+export const DOMAIN_TLDS=[{tld:".rw",label:"🇷🇼 Rwanda Sovereign Domain (.rw)",rwf:12000},{tld:".co.rw",label:"🏢 Rwanda Business Domain (.co.rw)",rwf:10000},{tld:".com",label:"🌐 Global Commercial Domain (.com)",rwf:18000},{tld:".ai",label:"🤖 AI Enterprise Domain (.ai)",rwf:95000}];
+export const CLOUD_NODES=[{id:"CL-01",name:"⚡ Kigali Edge NVMe Pro Server (8 vCPU / 32GB RAM)",usd:18},{id:"CL-02",name:"🧠 NVIDIA H100 AI Training GPU Cluster (Hourly)",usd:4.5}];

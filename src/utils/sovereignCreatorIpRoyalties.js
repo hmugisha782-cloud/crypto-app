@@ -1,0 +1,2 @@
+export const CREATOR_ROYALTY_ASSETS=[{id:"IP-01",name:"🎵 Kigali Afrobeats & Gakondo Master Royalty Share",usd:30,apy:16.4},{id:"IP-02",name:"🎨 Imigongo Heritage Digital Fine-Art Collector Edition",usd:55,apy:14.0},{id:"IP-03",name:"🎬 East Africa Documentary & Film Distribution Rights",usd:80,apy:19.2}];
+export const IP_REGISTRATIONS=[{id:"RG-01",name:"🏛️ RDB Copyright, Trademark & Software Patent Seal",rwf:20000},{id:"RG-02",name:"🌍 Global ISRC Music & Streaming Royalty Split Setup",rwf:10000}];

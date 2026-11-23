@@ -1,0 +1,2 @@
+export const CREDIT_FACILITIES=[{id:"CR-01",name:"⚡ Instant MoMo / Wallet Nano-Overdraft (0% 7-Day)",maxRwf:50000,ratePct:1.5},{id:"CR-02",name:"🏪 Kigali & Gatsibo SME Working Capital Line",maxRwf:500000,ratePct:2.2},{id:"CR-03",name:"🌾 Seasonal Harvest & Agro-Input Bridge Facility",maxRwf:300000,ratePct:1.8}];
+export function calcRepayRwf(rwf,pct){return Math.round(Number(rwf||0)*(1+Number(pct||0)/100));}

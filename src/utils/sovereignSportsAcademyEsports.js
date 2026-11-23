@@ -1,0 +1,2 @@
+export const SPORTS_ACADEMY_PASSES=[{id:"SA-01",name:"⚽ Kigali & Gatsibo Youth Football & Basketball Academy",rwf:10000},{id:"SA-02",name:"🚴 Tour du Rwanda & Kigali Car-Free Day Cycling Club",rwf:6000},{id:"SA-03",name:"🏊 Amahoro National Stadium Olympic Pool & Gym Pass",rwf:15000}];
+export const ESPORTS_LEAGUES=[{id:"ES-01",name:"🎮 East Africa EA Sports FC & Chess Pro Cup Entry",usd:5,prizeUsd:500},{id:"ES-02",name:"🏆 KGT Global AI & Coding Hackathon Arena",usd:10,prizeUsd:1500}];

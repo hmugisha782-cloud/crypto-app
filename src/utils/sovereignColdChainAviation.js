@@ -1,0 +1,2 @@
+export const COLD_CHAIN_SLOTS=[{id:"CC-01",name:"❄️ Kigali Airport (KGL) Fresh Horticulture Cold-Room",rwf:22000},{id:"CC-02",name:"🥛 Gatsibo & Nyagatare Refrigerated Dairy Tanker Slot",rwf:18000},{id:"CC-03",name:"💐 European Flower & Avocado Express Air-Cargo Pallet",rwf:45000}];
+export const FUEL_CREDITS=[{id:"FL-01",name:"⛽ Kigali & Gatsibo Commercial Diesel / Jet-A1 Fuel Voucher",rwf:30000},{id:"FL-02",name:"🚢 Lake Kivu & Mombasa Maritime Bunkering Credit",rwf:50000}];

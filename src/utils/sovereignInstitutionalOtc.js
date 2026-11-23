@@ -1,0 +1,2 @@
+export const OTC_BLOCKS=[{id:"OTC-01",pair:"₿ BTC / USDT Institutional Block (Zero-Slippage)",minUsd:250,rebatePct:0.4},{id:"OTC-02",pair:"🥇 1kg Kigali Vault 999.9 Gold Bullion Allocation",minUsd:500,rebatePct:0.6},{id:"OTC-03",pair:"💵 USD / RWF Corporate Treasury Spot Desk",minUsd:100,rebatePct:0.3}];
+export function calcOtcRebate(usd,pct){return Number((Number(usd||0)*(Number(pct||0)/100)).toFixed(2));}

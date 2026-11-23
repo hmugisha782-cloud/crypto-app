@@ -1,0 +1,2 @@
+export const UTILITY_PROVIDERS=[{code:"EUCL",name:"REG EUCL CashPower Electricity",minRwf:1000},{code:"WASAC",name:"WASAC Clean Water Prepaid",minRwf:1000},{code:"MTN-4G",name:"MTN Rwanda 4G/5G Unlimited Fiber",minRwf:5000},{code:"AIRTEL-4G",name:"Airtel Rwanda SuperBundle",minRwf:2000},{code:"STARLINK",name:"Starlink High-Speed Satellite Kit",minRwf:45000}];
+export function calcKwhFromRwf(rwf){return Number((Number(rwf||0)/249).toFixed(2));}

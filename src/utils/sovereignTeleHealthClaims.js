@@ -1,0 +1,2 @@
+export const TELEHEALTH_CLINICS=[{id:"TH-01",name:"🩺 King Faisal & CHUK Kigali 24/7 Specialist Video Consult",rwf:10000},{id:"TH-02",name:"💊 Gatsibo & Kigali Express Pharmacy Prescription Delivery",rwf:4500},{id:"TH-03",name:"🧬 Full Executive Blood & Wellness Lab Panel",rwf:22000}];
+export const INSURANCE_CLAIMS=[{id:"CL-01",name:"🏥 RSSB / RAMA Digital Outpatient Instant Claim",coverPct:85},{id:"CL-02",name:"🛡️ Sanlam / Radiant Private Corporate Health Claim",coverPct:90}];

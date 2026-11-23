@@ -1,0 +1,2 @@
+export const ROBO_PORTFOLIOS=[{id:"RB-01",name:"🛡️ Kigali Sovereign Shield (60% BNR Bonds · 25% Gold · 15% USDT)",apy:13.8},{id:"RB-02",name:"⚖️ Balanced East Africa & Global Growth (40% Equities · 35% Crypto · 25% RWF)",apy:21.4},{id:"RB-03",name:"🚀 Alpha AI & Bitcoin Quantum Accelerator (70% BTC/ETH · 30% AI Stocks)",apy:32.6}];
+export function projectFiveYearUsd(usd,apy){return Number((Number(usd||0)*Math.pow(1+Number(apy||0)/100,5)).toFixed(2));}

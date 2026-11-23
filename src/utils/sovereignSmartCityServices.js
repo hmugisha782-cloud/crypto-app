@@ -1,0 +1,2 @@
+export const MUNICIPAL_SERVICES=[{id:"MC-01",name:"💧 WASAC Prepaid Smart Water Meter Top-Up",rwf:5000},{id:"MC-02",name:"♻️ Kigali & Gatsibo Smart Waste & Green Street Levy",rwf:3000},{id:"MC-03",name:"🏗️ City of Kigali Building & Renovation E-Permit",rwf:20000}];
+export const RECYCLE_CREDITS=[{id:"RC-01",name:"♻️ 10kg Plastic & E-Waste Green Eco-Credit (+1,500 RWF)",rwf:1500},{id:"RC-02",name:"🌳 5 Native Trees Reforestation Carbon Voucher (+2,500 RWF)",rwf:2500}];

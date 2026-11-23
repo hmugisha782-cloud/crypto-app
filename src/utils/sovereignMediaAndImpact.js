@@ -1,0 +1,2 @@
+export const RWANDA_LIVE_CHANNELS=[{id:"MD-01",name:"📺 RTV Rwanda Television Live HD (Kigali)",tipRwf:1000},{id:"MD-02",name:"📻 Kiss FM 102.3 & KT Radio Kigali Live",tipRwf:500},{id:"MD-03",name:"🎙️ KGT Global FinTech & Crypto Podcast Studio",tipRwf:2000}];
+export const IMPACT_CAMPAIGNS=[{id:"IM-01",name:"🌱 Gatsibo Youth Coding & AI Innovation Lab",goalUsd:5000,raisedUsd:3840},{id:"IM-02",name:"💧 Rural Clean Water & Solar Borehole Initiative",goalUsd:8000,raisedUsd:6120}];

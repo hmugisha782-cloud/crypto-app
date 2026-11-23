@@ -1,0 +1,2 @@
+export const CUSTOMS_DECLARATIONS=[{id:"CS-01",name:"🛃 RRA Electronic Single Window Import Duty Pre-Clearance",rwf:25000},{id:"CS-02",name:"🌍 EAC Certificate of Origin (Kigali / Gatuna / Rusumo)",rwf:12000},{id:"CS-03",name:"✈️ KGL Air Cargo Phytosanitary & Export Quality Seal",rwf:18000}];
+export const TRADE_FINANCE=[{id:"TF-01",name:"🏦 Digital Letter of Credit (LC) Escrow Guarantee",usd:75},{id:"TF-02",name:"🚢 AfCFTA Cross-Border Invoice Factoring Line",usd:50}];

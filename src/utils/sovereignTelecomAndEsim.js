@@ -1,0 +1,2 @@
+export const GLOBAL_ESIM_PLANS=[{id:"ES-01",name:"🌍 Global 190-Country Travel eSIM (10GB / 30 Days)",usd:18},{id:"ES-02",name:"🇷🇼 Rwanda MTN / Airtel Unlimited 5G VIP Data Bundle",usd:12},{id:"ES-03",name:"🛰️ Starlink Maritime & Aviation Priority Data Top-Up",usd:45}];
+export const VIRTUAL_NUMBERS=[{id:"VN-01",name:"📞 +250 Rwanda Business Cloud PBX & SMS Line",rwf:6000},{id:"VN-02",name:"🇺🇸 +1 USA / 🇬🇧 +44 UK Executive Virtual Number",rwf:9500}];

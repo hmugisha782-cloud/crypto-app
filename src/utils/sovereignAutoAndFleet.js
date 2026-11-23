@@ -1,0 +1,2 @@
+export const AUTO_SERVICES=[{id:"AU-01",name:"🚗 RNP Vehicle Inspection (Contrôle Technique Remera)",rwf:15000},{id:"AU-02",name:"🔋 Ampersand / Spiro EV Moto Monthly Battery Plan",rwf:35000},{id:"AU-03",name:"🛣️ Kigali Smart Parking & Highway E-Toll Pass",rwf:5000}];
+export const FLEET_VEHICLES=[{id:"FL-01",name:"🚙 Toyota RAV4 Hybrid 2025 Daily Executive Rental",usd:65},{id:"FL-02",name:"🚚 SinoTruk / Isuzu Cargo Truck (Kigali → Gatsibo)",usd:95}];

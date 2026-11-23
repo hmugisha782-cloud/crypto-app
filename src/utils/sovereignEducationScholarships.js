@@ -1,0 +1,2 @@
+export const TUITION_INSTITUTIONS=[{id:"ED-01",name:"🎓 University of Rwanda (UR) & ALU Kigali Tuition",rwf:75000},{id:"ED-02",name:"💻 Carnegie Mellon University Africa (CMU-Africa) Lab Fee",rwf:120000},{id:"ED-03",name:"🏫 Gatsibo & Eastern Province TVET / Boarding School Pay",rwf:45000}];
+export const SCHOLARSHIP_GRANTS=[{id:"SC-01",name:"🌍 KGT Sovereign AI & Software Engineering Grant ($250)",usd:250},{id:"SC-02",name:"🚀 Women in East Africa FinTech Fellowship ($400)",usd:400}];
