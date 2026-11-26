@@ -83,4 +83,29 @@ router.post("/ask", (req, res) => {
   res.json({ ok: true, question, answer, quickAction });
 });
 
+
+router.post("/web-search", async (req, res) => {
+  try {
+    const q = String(req.body?.q || "").trim();
+    const lang = String(req.body?.lang || "en").slice(0, 2).toLowerCase();
+    if (!q) return res.json({ results: "" });
+    const langs = Array.from(new Set([lang, "en", "fr", "rw", "sw"].filter(Boolean))).slice(0, 3);
+    const tasks = [
+      fetch("https://api.duckduckgo.com/?format=json&no_html=1&q=" + encodeURIComponent(q)).then(r => r.ok ? r.json() : null).catch(() => null),
+      fetch("https://google.com" + encodeURIComponent(q) + "&hl=" + lang).then(r => r.ok ? r.text() : "").catch(() => ""),
+      ...langs.map(l => fetch("https://" + l + ".wikipedia.org/w/api.php?action=query&list=search&format=json&srsearch=" + encodeURIComponent(q)).then(r => r.ok ? r.json() : null).catch(() => null))
+    ];
+    const [ddg, newsXml, ...wikis] = await Promise.all(tasks);
+    const out = [];
+    if (ddg?.AbstractText) out.push("[Web Summary]: " + ddg.AbstractText);
+    (ddg?.RelatedTopics || []).slice(0, 3).forEach(t => { if (t?.Text) out.push("- " + t.Text); });
+    const titles=(newsXml.match(/<title>([\s\S]*?)<\/title>/g)||[]).slice(1,5).map(x=>x.replace(/<[^>]+>|<!\[CDATA\[|\]\]>/g,"").trim());
+    if (titles.length) out.push("[Latest News]: " + titles.join(" | "));
+    wikis.forEach((w, idx) => {
+      (w?.query?.search || []).slice(0, 2).forEach(s => out.push("[" + langs[idx].toUpperCase() + " Wiki - " + s.title + "]: " + String(s.snippet || "").replace(/<[^>]+>/g, "")));
+    });
+    res.json({ results: out.join("\n").slice(0, 2600) });
+  } catch { res.json({ results: "" }); }
+});
+
 export default router;
