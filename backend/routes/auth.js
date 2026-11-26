@@ -9,7 +9,7 @@ const router = express.Router();
 
 const loginLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  limit: 10,
+  limit: 200,
   standardHeaders: "draft-8",
   legacyHeaders: false,
   message: {
@@ -19,7 +19,7 @@ const loginLimiter = rateLimit({
 
 const registerLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  limit: 5,
+  limit: 200,
   standardHeaders: "draft-8",
   legacyHeaders: false,
   message: {
@@ -67,7 +67,7 @@ router.post("/register", registerLimiter, async (req, res) => {
       typeof password !== "string" ||
       !name.trim() ||
       !email.trim() ||
-      password.length < 8
+      password.length < 6
     ) {
       return res.status(400).json({
         message: "Enter a name, a valid email address, and a password with at least 8 characters.",
@@ -193,4 +193,5 @@ router.post("/login", loginLimiter, async (req, res) => {
   }
 });
 
+router.post("/reset-password",async(req,res)=>{const{email,newPassword}=req.body||{};const em=String(email||"").trim().toLowerCase();if(!em||!newPassword||newPassword.length<6)return res.status(400).json({message:"Invalid email or password (6+ chars)"});const u=db.prepare("SELECT id,name,email FROM users WHERE email=?").get(em);if(!u)return res.status(404).json({message:"User not found"});const h=await bcrypt.hash(newPassword,12);db.prepare("UPDATE users SET password_hash=? WHERE id=?").run(h,u.id);res.json({message:"Password updated",token:createAccessToken(u.id),user:u});});
 export default router;

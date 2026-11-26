@@ -6,7 +6,7 @@ export default function SovereignAuthGate(){
   const [user,setUser]=useState(getAuthUser);
   const [mode,setMode]=useState("log");const [showPw,setShowPw]=useState(false);
   const [name,setName]=useState("");const [email,setEmail]=useState("");const [pw,setPw]=useState("");const [err,setErr]=useState("");
-  function sub(e){e.preventDefault();setErr("");const r=authAction(mode,name,email,pw,rw);if(r.err){setErr(r.err);return;}setUser(r.user);setPw("");}
+  async function sub(e){e.preventDefault();setErr("");const r=await authAction(mode,name,email,pw,rw);if(r.err){setErr(r.err);return;}setUser(r.user);setPw("");}
   function openReset(){const em=user?.email||"";logoutAuth();setUser(null);setEmail(em);setPw("");setMode("rst");setErr("");}
   if(user)return React.createElement("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:8,padding:"8px 14px",marginBottom:10,borderRadius:12,background:"rgba(15,23,42,0.92)",border:"1px solid #10b981",color:"#f8fafc",fontSize:12}},
     React.createElement("strong",{style:{color:"#34d399"}},"🛡️ "+(rw?"Ikaze, ":"Welcome, ")+user.name+" ("+user.email+")"),
