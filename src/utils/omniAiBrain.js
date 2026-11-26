@@ -1,3 +1,4 @@
+import { runSovereignAiAsync } from "./sovereignOmniAiEngine.js";
 import { getWalletState, getLedgerTxs } from "./sovereignLedger.js";
 import { getLiveMarketSnapshot } from "./liveMarketStore.js";
 import { loadUserFacts, rememberUserFact, loadAiHistory } from "./omniAiMemory.js";
@@ -102,7 +103,7 @@ export async function generateOmniAiResponse(rawQuery, preferredLang = "RW", per
   try {
     const ctrl = new AbortController();
     const timer = setTimeout(() => ctrl.abort(), 14000);
-    const r2 = await fetch("https://pollinations.ai", {
+    const r2 = await fetch("https://text.pollinations.ai/openai", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       signal: ctrl.signal,
@@ -118,6 +119,19 @@ export async function generateOmniAiResponse(rawQuery, preferredLang = "RW", per
       if (ans && ans.length > 3 && !ans.startsWith("<!DOCTYPE")) return { text: ans };
     }
   } catch {}
+
+    if (lower.includes("portfolio") || lower.includes("isesengura") || lower.includes("profit") || lower.includes("inyungu")) {
+    const btcPrice = snap.prices["BTC/USDT"]?.price || 65420;
+    const ethPrice = snap.prices["ETH/USDT"]?.price || 3420;
+    const totalUsd = Number(w.usd || 0) + Number(w.btc || 0) * btcPrice + Number(w.eth || 0) * ethPrice + Number(w.paxg || 0) * 2650;
+    return { text: preferredLang === "RW" ? `📊 **Isesengura rya Portfolio Yawe (Live):**\n• Agaciro kose: **${totalUsd.toLocaleString(undefined,{maximumFractionDigits:2})}** (**${Math.round(totalUsd * rwf).toLocaleString()} RWF**)\n• Cash USDT: **${Number(w.usd||0).toLocaleString()}** | BTC: **${w.btc}** | ETH: **${w.eth}**\n• Inyungu za Staking/Yield: **+${Number(w.totalYieldEarnedUsd||0).toFixed(2)}**\n• Inama ya AI: Bika 60% muri USDT/BTC, 25% muri ETH, na 15% muri Gold (PAXG) kugira ngo wirinde ihindagurika ry isoko.` : `📊 **Live Portfolio Audit:**\n• Total Net Worth: **${totalUsd.toLocaleString(undefined,{maximumFractionDigits:2})}** (**${Math.round(totalUsd * rwf).toLocaleString()} RWF**)\n• USDT Cash: **${Number(w.usd||0).toLocaleString()}** | BTC: **${w.btc}** | ETH: **${w.eth}**\n• Yield Earned: **+${Number(w.totalYieldEarnedUsd||0).toFixed(2)}**\n• AI Allocation: 60% BTC/USDT core, 25% ETH growth, 15% PAXG Gold hedge.` };
+  }
+  // portfolio_audit
+  if (lower.includes("rwf") || lower.includes("rate") || lower.includes("ivunjisha") || lower.includes("idorari") || lower.includes("exchange")) {
+    const spread = rwf > 1495 ? (preferredLang === "RW" ? "Idorari riri hejuru cyane (1 USD = " + rwf + " RWF): ni igihe cyiza cyo kuvunjisha USDT/USD muri RWF cyangwa kubika inyungu." : "USD/RWF is elevated at " + rwf + " RWF: favorable window to take profit into RWF.") : (preferredLang === "RW" ? "Igiciro cya 1 USD = " + rwf + " RWF kiri ku murongo mwiza: ni igihe cyiza cyo kugura USDT cyangwa BTC ukoresheje RWF." : "USD/RWF is steady at " + rwf + " RWF: good entry window to accumulate USDT/BTC from RWF.");
+    return { text: `💱 **RWF Live FX & Exchange Rate Advisory:**\n• Igiciro cy ubu: **1 USD = ${rwf.toLocaleString()} RWF**\n• 100,000 RWF = **${(100000 / rwf).toFixed(2)} USDT**\n• 1,000 USD = **${Math.round(1000 * rwf).toLocaleString()} RWF**\n• Inama ya AI: ${spread}` };
+  }
+  // rwf_fx_advice
 
   // 6. Offline Encyclopedia & Live State Fallback
   if (lower.includes("wallet") || lower.includes("balance") || lower.includes("amafaranga")) {

@@ -21,6 +21,7 @@ export default function SovereignOmniAiCopilot({ theme, panel }) {
   const [autoVoice, setAutoVoice] = useState(false);
   const [messages, setMessages] = useState(loadAiHistory);
   const [attachedFile, setAttachedFile] = useState(null);
+  const [streamingText, setStreamingText] = useState("");
   const [factsCount, setFactsCount] = useState(() => loadUserFacts().length);
   const fileRef = useRef(null);
 
@@ -34,9 +35,7 @@ export default function SovereignOmniAiCopilot({ theme, panel }) {
     setThinking(true);
     try {
       const res = await generateOmniAiResponse(q, lang, persona, attachedFile);
-      const next2 = [...next1, { role: "ai", time: new Date().toLocaleTimeString(), persona, text: res.text }];
-      setMessages(next2);
-      saveAiHistory(next2);
+      const full=String(res.text||"");const words=full.split(" ");let acc="";for(let i=0;i<words.length;i+=3){acc+=(i?" ":"")+words.slice(i,i+3).join(" ");setStreamingText(acc+" ▌");await new Promise(r=>setTimeout(r,18));}setStreamingText("");const next2=[...next1,{role:"ai",time:new Date().toLocaleTimeString(),persona,text:full}];setMessages(next2);saveAiHistory(next2);// streamReply
       setFactsCount(loadUserFacts().length);
       setAttachedFile(null);
       if (autoVoice) speakCleanText(res.text, lang);
@@ -105,7 +104,8 @@ export default function SovereignOmniAiCopilot({ theme, panel }) {
             <span>{m.text}</span>
           </div>
         ))}
-        {thinking && <div style={{ fontSize: 12, color: "#c4b5fd", fontWeight: 800 }}>⏳ KGT Omni-AI v100.0 irimo gukora no gusesengura...</div>}
+        {streamingText && <div style={{padding:"10px 12px",borderRadius:10,background:"rgba(139,92,246,0.18)",border:"1px solid #8b5cf6",fontSize:13,whiteSpace:"pre-wrap"}}>{streamingText}</div>}
+      {thinking && !streamingText && <div style={{ fontSize: 12, color: "#c4b5fd", fontWeight: 800 }}>⏳ KGT Omni-AI v100.0 irimo gukora no gusesengura...</div>}
       </div>
       {attachedFile && (
         <div style={{ fontSize: 11.5, padding: "6px 9px", borderRadius: 7, background: "rgba(56,189,248,0.18)", color: "#7dd3fc", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
